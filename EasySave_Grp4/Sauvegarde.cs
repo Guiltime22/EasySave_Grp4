@@ -1,13 +1,13 @@
 ﻿using System;
 using System.IO;
 // Test commit
-namespace test
+namespace sauvegarde
 {
     public class Sauvegarde
     {
         public void CopyRepertoire(string src, string dest)
         {
-            // Get the subdirectories for the specified directory.
+            // Get the subdirectories for the specified directory. CHIRAZ EST PASSEE PAR LAAAA
             DirectoryInfo dir = new DirectoryInfo(src);
 
             if (!dir.Exists)
