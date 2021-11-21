@@ -1,18 +1,23 @@
 ﻿using System;
+using System.IO;
+//using Newtonsoft.Json;
+using System.Text.Json;
 
-namespace sauvegarde
+namespace test
 {
     class Program
     {
-        static string src;
-        static string dest;
-        static int i;
+        static string path = @"C:\Users\ghile\Desktop\POO\JSON\";
+        
         static void Main(string[] args)
         {
-            
-            Console.WriteLine($"Bienvenue dans l'interface EasySave {Environment.NewLine}");
+            int nbFichiersSD = Directory.GetFiles(path, "*.*", SearchOption.TopDirectoryOnly).Length;
 
-            Console.WriteLine($"1. Création Travail de sauvegarde {Environment.NewLine} 2. Execution Travail de sauvegarde {Environment.NewLine} 3. Exit");
+            Sauvegarde SV = new Sauvegarde();
+            
+            Console.WriteLine($"Bienvenue dans l'interface EasySave => vous avez "+nbFichiersSD+ $"/5 slots de sauvegardes. {Environment.NewLine}");
+
+            Console.WriteLine($"1. Création Travail de sauvegarde                  2. Execution Travail de sauvegarde {Environment.NewLine} {Environment.NewLine}3. Exit");
             
             Console.WriteLine("Votre saisie:");
             int Input = Convert.ToInt32(Console.ReadLine());
@@ -22,22 +27,21 @@ namespace sauvegarde
                 Console.Clear();
                 Console.WriteLine("Combien de travaux voulez-vous réaliser ?");
                 int choice = Convert.ToInt32(Console.ReadLine());
-
-                Sauvegarde SV = new Sauvegarde();
-                SV.Travail_Sauvegarde(choice);
-                /*
-                Console.WriteLine("Veuillez saisir votre dossier source");
-                src = Console.ReadLine();
-                Console.WriteLine("Veuillez saisir votre dossier destination");
-                dest = Console.ReadLine();
-
-                Sauvegarde SV = new Sauvegarde();
-                SV.CopyRepertoire(src, dest);
-                */
+                if(choice+nbFichiersSD < 5)
+                {
+                    SV.Create_Travail_Sauvegarde(choice,nbFichiersSD);
+                }
+                else
+                {
+                    Console.WriteLine("Nombre de slots insuffisant, veuillez réessayer ultérieurement");
+                    Environment.Exit(0);
+                }
+                
             }
             else if(Input == 2)
             {
                 Console.Clear();
+                SV.Execute_Travail_Sauvegarde();
             }
             else if(Input == 3)
             {
