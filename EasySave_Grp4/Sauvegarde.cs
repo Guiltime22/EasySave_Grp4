@@ -5,6 +5,7 @@ using System.Text.Json;
 
 namespace test
 {
+    
     public class JFile
     {
         public string name { get; set; }
@@ -14,6 +15,7 @@ namespace test
     }
     public class Sauvegarde
     {
+        private Type_Save SV = new Type_Save();
         public void Create_Travail_Sauvegarde(int choice, int nbFichiersSD)
         {
             if (nbFichiersSD < 5)
@@ -34,7 +36,7 @@ namespace test
                     Console.WriteLine("Veuillez saisir le dossier destination");
                     string dest_name = Console.ReadLine();
 
-                    Console.WriteLine("Veuillez saisir le type de sauvegarde");
+                    Console.WriteLine("Veuillez saisir le type de sauvegarde : Complet / Differentiel");
                     string type_save = Console.ReadLine();
 
                     var jFile = new JFile
@@ -74,17 +76,33 @@ namespace test
                 Console.WriteLine("Veuillez saisir le nom du travail de sauvegarde");
                 string nom_fichier = Console.ReadLine();
                 string fileName = @"C:\Users\ghile\Desktop\POO\JSON\"+nom_fichier+".json";
+                string jsonString = File.ReadAllText(fileName);
+                JFile jFile = JsonSerializer.Deserialize<JFile>(jsonString);
+                if(jFile.type_save == "Complet")
+                {
                 try
                 {
-                    string jsonString = File.ReadAllText(fileName);
-                    JFile jFile = JsonSerializer.Deserialize<JFile>(jsonString);
-                    CopyRepertoire(jFile.source_name, jFile.dest_name);
+                    SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
                     File.Delete(fileName);
+                    Console.Clear();
                     Console.WriteLine("Copie effectué avec succès !");
                 }
                 catch
                 {
                     Console.WriteLine("Travail introuvable");
+                }
+                }else if(jFile.type_save == "Differentiel")
+                {
+                    try
+                    {
+                        SV.CopyRepertoire_Modifier(jFile.source_name, jFile.dest_name);
+                        File.Delete(fileName);
+                        Console.WriteLine("Copie effectué avec succès !");
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Travail introuvable");
+                    }
                 }
             }
             if(EXE == 2)
@@ -95,51 +113,22 @@ namespace test
                 {
                     string jsonString = File.ReadAllText(file);
                     JFile jFile = JsonSerializer.Deserialize<JFile>(jsonString);
-                    CopyRepertoire(jFile.source_name, jFile.dest_name);
-                    File.Delete(file);
+                    if (jFile.type_save == "Complet")
+                    {
+                        SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
+                        File.Delete(file);
+                    }else if(jFile.type_save == "Differentiel")
+                    {
+                        SV.CopyRepertoire_Modifier(jFile.source_name, jFile.dest_name);
+                        File.Delete(file);
+                        Console.Clear();
+                    }
                 }
+                
                 Console.WriteLine("Copie effectué avec succès !");
             }
             
         }
 
-        public void CopyRepertoire(string src, string dest)
-        {
-            // Get the subdirectories for the specified directory.
-            DirectoryInfo dir = new DirectoryInfo(src);
-
-            if (!dir.Exists)
-            {
-                throw new DirectoryNotFoundException(
-                    "Source directory does not exist or could not be found: "
-                    + src);
-            }
-
-            DirectoryInfo[] dirs = dir.GetDirectories();
-
-            // If the destination directory doesn't exist, create it.       
-            Directory.CreateDirectory(dest);
-
-            // Get the files in the directory and copy them to the new location.
-            FileInfo[] files = dir.GetFiles();
-            foreach (FileInfo file in files)
-            {
-                string tempPath = Path.Combine(dest, file.Name);
-                file.CopyTo(tempPath, true);
-            }
-            /*
-            // If copying subdirectories, copy them and their contents to new location.
-            if (copySubDirs)
-            {
-                foreach (DirectoryInfo subdir in dirs)
-                {
-                    string tempPath = Path.Combine(dest, subdir.Name);
-                    CopyRepertoire(subdir.FullName, tempPath, copySubDirs);
-                }
-            }
-            */
-            
-        }
-        
     }
 }
