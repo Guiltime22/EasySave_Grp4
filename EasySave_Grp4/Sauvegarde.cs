@@ -7,7 +7,7 @@ namespace sauvegarde
     {
         public void CopyRepertoire(string src, string dest)
         {
-            // Get the subdirectories for the specified directory. CHIRAZ EST PASSEE PAR LAAAA
+            // Get the subdirectories for the specified directory. Chiraz est passée par la les bgs
             DirectoryInfo dir = new DirectoryInfo(src);
 
             if (!dir.Exists)
