@@ -5,7 +5,7 @@ namespace sauvegarde
 {
     public class Sauvegarde
     {
-        public void CopyRepertoire(string src, string dest)
+        public void CopyRepertoire(string src, string dest)//Déclaration des variables de la fonction
         {
             // Get the subdirectories for the specified directory. Chiraz est passée par la les bgs
             DirectoryInfo dir = new DirectoryInfo(src);
