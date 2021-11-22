@@ -55,11 +55,11 @@ namespace test
                     Console.Clear();
                     //Console.WriteLine(jsonString);
                 }
-                Console.WriteLine("Travail de sauvegarde enrengistré avec succès !");
+                Console.WriteLine("Travail de sauvegarde enregistré avec succès !");
             }
             else
             {
-                Console.WriteLine("Limite de nombres de travaux atteints, veuillez libérer de l'espace");
+                Console.WriteLine("Limite de nombres de travaux atteinte, veuillez libérer de l'espace");
                 Environment.Exit(0);
             }
             
@@ -85,7 +85,7 @@ namespace test
                     SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
                     File.Delete(fileName);
                     Console.Clear();
-                    Console.WriteLine("Copie effectué avec succès !");
+                    Console.WriteLine("Copie effectuée avec succès !");
                 }
                 catch
                 {
@@ -97,7 +97,7 @@ namespace test
                     {
                         SV.CopyRepertoire_Modifier(jFile.source_name, jFile.dest_name);
                         File.Delete(fileName);
-                        Console.WriteLine("Copie effectué avec succès !");
+                        Console.WriteLine("Copie effectuée avec succès !");
                     }
                     catch
                     {
@@ -125,7 +125,7 @@ namespace test
                     }
                 }
                 
-                Console.WriteLine("Copie effectué avec succès !");
+                Console.WriteLine("Copie effectuée avec succès !");
             }
             
         }
