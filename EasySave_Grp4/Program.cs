@@ -7,7 +7,7 @@ namespace test
 {
     class Program
     {
-        static string path = @"C:\Users\ghile\Desktop\POO\JSON\";
+        static string path = @"..\..\..\Config\Travaux_Sauvegarde\";
         
         static void Main(string[] args)
         {
