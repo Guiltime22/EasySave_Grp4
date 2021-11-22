@@ -1,7 +1,8 @@
 ﻿using System;
 using System.IO;
-//using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System.Text.Json;
+using System.Collections.Generic;
 
 namespace test
 {
@@ -32,9 +33,26 @@ namespace test
 
                     Console.WriteLine("Veuillez saisir le dossier source");
                     string source_name = Console.ReadLine();
-
+                    try
+                    {
+                        var verifDest = Directory.GetFiles(source_name, "*", SearchOption.AllDirectories);
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Dossier introuvable, veuillez réessayer");
+                        Environment.Exit(0);
+                    }
                     Console.WriteLine("Veuillez saisir le dossier destination");
                     string dest_name = Console.ReadLine();
+                    try
+                    {
+                        var verifDest = Directory.GetFiles(dest_name, "*", SearchOption.AllDirectories);
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Dossier introuvable, veuillez réessayer");
+                        Environment.Exit(0);
+                    }
 
                     Console.WriteLine("Veuillez saisir le type de sauvegarde : Complet / Differentiel");
                     string type_save = Console.ReadLine();
@@ -46,9 +64,18 @@ namespace test
                         dest_name = dest_name,
                         type_save = type_save
                     };
-
-                    string fileName = @"C:\Users\ghile\Desktop\POO\JSON\" + name + ".json";
-                    string jsonString = JsonSerializer.Serialize(jFile);
+                    /*
+                    var toJSON = new List<JFile> {
+                    new JFile{
+                        backupName = "Save " + linesCount,
+                        type = type,
+                        sourcePath = sourcePath,
+                        destinationPath = destinationPath,
+                        }
+                    };
+                    */
+                    string fileName = @"..\..\..\Config\Travaux_Sauvegarde\" + name + ".json";
+                    string jsonString = System.Text.Json.JsonSerializer.Serialize(jFile);
                     File.WriteAllText(fileName, jsonString);
 
 
@@ -75,9 +102,9 @@ namespace test
                 Console.Clear();
                 Console.WriteLine("Veuillez saisir le nom du travail de sauvegarde");
                 string nom_fichier = Console.ReadLine();
-                string fileName = @"C:\Users\ghile\Desktop\POO\JSON\"+nom_fichier+".json";
+                string fileName = @"..\..\..\Config\Travaux_Sauvegarde\" + nom_fichier+".json";
                 string jsonString = File.ReadAllText(fileName);
-                JFile jFile = JsonSerializer.Deserialize<JFile>(jsonString);
+                JFile jFile = System.Text.Json.JsonSerializer.Deserialize<JFile>(jsonString);
                 if(jFile.type_save == "Complet")
                 {
                 try
@@ -108,11 +135,11 @@ namespace test
             if(EXE == 2)
             {
                 Console.Clear();
-                string[] files = Directory.GetFiles(@"C:\Users\ghile\Desktop\POO\JSON", "*.json");
+                string[] files = Directory.GetFiles(@"..\..\..\Config\Travaux_Sauvegarde", "*.json");
                 foreach (var file in files)
                 {
                     string jsonString = File.ReadAllText(file);
-                    JFile jFile = JsonSerializer.Deserialize<JFile>(jsonString);
+                    JFile jFile = System.Text.Json.JsonSerializer.Deserialize<JFile>(jsonString);
                     if (jFile.type_save == "Complet")
                     {
                         SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
@@ -129,6 +156,7 @@ namespace test
             }
             
         }
+        
 
     }
 }
