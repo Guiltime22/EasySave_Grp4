@@ -43,7 +43,7 @@ namespace test
                     type_save = type_save
                 };
 
-                string fileName = @"C:\Users\ghile\Desktop\JFile"+i+".json";
+                string fileName = @"C:\Users\DELL\Desktop\"+name+"_"+i+".json";
                 string jsonString = JsonSerializer.Serialize(jFile);
                 File.WriteAllText(fileName, jsonString);
 
