@@ -3,10 +3,11 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Text.Json;
 using System.Collections.Generic;
+using System.Windows;
 
 namespace test
 {
-    
+
     public class JFile
     {
         public string name { get; set; }
@@ -14,6 +15,7 @@ namespace test
         public string dest_name { get; set; }
         public string type_save { get; set; }
     }
+
     public class Sauvegarde
     {
         private Type_Save SV = new Type_Save();
@@ -89,17 +91,26 @@ namespace test
                 Console.WriteLine("Limite de nombres de travaux atteints, veuillez libérer de l'espace");
                 Environment.Exit(0);
             }
-            
+
         }
-        
+
         public void Execute_Travail_Sauvegarde()
         {
             Console.WriteLine("Choisissez le mode d'execution");
             Console.WriteLine("1. Unique                                2. Sequentielle");
             int EXE = Convert.ToInt32(Console.ReadLine());
-            if(EXE == 1)
+            if (EXE == 1)
             {
                 Console.Clear();
+                string SaveName = @"..\..\..\Config\Travaux_Sauvegarde\";
+                string[] files = Directory.GetFiles(SaveName);
+
+                Console.WriteLine("Vos Travaux : ");
+                foreach (string file in files)
+                {
+                    JFile test = JsonConvert.DeserializeObject<JFile>(File.ReadAllText(file));
+                    Console.WriteLine(" - " + test.name + " - " + test.source_name + " - " + test.dest_name + " - " + test.type_save);
+                }
                 Console.WriteLine("Veuillez saisir le nom du travail de sauvegarde");
                 string nom_fichier = Console.ReadLine();
                 string fileName = @"..\..\..\Config\Travaux_Sauvegarde\" + nom_fichier+".json";
@@ -107,18 +118,19 @@ namespace test
                 JFile jFile = System.Text.Json.JsonSerializer.Deserialize<JFile>(jsonString);
                 if(jFile.type_save == "Complet")
                 {
-                try
-                {
-                    SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
-                    File.Delete(fileName);
-                    Console.Clear();
-                    Console.WriteLine("Copie effectué avec succès !");
+                    try
+                    {
+                        SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
+                        File.Delete(fileName);
+                        Console.Clear();
+                        Console.WriteLine("Copie effectué avec succès !");
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Travail introuvable");
+                    }
                 }
-                catch
-                {
-                    Console.WriteLine("Travail introuvable");
-                }
-                }else if(jFile.type_save == "Differentiel")
+                else if(jFile.type_save == "Differentiel")
                 {
                     try
                     {
@@ -144,19 +156,20 @@ namespace test
                     {
                         SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
                         File.Delete(file);
-                    }else if(jFile.type_save == "Differentiel")
+                    }
+                    else if(jFile.type_save == "Differentiel")
                     {
                         SV.CopyRepertoire_Modifier(jFile.source_name, jFile.dest_name);
                         File.Delete(file);
                         Console.Clear();
                     }
                 }
-                
+
                 Console.WriteLine("Copie effectué avec succès !");
             }
-            
+
         }
-        
+
 
     }
 }
