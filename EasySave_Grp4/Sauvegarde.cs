@@ -6,7 +6,6 @@ using System.Collections.Generic;
 
 namespace test
 {
-    
     public class JFile
     {
         public string name { get; set; }
@@ -16,7 +15,9 @@ namespace test
     }
     public class Sauvegarde
     {
+        private States ST = new States();
         private Type_Save SV = new Type_Save();
+        string ETAT;
         public void Create_Travail_Sauvegarde(int choice, int nbFichiersSD)
         {
             if (nbFichiersSD < 5)
@@ -44,15 +45,6 @@ namespace test
                     }
                     Console.WriteLine("Veuillez saisir le dossier destination");
                     string dest_name = Console.ReadLine();
-                    try
-                    {
-                        var verifDest = Directory.GetFiles(dest_name, "*", SearchOption.AllDirectories);
-                    }
-                    catch
-                    {
-                        Console.WriteLine("Dossier introuvable, veuillez réessayer");
-                        Environment.Exit(0);
-                    }
 
                     Console.WriteLine("Veuillez saisir le type de sauvegarde : Complet / Differentiel");
                     string type_save = Console.ReadLine();
@@ -76,8 +68,9 @@ namespace test
                     */
                     string fileName = @"..\..\..\Config\Travaux_Sauvegarde\" + name + ".json";
                     string jsonString = System.Text.Json.JsonSerializer.Serialize(jFile);
+                    ETAT = "Inactif";
                     File.WriteAllText(fileName, jsonString);
-
+                    ST.Creer_Fichier_Etat(name, source_name, dest_name, ETAT);
 
                     Console.Clear();
                     //Console.WriteLine(jsonString);
@@ -89,40 +82,46 @@ namespace test
                 Console.WriteLine("Limite de nombres de travaux atteinte, veuillez libérer de l'espace");
                 Environment.Exit(0);
             }
-            
+
         }
-        
+
         public void Execute_Travail_Sauvegarde()
         {
             Console.WriteLine("Choisissez le mode d'execution");
             Console.WriteLine("1. Unique                                2. Sequentielle");
             int EXE = Convert.ToInt32(Console.ReadLine());
-            if(EXE == 1)
+            ETAT = "ACTIF";
+            if (EXE == 1)
             {
                 Console.Clear();
                 Console.WriteLine("Veuillez saisir le nom du travail de sauvegarde");
                 string nom_fichier = Console.ReadLine();
-                string fileName = @"..\..\..\Config\Travaux_Sauvegarde\" + nom_fichier+".json";
+                string fileName = @"..\..\..\Config\Travaux_Sauvegarde\" + nom_fichier + ".json";
                 string jsonString = File.ReadAllText(fileName);
                 JFile jFile = System.Text.Json.JsonSerializer.Deserialize<JFile>(jsonString);
-                if(jFile.type_save == "Complet")
+
+
+               //ST.Modifier_Fichier_Etat(jFile.name, jFile.source_name, jFile.dest_name, ETAT);
+                if (jFile.type_save == "Complet")
                 {
-                try
-                {
-                    SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
-                    File.Delete(fileName);
-                    Console.Clear();
-                    Console.WriteLine("Copie effectuée avec succès !");
-                }
-                catch
-                {
-                    Console.WriteLine("Travail introuvable");
-                }
-                }else if(jFile.type_save == "Differentiel")
+                    try
+                    {
+                        SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
+                        ST.Creer_Fichier_Etat(jFile.name, jFile.source_name, jFile.dest_name, ETAT);
+                        File.Delete(fileName);
+                        Console.Clear();
+                        Console.WriteLine("Copie effectuée avec succès !");
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Travail introuvable");
+                    }
+                } else if (jFile.type_save == "Differentiel")
                 {
                     try
                     {
                         SV.CopyRepertoire_Modifier(jFile.source_name, jFile.dest_name);
+                        ST.Creer_Fichier_Etat(jFile.name, jFile.source_name, jFile.dest_name, ETAT);
                         File.Delete(fileName);
                         Console.WriteLine("Copie effectuée avec succès !");
                     }
@@ -132,7 +131,7 @@ namespace test
                     }
                 }
             }
-            if(EXE == 2)
+            if (EXE == 2)
             {
                 Console.Clear();
                 string[] files = Directory.GetFiles(@"..\..\..\Config\Travaux_Sauvegarde", "*.json");
@@ -144,19 +143,20 @@ namespace test
                     {
                         SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
                         File.Delete(file);
-                    }else if(jFile.type_save == "Differentiel")
+                    } else if (jFile.type_save == "Differentiel")
                     {
                         SV.CopyRepertoire_Modifier(jFile.source_name, jFile.dest_name);
                         File.Delete(file);
                         Console.Clear();
                     }
                 }
-                
+
                 Console.WriteLine("Copie effectuée avec succès !");
             }
-            
+
         }
-        
+
 
     }
+ 
 }
