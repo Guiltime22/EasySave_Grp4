@@ -20,7 +20,8 @@ namespace test
 
                 Console.WriteLine($"Bienvenue dans l'interface EasySave => vous avez " + nbFichiersSD + $"/5 slots de sauvegardes. {Environment.NewLine}");
 
-                Console.WriteLine($"1. Création Travail de sauvegarde                  2. Execution Travail de sauvegarde {Environment.NewLine} {Environment.NewLine}3. Exit{Environment.NewLine}");
+                Console.WriteLine($"1. Création Travail de sauvegarde                  2. Execution Travail de sauvegarde {Environment.NewLine} {Environment.NewLine}" +
+                                  $"3. Gestion des travaux de sauvegarde               4. Exit {Environment.NewLine}");
 
                 Console.WriteLine("Votre saisie:");
                 int Input = Convert.ToInt32(Console.ReadLine());
@@ -30,7 +31,7 @@ namespace test
                     Console.Clear();
                     Console.WriteLine("Combien de travaux voulez-vous réaliser ?");
                     int choice = Convert.ToInt32(Console.ReadLine());
-                    if (choice + nbFichiersSD < 5)
+                    if (choice + nbFichiersSD <= 5)
                     {
                         SV.Create_Travail_Sauvegarde(choice, nbFichiersSD);
                     }
@@ -47,6 +48,11 @@ namespace test
                     SV.Execute_Travail_Sauvegarde();
                 }
                 else if (Input == 3)
+                {
+                    Console.Clear();
+                    SV.Gestion_Travail_Sauvegarde(nbFichiersSD);
+                }
+                else if (Input == 4)
                 {
                     Console.Clear();
                     Console.WriteLine("BYE BYE");

@@ -6,7 +6,6 @@ using System.Collections.Generic;
 
 namespace test
 {
-    
     public class JFile
     {
         public string name { get; set; }
@@ -16,21 +15,22 @@ namespace test
     }
     public class Sauvegarde
     {
+        
         private Type_Save SV = new Type_Save();
         public void Create_Travail_Sauvegarde(int choice, int nbFichiersSD)
         {
-            if (nbFichiersSD < 5)
+            if (nbFichiersSD <= 5)
             {
                 while (choice > 5)
                 {
+                    Console.Clear();
                     Console.WriteLine("Vous avez depassé le seuil de travaux, veuillez réessayer ultérieurement");
+                    return;
                 }
                 for (int i = 1; i <= choice; i++)
                 {
                     Console.Clear();
-                    Console.WriteLine("Veuillez saisir le nom du travail");
-                    string name = Console.ReadLine();
-
+                   
                     Console.WriteLine("Veuillez saisir le dossier source");
                     string source_name = Console.ReadLine();
                     try
@@ -39,23 +39,20 @@ namespace test
                     }
                     catch
                     {
+                        Console.Clear();
                         Console.WriteLine("Dossier introuvable, veuillez réessayer");
-                        Environment.Exit(0);
+                        return;
                     }
                     Console.WriteLine("Veuillez saisir le dossier destination");
                     string dest_name = Console.ReadLine();
-                    try
-                    {
-                        var verifDest = Directory.GetFiles(dest_name, "*", SearchOption.AllDirectories);
-                    }
-                    catch
-                    {
-                        Console.WriteLine("Dossier introuvable, veuillez réessayer");
-                        Environment.Exit(0);
-                    }
 
                     Console.WriteLine("Veuillez saisir le type de sauvegarde : Complet / Differentiel");
                     string type_save = Console.ReadLine();
+                
+                    Console.WriteLine("Veuillez saisir le nom du travail");
+                    string name = Console.ReadLine();
+                    
+
 
                     var jFile = new JFile
                     {
@@ -64,21 +61,10 @@ namespace test
                         dest_name = dest_name,
                         type_save = type_save
                     };
-                    /*
-                    var toJSON = new List<JFile> {
-                    new JFile{
-                        backupName = "Save " + linesCount,
-                        type = type,
-                        sourcePath = sourcePath,
-                        destinationPath = destinationPath,
-                        }
-                    };
-                    */
+                   
                     string fileName = @"..\..\..\Config\Travaux_Sauvegarde\" + name + ".json";
                     string jsonString = System.Text.Json.JsonSerializer.Serialize(jFile);
                     File.WriteAllText(fileName, jsonString);
-
-
                     Console.Clear();
                     //Console.WriteLine(jsonString);
                 }
@@ -86,50 +72,53 @@ namespace test
             }
             else
             {
+                Console.Clear();
                 Console.WriteLine("Limite de nombres de travaux atteints, veuillez libérer de l'espace");
-                Environment.Exit(0);
+                return;
             }
-            
+            return;   
         }
         
         public void Execute_Travail_Sauvegarde()
         {
             Console.WriteLine("Choisissez le mode d'execution");
-            Console.WriteLine("1. Unique                                2. Sequentielle");
+            Console.WriteLine($"1. Unique                                2. Sequentielle {Environment.NewLine}" +
+                              $"3. Exit");
             int EXE = Convert.ToInt32(Console.ReadLine());
             if(EXE == 1)
             {
                 Console.Clear();
                 Console.WriteLine("Veuillez saisir le nom du travail de sauvegarde");
-                string nom_fichier = Console.ReadLine();
-                string fileName = @"..\..\..\Config\Travaux_Sauvegarde\" + nom_fichier+".json";
-                string jsonString = File.ReadAllText(fileName);
-                JFile jFile = System.Text.Json.JsonSerializer.Deserialize<JFile>(jsonString);
-                if(jFile.type_save == "Complet")
-                {
                 try
                 {
-                    SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
-                    File.Delete(fileName);
-                    Console.Clear();
-                    Console.WriteLine("Copie effectué avec succès !");
-                }
-                catch
-                {
-                    Console.WriteLine("Travail introuvable");
-                }
-                }else if(jFile.type_save == "Differentiel")
-                {
-                    try
+                    string nom_fichier = Console.ReadLine();
+                    string fileName = @"..\..\..\Config\Travaux_Sauvegarde\" + nom_fichier + ".json";
+                    string jsonString = File.ReadAllText(fileName);
+                    JFile jFile = System.Text.Json.JsonSerializer.Deserialize<JFile>(jsonString);
+                    if (jFile.type_save == "Complet")
                     {
+
+                        SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
+                        File.Delete(fileName);
+                        Console.Clear();
+                        Console.WriteLine("Copie effectué avec succès !");
+
+                    }
+                    else if (jFile.type_save == "Differentiel")
+                    {
+
                         SV.CopyRepertoire_Modifier(jFile.source_name, jFile.dest_name);
                         File.Delete(fileName);
                         Console.WriteLine("Copie effectué avec succès !");
+
                     }
-                    catch
-                    {
-                        Console.WriteLine("Travail introuvable");
-                    }
+                    
+                }
+                catch
+                {
+                    Console.Clear();
+                    Console.WriteLine("Travail introuvable, veuillez réessayer");
+                    return;
                 }
             }
             if(EXE == 2)
@@ -154,9 +143,69 @@ namespace test
                 
                 Console.WriteLine("Copie effectué avec succès !");
             }
-            
+            if(EXE == 3)
+            {
+                Console.Clear();
+                return;
+            }
+            return;   
         }
-        
+        public void Gestion_Travail_Sauvegarde(int nbFichiersSD)
+        {
+            Console.WriteLine("Faites votre choix !");
+            Console.WriteLine($"1. Afficher                                2. Modifier {Environment.NewLine} {Environment.NewLine}" +
+                               "3. Supprimer                               4. Exit");
+            int Gest = Convert.ToInt32(Console.ReadLine());
+            if(Gest == 1)
+            {
+
+            }else if(Gest == 2)
+            {
+                Console.WriteLine("Combien de travaux voulez-vous modifier ?");
+                int choice = Convert.ToInt32(Console.ReadLine());
+                for(int i = 1; i <= choice; i++) {
+                Console.Clear();
+                Console.WriteLine("Quel travail voulez-vous modifier ?");
+                string modif = Console.ReadLine();
+                string m = @"..\..\..\Config\Travaux_Sauvegarde\" + modif + ".json";
+                try
+                {
+                    File.Delete(m);
+                }
+                catch
+                {
+                    Console.WriteLine("Travail introuvable");
+                    return;
+                }
+                Create_Travail_Sauvegarde(choice, nbFichiersSD);
+                }
+            }
+            else if(Gest == 3)
+            {
+                Console.Clear();
+                Console.WriteLine("Veuillez saisir le nom du travail à supprimer");
+                string supp = Console.ReadLine();
+                string f = @"..\..\..\Config\Travaux_Sauvegarde\" + supp + ".json";
+                try
+                {
+                    File.Delete(f);
+                    Console.Clear();
+                    Console.WriteLine("Suppression Terminée");
+
+                }
+                catch
+                {
+                    Console.WriteLine("Travail introuvable");
+                    return;
+                }
+
+            }else if(Gest == 4)
+            {
+                Console.Clear();
+                return;
+            }
+            return;
+        }
 
     }
 }
