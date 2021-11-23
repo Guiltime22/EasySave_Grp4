@@ -1,12 +1,8 @@
 ﻿using System;
 using System.IO;
-using Newtonsoft.Json;
-using System.Text.Json;
-using System.Collections.Generic;
 
 namespace test
 {
-    
     public class JFile
     {
         public string name { get; set; }
@@ -16,22 +12,24 @@ namespace test
     }
     public class Sauvegarde
     {
+
         private Type_Save SV = new Type_Save();
         public void Create_Travail_Sauvegarde(int choice, int nbFichiersSD)
         {
-            if (nbFichiersSD < 5)
+            if (nbFichiersSD <= 5)
             {
                 while (choice > 5)
                 {
-                    Console.WriteLine("Vous avez depassé le seuil de travaux, veuillez réessayer ultérieurement");
+                    Console.Clear();
+                    Langue seuil = new Langue();
+                    seuil.Seuil();  /* appel  fonction */
+                    Environment.Exit(0);
                 }
                 for (int i = 1; i <= choice; i++)
                 {
                     Console.Clear();
-                    Console.WriteLine("Veuillez saisir le nom du travail");
-                    string name = Console.ReadLine();
-
-                    Console.WriteLine("Veuillez saisir le dossier source");
+                    Langue source = new Langue();
+                    source.Source();  /* appel  fonction */
                     string source_name = Console.ReadLine();
                     try
                     {
@@ -39,23 +37,27 @@ namespace test
                     }
                     catch
                     {
-                        Console.WriteLine("Dossier introuvable, veuillez réessayer");
-                        Environment.Exit(0);
-                    }
-                    Console.WriteLine("Veuillez saisir le dossier destination");
-                    string dest_name = Console.ReadLine();
-                    try
-                    {
-                        var verifDest = Directory.GetFiles(dest_name, "*", SearchOption.AllDirectories);
-                    }
-                    catch
-                    {
-                        Console.WriteLine("Dossier introuvable, veuillez réessayer");
-                        Environment.Exit(0);
-                    }
+                        Console.Clear();
+                        Langue introuvable = new Langue();
+                        introuvable.Dossier_introuvable();  /* appel  fonction */
 
-                    Console.WriteLine("Veuillez saisir le type de sauvegarde : Complet / Differentiel");
+                        Environment.Exit(0);
+                    }
+                    Langue destination = new Langue();
+                    destination.Destination();  /* appel  fonction */
+                    string dest_name = Console.ReadLine();
+
+
+
+                    Langue type = new Langue();
+                    type.Type_sauvegarde();  /* appel  fonction */
                     string type_save = Console.ReadLine();
+
+                    Langue saisir = new Langue();
+                    saisir.Saisir();  /* appel  fonction */
+                    string name = Console.ReadLine();
+
+
 
                     var jFile = new JFile
                     {
@@ -64,75 +66,75 @@ namespace test
                         dest_name = dest_name,
                         type_save = type_save
                     };
-                    /*
-                    var toJSON = new List<JFile> {
-                    new JFile{
-                        backupName = "Save " + linesCount,
-                        type = type,
-                        sourcePath = sourcePath,
-                        destinationPath = destinationPath,
-                        }
-                    };
-                    */
+
                     string fileName = @"..\..\..\Config\Travaux_Sauvegarde\" + name + ".json";
                     string jsonString = System.Text.Json.JsonSerializer.Serialize(jFile);
                     File.WriteAllText(fileName, jsonString);
-
-
                     Console.Clear();
                     //Console.WriteLine(jsonString);
                 }
-                Console.WriteLine("Travail de sauvegarde enrengistré avec succès !");
+
+                Langue enregistre = new Langue();
+                enregistre.Travail_enregistre();  /* appel  fonction */
+
             }
             else
             {
-                Console.WriteLine("Limite de nombres de travaux atteints, veuillez libérer de l'espace");
+                Console.Clear();
+
+                Langue limite = new Langue();
+                limite.Limite();  /* appel  fonction */
                 Environment.Exit(0);
             }
-            
+            return;
         }
-        
+
         public void Execute_Travail_Sauvegarde()
         {
-            Console.WriteLine("Choisissez le mode d'execution");
-            Console.WriteLine("1. Unique                                2. Sequentielle");
+            Langue execute = new Langue();
+            execute.Mode();  /* appel  fonction */
             int EXE = Convert.ToInt32(Console.ReadLine());
-            if(EXE == 1)
+            if (EXE == 1)
             {
                 Console.Clear();
-                Console.WriteLine("Veuillez saisir le nom du travail de sauvegarde");
-                string nom_fichier = Console.ReadLine();
-                string fileName = @"..\..\..\Config\Travaux_Sauvegarde\" + nom_fichier+".json";
-                string jsonString = File.ReadAllText(fileName);
-                JFile jFile = System.Text.Json.JsonSerializer.Deserialize<JFile>(jsonString);
-                if(jFile.type_save == "Complet")
-                {
+                Langue Nom = new Langue();
+                Nom.Nom_t();  /* appel  fonction */
                 try
                 {
-                    SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
-                    File.Delete(fileName);
-                    Console.Clear();
-                    Console.WriteLine("Copie effectué avec succès !");
+                    string nom_fichier = Console.ReadLine();
+                    string fileName = @"..\..\..\Config\Travaux_Sauvegarde\" + nom_fichier + ".json";
+                    string jsonString = File.ReadAllText(fileName);
+                    JFile jFile = System.Text.Json.JsonSerializer.Deserialize<JFile>(jsonString);
+                    if (jFile.type_save == "Complet" || jFile.type_save == "Full")
+                    {
+
+                        SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
+                        File.Delete(fileName);
+                        Console.Clear();
+                        Langue copie = new Langue();
+                        copie.Copie();  /* appel  fonction */
+
+                    }
+                    else if (jFile.type_save == "Differentiel" || jFile.type_save == " Differential")
+                    {
+
+                        SV.CopyRepertoire_Modifier(jFile.source_name, jFile.dest_name);
+                        File.Delete(fileName);
+                        Langue copie1 = new Langue();
+                        copie1.Copie();  /* appel  fonction */
+
+                    }
+
                 }
                 catch
                 {
-                    Console.WriteLine("Travail introuvable");
-                }
-                }else if(jFile.type_save == "Differentiel")
-                {
-                    try
-                    {
-                        SV.CopyRepertoire_Modifier(jFile.source_name, jFile.dest_name);
-                        File.Delete(fileName);
-                        Console.WriteLine("Copie effectué avec succès !");
-                    }
-                    catch
-                    {
-                        Console.WriteLine("Travail introuvable");
-                    }
+                    Console.Clear();
+
+                    Langue introuvable = new Langue();
+                    introuvable.Travail_introuvable();  /* appel  fonction */                     Environment.Exit(0);
                 }
             }
-            if(EXE == 2)
+            if (EXE == 2)
             {
                 Console.Clear();
                 string[] files = Directory.GetFiles(@"..\..\..\Config\Travaux_Sauvegarde", "*.json");
@@ -140,23 +142,98 @@ namespace test
                 {
                     string jsonString = File.ReadAllText(file);
                     JFile jFile = System.Text.Json.JsonSerializer.Deserialize<JFile>(jsonString);
-                    if (jFile.type_save == "Complet")
+                    if (jFile.type_save == "Complet" || jFile.type_save == "Full")
                     {
                         SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
                         File.Delete(file);
-                    }else if(jFile.type_save == "Differentiel")
+                    }
+                    else if (jFile.type_save == "Differentiel" || jFile.type_save == " Differential")
                     {
                         SV.CopyRepertoire_Modifier(jFile.source_name, jFile.dest_name);
                         File.Delete(file);
                         Console.Clear();
                     }
                 }
-                
-                Console.WriteLine("Copie effectué avec succès !");
+                Langue copie2 = new Langue();
+                copie2.Copie();  /* appel  fonction */
             }
-            
+            if (EXE == 3)
+            {
+                Console.Clear();
+                return;
+            }
+            return;
         }
-        
+        public void Gestion_Travail_Sauvegarde(int nbFichiersSD)
+        {
+            Langue gest_tr = new Langue();
+            gest_tr.Gest_Tr_sauvegarde();  /* appel  fonction */
+            int Gest = Convert.ToInt32(Console.ReadLine());
+            if (Gest == 1)
+            {
+
+            }
+            else if (Gest == 2)
+            {
+                Langue modifier = new Langue();
+                modifier.Modifiernb();  /* appel  fonction */
+                int choice = Convert.ToInt32(Console.ReadLine());
+                for (int i = 1; i <= choice; i++)
+                {
+                    Console.Clear();
+
+                    Langue modifiertr = new Langue();
+                    modifiertr.ModifierTr();  /* appel  fonction */
+                    string modif = Console.ReadLine();
+                    string m = @"..\..\..\Config\Travaux_Sauvegarde\" + modif + ".json";
+                    try
+                    {
+                        File.Delete(m);
+                    }
+                    catch
+                    {
+                        Langue introuvable1 = new Langue();
+                        introuvable1.Travail_introuvable();  /* appel  fonction */
+                        Environment.Exit(0);
+                    }
+                    Create_Travail_Sauvegarde(choice, nbFichiersSD);
+                }
+            }
+            else if (Gest == 3)
+            {
+                Console.Clear();
+                Langue supptr = new Langue();
+                supptr.Supprimer();  /* appel  fonction */
+
+                string supp = Console.ReadLine();
+                string f = @"..\..\..\Config\Travaux_Sauvegarde\" + supp + ".json";
+                try
+                {
+                    File.Delete(f);
+                    Console.Clear();
+                    Langue suppt = new Langue();
+                    suppt.Supprimer_Terminer();  /* appel  fonction */
+                    Environment.Exit(0);
+                }
+                catch
+                {
+
+                    Langue introuvable2 = new Langue();
+                    introuvable2.Travail_introuvable();  /* appel  fonction */
+                    Environment.Exit(0);
+
+
+
+                }
+
+            }
+            else if (Gest == 4)
+            {
+                Console.Clear();
+                return;
+            }
+            return;
+        }
 
     }
 }

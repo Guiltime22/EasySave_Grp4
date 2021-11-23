@@ -8,35 +8,57 @@ namespace test
     class Program
     {
         static string path = @"..\..\..\Config\Travaux_Sauvegarde\";
-        
+
+        public class Butter
+        {
+            public static int v;
+        }
+
+
         static void Main(string[] args)
         {
             Console.Clear();
+
+            Console.WriteLine("Choisisez la langue.");
+            Console.WriteLine("1.Anglais                 2.Francais");
+            Butter.v = Convert.ToInt32(Console.ReadLine());
+
+
+
             while (true)
             {
+
+                Console.Clear();
+
                 int nbFichiersSD = Directory.GetFiles(path, "*.*", SearchOption.TopDirectoryOnly).Length;
 
                 Sauvegarde SV = new Sauvegarde();
 
-                Console.WriteLine($"Bienvenue dans l'interface EasySave => vous avez " + nbFichiersSD + $"/5 slots de sauvegardes. {Environment.NewLine}");
 
-                Console.WriteLine($"1. Création Travail de sauvegarde                  2. Execution Travail de sauvegarde {Environment.NewLine} {Environment.NewLine}3. Exit{Environment.NewLine}");
 
-                Console.WriteLine("Votre saisie:");
+                Langue lan = new Langue();
+                lan.Welcome(); /* appel  fonction */
+
+
                 int Input = Convert.ToInt32(Console.ReadLine());
 
                 if (Input == 1)
                 {
                     Console.Clear();
-                    Console.WriteLine("Combien de travaux voulez-vous réaliser ?");
+
+
+                    Langue tra = new Langue();
+                    tra.Traveaux();  /* appel  fonction */
+
                     int choice = Convert.ToInt32(Console.ReadLine());
-                    if (choice + nbFichiersSD < 5)
+                    if (choice + nbFichiersSD <= 5)
                     {
                         SV.Create_Travail_Sauvegarde(choice, nbFichiersSD);
                     }
                     else
                     {
-                        Console.WriteLine("Nombre de slots insuffisant, veuillez réessayer ultérieurement");
+                        Langue slot = new Langue();
+                        slot.nbslots();  /* appel  fonction */
                         Environment.Exit(0);
                     }
 
@@ -49,12 +71,18 @@ namespace test
                 else if (Input == 3)
                 {
                     Console.Clear();
+                    SV.Gestion_Travail_Sauvegarde(nbFichiersSD);
+                }
+                else if (Input == 4)
+                {
+                    Console.Clear();
                     Console.WriteLine("BYE BYE");
                     Environment.Exit(0);
                 }
                 else
                 {
-                    Console.WriteLine("Choix incorrecte, fermeture de la console");
+                    Langue choix = new Langue();
+                    choix.Choix();  /* appel  fonction */
                     Environment.Exit(0);
                 }
             }
