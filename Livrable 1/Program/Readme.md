@@ -26,23 +26,41 @@ EasySave Version 1.0 :
 Dans cette première version notre logiciel est réalisé en ligne de console sans interface graphique.
 
 •	Le logiciel est utilisé par des utilisateurs anglophones et francophones.
+
 •	Le logiciel permet de créer jusqu’à 5 travaux de sauvegarde.
+
 •	Un travail est défini par : 
+
     -Son nom.
-    -Son répertoire source
-    -Son répertoire cible
-  	-Le type de sauvegarde (Complet ou Différentiel)			
+    
+    -Son répertoire source.
+    
+    -Son répertoire cible.
+    
+  	-Le type de sauvegarde (Complet ou Différentiel)	
+	
 •	Les répertoires cibles et sources pourront être sur des disques locaux, externes ou des lecteurs réseaux.
+
 •	L’historique des actions de sauvegardes seront écrit dans fichier log journalier, où sera transcrit l’horodatage, l’appellation du travail de sauvegarde, l’adresse complète du fichier Source (format UNC), l’adresse complète du fichier de destination (format UNC), la taille du fichier et le Temps de transfert du fichier en ms.
+
 •	L’état d’avancement des travaux de sauvegarde sera aussi enregistré dans un fichier unique où sera transcrit pour chaque sauvegarde l’appellation du travail de sauvegarde, l’horodatage ainsi que l’état du travail de Sauvegarde (ex : Actif, Non Actif...)
+
   o	Si le travail est actif, les informations enregistrées en plus seront : 
+  
     	•Le nombre total de fichiers éligibles
+	
     	•La taille des fichiers à transférer
+	
      	•La progression
+	
           -Nombre de fichiers restants
+	  
           -Taille des fichiers restants
+	  
           -Adresse complète du fichier Source en cours de sauvegarde
+	  
           -Adresse complète du fichier de destination
+	  
 •	Les fichiers (log journalier et état) et tous les fichiers de configuration seront au format JSON. Afin de permettre une lecture rapide via Notepad, il est nécessaire de mettre des sauts de ligne entre les éléments JSON. Une pagination serait un plus.
 
 Démarrer l’application :
@@ -51,10 +69,15 @@ Démarrer l’application :
 
 
 Auteurs : Groupe 04
+
 TIGAMOUNINE Nadjib
+
 OUCHAOUA Ghiles
+
 KADOUCHE Lydia
+
 MAZOUNI Chiraz
+
 MESBAH Wail
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
