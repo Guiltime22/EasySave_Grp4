@@ -90,7 +90,7 @@ namespace test
             Console.WriteLine("Choisissez le mode d'execution");
             Console.WriteLine("1. Unique                                2. Sequentielle");
             int EXE = Convert.ToInt32(Console.ReadLine());
-            ETAT = "ACTIF";
+            ETAT = "Actif";
             if (EXE == 1)
             {
                 Console.Clear();
@@ -106,8 +106,8 @@ namespace test
                 {
                     try
                     {
-                        SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
-                        ST.Creer_Fichier_Etat(jFile.name, jFile.source_name, jFile.dest_name, ETAT);
+                        SV.CopyRepertoire(jFile.name,jFile.source_name, jFile.dest_name, ETAT);
+                        //ST.Creer_Fichier_Etat(jFile.name, jFile.source_name, jFile.dest_name, ETAT);
                         File.Delete(fileName);
                         Console.Clear();
                         Console.WriteLine("Copie effectuée avec succès !");
@@ -120,8 +120,8 @@ namespace test
                 {
                     try
                     {
-                        SV.CopyRepertoire_Modifier(jFile.source_name, jFile.dest_name);
-                        ST.Creer_Fichier_Etat(jFile.name, jFile.source_name, jFile.dest_name, ETAT);
+                        SV.CopyRepertoire_Modifier(jFile.name,jFile.source_name, jFile.dest_name, ETAT);
+                        //ST.Creer_Fichier_Etat(jFile.name, jFile.source_name, jFile.dest_name, ETAT);
                         File.Delete(fileName);
                         Console.WriteLine("Copie effectuée avec succès !");
                     }
@@ -141,11 +141,11 @@ namespace test
                     JFile jFile = System.Text.Json.JsonSerializer.Deserialize<JFile>(jsonString);
                     if (jFile.type_save == "Complet")
                     {
-                        SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
+                        SV.CopyRepertoire(jFile.name,jFile.source_name, jFile.dest_name, ETAT);
                         File.Delete(file);
                     } else if (jFile.type_save == "Differentiel")
                     {
-                        SV.CopyRepertoire_Modifier(jFile.source_name, jFile.dest_name);
+                        SV.CopyRepertoire_Modifier(jFile.name,jFile.source_name, jFile.dest_name, ETAT);
                         File.Delete(file);
                         Console.Clear();
                     }
