@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.IO;
 
 namespace test
@@ -172,6 +173,14 @@ namespace test
             int Gest = Convert.ToInt32(Console.ReadLine());
             if (Gest == 1)
             {
+                {
+                    Console.Clear();
+                    Langue afficher = new Langue();
+                    afficher.Affichage(); /*Appel fonction */
+
+                    Console.ReadKey();
+                    Console.Clear();
+                }
 
             }
             else if (Gest == 2)

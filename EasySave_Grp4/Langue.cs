@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.IO;
 //using Newtonsoft.Json;
 using static test.Program;
@@ -436,8 +437,57 @@ namespace test
 
 
 
+        public void Affichage()
+
+
+        {
+
+            if (Butter.v == 1)
+
+            {
+                string[] files = Directory.GetFiles(@"..\..\..\Config\Travaux_Sauvegarde", "*.json");
+                Console.WriteLine("Your works: ");
+                foreach (string file in files)
+                {
+                    JFile test = JsonConvert.DeserializeObject<JFile>(File.ReadAllText(file));
+                    Console.WriteLine("╔══════════════════════════════════════════════════════════════════════════════════════╗");
+                    Console.WriteLine("Name :" + test.name);
+                    Console.WriteLine("Source folder :" + test.source_name);
+                    Console.WriteLine("Recipient file :" + test.dest_name);
+                    Console.WriteLine("type of backup:" + test.type_save);
+                    Console.WriteLine("╚══════════════════════════════════════════════════════════════════════════════════════╝");
+                }
+                Console.WriteLine("Press a key to return to the menu.");
+            }
+            else if (Butter.v == 2)
+
+            {
+                string[] files = Directory.GetFiles(@"..\..\..\Config\Travaux_Sauvegarde", "*.json");
+                Console.WriteLine("Vos Travaux : ");
+                foreach (string file in files)
+                {
+                    JFile test = JsonConvert.DeserializeObject<JFile>(File.ReadAllText(file));
+                    Console.WriteLine("╔══════════════════════════════════════════════════════════════════════════════════════╗");
+                    Console.WriteLine("Nom :" + test.name);
+                    Console.WriteLine("Dossier Source :" + test.source_name);
+                    Console.WriteLine("Dossier Destinataire :" + test.dest_name);
+                    Console.WriteLine("Type de Sauvegarde :" + test.type_save);
+                    Console.WriteLine("╚══════════════════════════════════════════════════════════════════════════════════════╝");
+                }
+                Console.WriteLine("Appuyer sur une touche pour revenir au menu.");
+            }
+
+
+
+        }
+        }
+
+
+
+
+
     }
-}
+
 
 
 
