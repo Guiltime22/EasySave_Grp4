@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 //using Newtonsoft.Json;
 using System.Text.Json;
@@ -8,6 +9,7 @@ namespace test
     class Type_Save
     {
         private States ST = new States();
+        private Log LG = new Log();
         public void CopyRepertoire(string name, string src, string dest, string etat)
         {
             // Get the subdirectories for the specified directory.
@@ -29,8 +31,16 @@ namespace test
             FileInfo[] files = dir.GetFiles();
             foreach (FileInfo file in files)
             {
+                Stopwatch stopWatch = new Stopwatch();
+                Stopwatch.StartNew();
+                stopWatch.Start();
                 string tempPath = Path.Combine(dest, file.Name);
                 file.CopyTo(tempPath, true);
+                int tf = Convert.ToInt32(file.Length);
+                int Taille = tf;
+                stopWatch.Stop();
+                TimeSpan ts = stopWatch.Elapsed;
+                LG.Create_Log(file, name, src, dest, ts, Taille);
             }
             /*
             // If copying subdirectories, copy them and their contents to new location.
@@ -63,6 +73,14 @@ namespace test
                             {
                                 sourceFiles[source].CopyTo(Path.Combine(destinationDir.FullName, sourceFiles[source].Name), true);
                                 ST.Creer_Fichier_Etat(name, sourcePath, destinationPath, etat);
+                                Stopwatch stopWatch = new Stopwatch();
+                                Stopwatch.StartNew();
+                                stopWatch.Start();
+                                int tf = Convert.ToInt32(sourceFiles[source].Length);
+                                int Taille = tf;
+                                stopWatch.Stop();
+                                TimeSpan ts = stopWatch.Elapsed;
+                                LG.Create_Log(sourceFiles[source], name, sourcePath, destinationPath, ts, Taille);
 
                             }
                         }

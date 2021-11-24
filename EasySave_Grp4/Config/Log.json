@@ -1,0 +1,34 @@
+[
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\Découpage A3 S5.xlsx",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\Découpage A3 S5.xlsx",
+    "Size": "15242",
+    "Time": "\"Timestamp\": \"11/24/2021 16:41:25\"",
+    "TransitionTime": "00:00:00.0039970"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\Test_copy_copy.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\Test_copy_copy.txt",
+    "Size": "22",
+    "Time": "\"Timestamp\": \"11/24/2021 16:41:25\"",
+    "TransitionTime": "00:00:00.0018543"
+  },
+  {
+    "Name": "Save2",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\Test_copy_copy.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\Test_copy_copy.txt",
+    "Size": "23",
+    "Time": "\"Timestamp\": \"11/24/2021 16:52:58\"",
+    "TransitionTime": "00:00:00.0000120"
+  },
+  {
+    "Name": "Save2",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\Test_copy_copy.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\Test_copy_copy.txt",
+    "Size": "24",
+    "Time": "\"Timestamp\": \"11/24/2021 17:06:10\"",
+    "TransitionTime": "00:00:00.0000124"
+  }
+]
