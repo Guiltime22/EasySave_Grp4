@@ -7,7 +7,8 @@ namespace test
 {
     class Type_Save
     {
-        public void CopyRepertoire(string src, string dest)
+        private States ST = new States();
+        public void CopyRepertoire(string name,string src, string dest,string etat)
         {
             // Get the subdirectories for the specified directory.
             DirectoryInfo dir = new DirectoryInfo(src);
@@ -42,9 +43,9 @@ namespace test
                 }
             }
             */
-
+            ST.Creer_Fichier_Etat(name, src, dest, etat);
         }
-        public void CopyRepertoire_Modifier(string sourcePath, string destinationPath)
+        public void CopyRepertoire_Modifier(string name,string sourcePath, string destinationPath, string etat)
         {
             DirectoryInfo sourceDir = new DirectoryInfo(sourcePath);
             FileInfo[] sourceFiles = sourceDir.GetFiles();
@@ -61,6 +62,8 @@ namespace test
                             if (sourceFiles[source].LastWriteTime > destFiles[destination].LastWriteTime)
                             {
                                 sourceFiles[source].CopyTo(Path.Combine(destinationDir.FullName, sourceFiles[source].Name), true);
+                                ST.Creer_Fichier_Etat(name, sourcePath, destinationPath, etat);
+
                             }
                         }
                     }
