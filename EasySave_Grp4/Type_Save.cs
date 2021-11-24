@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
 using System.IO;
 //using Newtonsoft.Json;
 using System.Text.Json;
@@ -7,7 +10,7 @@ namespace test
 {
     class Type_Save
     {
-        public void CopyRepertoire(string src, string dest)
+        public void CopyRepertoire(string nom_fichier,string src, string dest)
         {
             // Get the subdirectories for the specified directory.
             DirectoryInfo dir = new DirectoryInfo(src);
@@ -28,6 +31,29 @@ namespace test
             FileInfo[] files = dir.GetFiles();
             foreach (FileInfo file in files)
             {
+                int tf = Convert.ToInt32(file.Length);
+                int Taille = tf;
+                var Temps = new JProperty("Timestamp", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+                var jsonDataWork = File.ReadAllText(LogFile.filepath);
+                var File_Var = new LogFile
+                {
+                    Name = nom_fichier,
+                    SourceFilePath = src +"\\"+ file.Name,
+                    TargetFilePath = dest +"\\"+ file.Name,
+                    Size = Convert.ToString(Taille),
+                    Time = Convert.ToString(Temps)
+                };
+               var workList = JsonConvert.DeserializeObject<List<LogFile>>(jsonDataWork) ?? new List<LogFile>();
+             workList.Add(new LogFile()
+             {
+                 Name = nom_fichier,
+                 SourceFilePath = src + "\\" + file.Name,
+                 TargetFilePath = dest + "\\" + file.Name,
+                 Size = Convert.ToString(Taille),
+                 Time = Convert.ToString(Temps)
+             });
+             string jsonString = JsonConvert.SerializeObject(workList,Formatting.Indented);
+             File.WriteAllText(LogFile.filepath, jsonString);
                 string tempPath = Path.Combine(dest, file.Name);
                 file.CopyTo(tempPath, true);
             }

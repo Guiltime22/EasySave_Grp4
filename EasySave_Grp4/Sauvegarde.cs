@@ -88,6 +88,18 @@ namespace test
             if (EXE == 1)
             {
                 Console.Clear();
+                string[] files = Directory.GetFiles(@"..\..\..\Config\Travaux_Sauvegarde", "*.json");
+                Console.WriteLine("Vos Travaux : ");
+                foreach (string file in files)
+                {
+                    JFile test = JsonConvert.DeserializeObject<JFile>(File.ReadAllText(file));
+                    Console.WriteLine("╔══════════════════════════════════════════════════════════════════════════════════════╗");
+                    Console.WriteLine("Nom :" + test.name);
+                    Console.WriteLine("Dossier Source :" + test.source_name);
+                    Console.WriteLine("Dossier Destinataire :" + test.dest_name);
+                    Console.WriteLine("Type de Sauvegarde :" + test.type_save);
+                    Console.WriteLine("╚══════════════════════════════════════════════════════════════════════════════════════╝");
+                }
                 Console.WriteLine("Veuillez saisir le nom du travail de sauvegarde");
                 try
                 {
@@ -98,7 +110,7 @@ namespace test
                     if (jFile.type_save == "Complet")
                     {
 
-                        SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
+                        SV.CopyRepertoire(nom_fichier,jFile.source_name, jFile.dest_name);
                         File.Delete(fileName);
                         Console.Clear();
                         Console.WriteLine("Copie effectué avec succès !");
@@ -131,7 +143,8 @@ namespace test
                     JFile jFile = System.Text.Json.JsonSerializer.Deserialize<JFile>(jsonString);
                     if (jFile.type_save == "Complet")
                     {
-                        SV.CopyRepertoire(jFile.source_name, jFile.dest_name);
+                        string nom_fichier = jFile.name;
+                        SV.CopyRepertoire(nom_fichier, jFile.source_name, jFile.dest_name);
                         File.Delete(file);
                     }
                     else if (jFile.type_save == "Differentiel")
