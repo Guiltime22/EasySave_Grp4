@@ -40,7 +40,6 @@ namespace test
                         Console.Clear();
                         Langue introuvable = new Langue();
                         introuvable.Dossier_introuvable();  /* appel  fonction */
-
                         Environment.Exit(0);
                     }
                     Langue destination = new Langue();
@@ -77,6 +76,7 @@ namespace test
                 Langue enregistre = new Langue();
                 enregistre.Travail_enregistre();  /* appel  fonction */
 
+
             }
             else
             {
@@ -84,7 +84,7 @@ namespace test
 
                 Langue limite = new Langue();
                 limite.Limite();  /* appel  fonction */
-                Environment.Exit(0);
+                return;
             }
             return;
         }
@@ -131,7 +131,8 @@ namespace test
                     Console.Clear();
 
                     Langue introuvable = new Langue();
-                    introuvable.Travail_introuvable();  /* appel  fonction */                     Environment.Exit(0);
+                    introuvable.Travail_introuvable();  /* appel  fonction */
+                    Environment.Exit(0);
                 }
             }
             if (EXE == 2)
@@ -192,6 +193,7 @@ namespace test
                     }
                     catch
                     {
+                        Console.Clear();
                         Langue introuvable1 = new Langue();
                         introuvable1.Travail_introuvable();  /* appel  fonction */
                         Environment.Exit(0);
@@ -205,24 +207,24 @@ namespace test
                 Langue supptr = new Langue();
                 supptr.Supprimer();  /* appel  fonction */
 
-                string supp = Console.ReadLine();
-                string f = @"..\..\..\Config\Travaux_Sauvegarde\" + supp + ".json";
+                string suppp = Console.ReadLine();
+                string f = @"..\..\..\Config\Travaux_Sauvegarde\" + suppp + ".json";
                 try
                 {
                     File.Delete(f);
-                    Console.Clear();
-                    Langue suppt = new Langue();
-                    suppt.Supprimer_Terminer();  /* appel  fonction */
+
+                    Langue supprfin = new Langue();
+                    supprfin.Supprimer_Terminer();  /* appel  fonction */
                     Environment.Exit(0);
+
                 }
                 catch
                 {
+                    Console.Clear();
 
                     Langue introuvable2 = new Langue();
                     introuvable2.Travail_introuvable();  /* appel  fonction */
                     Environment.Exit(0);
-
-
 
                 }
 

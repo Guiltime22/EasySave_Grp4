@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.IO;
 //using Newtonsoft.Json;
-using System.Text.Json;
 using static test.Program;
-using static test.Sauvegarde;
 
 namespace test
 {
@@ -317,6 +313,8 @@ namespace test
             }
 
         }
+
+
 
         public void Complet()
 
