@@ -13,4 +13,6 @@
     <Folder Include="Config\Travaux_Sauvegarde\" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
+
 </Project>
