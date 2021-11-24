@@ -9,7 +9,7 @@ namespace test
 {
     class Log
     {
-        public void Create_Log(FileInfo name,string nom_fichier, string src, string dest, TimeSpan ts, int Taille)
+        public void Create_Log(FileInfo name,string nom_fichier, string src, string dest, TimeSpan ts, int Taille) //Function to create a log into the log file for the work
         {
             var Temps = new JProperty("Timestamp", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
             var jsonDataWork = File.ReadAllText(LogFile.filepath);

@@ -3,14 +3,13 @@ using System.Diagnostics;
 using System.IO;
 //using Newtonsoft.Json;
 using System.Text.Json;
+using static test.Program;
 
 namespace test
 {
     class Type_Save
     {
-        private States ST = new States();
-        private Log LG = new Log();
-        public void CopyRepertoire(string name, string src, string dest, string etat)
+        public void CopyRepertoire(string name, string src, string dest, string etat) //Function to copy the files completly
         {
             // Get the subdirectories for the specified directory.
             DirectoryInfo dir = new DirectoryInfo(src);
@@ -40,47 +39,37 @@ namespace test
                 int Taille = tf;
                 stopWatch.Stop();
                 TimeSpan ts = stopWatch.Elapsed;
-                LG.Create_Log(file, name, src, dest, ts, Taille);
+                Butter.LG.Create_Log(file, name, src, dest, ts, Taille); //Function to create a log in log file
             }
-            /*
-            // If copying subdirectories, copy them and their contents to new location.
-            if (copySubDirs)
-            {
-                foreach (DirectoryInfo subdir in dirs)
-                {
-                    string tempPath = Path.Combine(dest, subdir.Name);
-                    CopyRepertoire(subdir.FullName, tempPath, copySubDirs);
-                }
-            }
-            */
-            ST.Creer_Fichier_Etat(name, src, dest, etat);
+     
+            Butter.ST.Creer_Fichier_Etat(name, src, dest, etat); //Function to create a state into the state file for the work
         }
-        public void CopyRepertoire_Modifier(string name, string sourcePath, string destinationPath, string etat)
+        public void CopyRepertoire_Modifier(string name, string sourcePath, string destinationPath, string etat)  //Function to copy the files differential
         {
-            DirectoryInfo sourceDir = new DirectoryInfo(sourcePath);
-            FileInfo[] sourceFiles = sourceDir.GetFiles();
-            for (int source = 0; source < sourceFiles.Length; source++)
+            DirectoryInfo sourceDir = new DirectoryInfo(sourcePath); //Get the informations of the directory source
+            FileInfo[] sourceFiles = sourceDir.GetFiles(); //Get files from the directory source
+            for (int source = 0; source < sourceFiles.Length; source++) 
             {
-                DirectoryInfo destinationDir = new DirectoryInfo(destinationPath);
-                FileInfo[] destFiles = destinationDir.GetFiles();
+                DirectoryInfo destinationDir = new DirectoryInfo(destinationPath); //Get the informations of the directory destination
+                FileInfo[] destFiles = destinationDir.GetFiles(); //Get files from the directory destination
                 for (int destination = 0; destination < destFiles.Length; destination++)
                 {
                     if (File.Exists(Path.Combine(destinationPath, sourceFiles[source].Name)))
                     {
-                        if (sourceFiles[source].Name == destFiles[destination].Name)
+                        if (sourceFiles[source].Name == destFiles[destination].Name) //Check if the exist in both the directories
                         {
-                            if (sourceFiles[source].LastWriteTime > destFiles[destination].LastWriteTime)
+                            if (sourceFiles[source].LastWriteTime > destFiles[destination].LastWriteTime) //Check the WriteTime of the both files 
                             {
-                                sourceFiles[source].CopyTo(Path.Combine(destinationDir.FullName, sourceFiles[source].Name), true);
-                                ST.Creer_Fichier_Etat(name, sourcePath, destinationPath, etat);
-                                Stopwatch stopWatch = new Stopwatch();
-                                Stopwatch.StartNew();
-                                stopWatch.Start();
+                                sourceFiles[source].CopyTo(Path.Combine(destinationDir.FullName, sourceFiles[source].Name), true); //Execute the copy
+                                Butter.ST.Creer_Fichier_Etat(name, sourcePath, destinationPath, etat); 
+                                Stopwatch stopWatch = new Stopwatch(); //Instance the Timer
+                                Stopwatch.StartNew(); //Reset the Timer
+                                stopWatch.Start(); //Begin the Timer
                                 int tf = Convert.ToInt32(sourceFiles[source].Length);
                                 int Taille = tf;
-                                stopWatch.Stop();
+                                stopWatch.Stop(); //Stop the Timer
                                 TimeSpan ts = stopWatch.Elapsed;
-                                LG.Create_Log(sourceFiles[source], name, sourcePath, destinationPath, ts, Taille);
+                                Butter.LG.Create_Log(sourceFiles[source], name, sourcePath, destinationPath, ts, Taille); //Function to create a log in log file
 
                             }
                         }

@@ -6,73 +6,58 @@ namespace test
 {
     class Program
     {
-        static string path = @"..\..\..\Config\Travaux_Sauvegarde\";
-
+        static string path = @"..\..\..\Config\Travaux_Sauvegarde\"; //Folder where the works are
         public class Butter
         {
             public static int v;
+            static public Langue LGUE = new Langue(); // Instance to use class Langue
+            static public States ST = new States(); // Instance to use class States
+            static public Log LG = new Log(); // Instance to use class Log
+            static public Type_Save SV = new Type_Save(); // Instance to use class Type_Save
         }
 
-
-        static void Main(string[] args)
+        static void Main(string[] args) // the main function
         {
             Console.Clear();
-
-            Console.WriteLine("Choisisez la langue.");
-            Console.WriteLine("1.Anglais                 2.Francais");
-            Butter.v = Convert.ToInt32(Console.ReadLine());
-
-
+            Console.WriteLine("Choisisez la langue / Choose your language"); //Choosing the language of the application
+            Console.WriteLine("1.Anglais/English                 2.Français/French");
+            Butter.v = Convert.ToInt32(Console.ReadLine()); // Input of the User
 
             while (true)
             {
-
                 Console.Clear();
-
                 int nbFichiersSD = Directory.GetFiles(path, "*.*", SearchOption.TopDirectoryOnly).Length;
+                Sauvegarde SV = new Sauvegarde(); //Instance to use class sauvegarde
+                Butter.LGUE.Welcome(); /* Calling a function */
+                int Input = Convert.ToInt32(Console.ReadLine()); //Input of the User
 
-                Sauvegarde SV = new Sauvegarde();
-
-
-
-                Langue lan = new Langue();
-                lan.Welcome(); /* appel  fonction */
-
-
-                int Input = Convert.ToInt32(Console.ReadLine());
-
-                if (Input == 1)
+                if (Input == 1) //choice of the creation
                 {
                     Console.Clear();
-
-
-                    Langue tra = new Langue();
-                    tra.Traveaux();  /* appel  fonction */
-
-                    int choice = Convert.ToInt32(Console.ReadLine());
+                    Butter.LGUE.Traveaux();  /* Calling a function */
+                    int choice = Convert.ToInt32(Console.ReadLine()); // Input of the User
                     if (choice + nbFichiersSD <= 5)
                     {
-                        SV.Create_Travail_Sauvegarde(choice, nbFichiersSD);
+                        SV.Create_Travail_Sauvegarde(choice, nbFichiersSD); //function of creation 
                     }
                     else
                     {
-                        Langue slot = new Langue();
-                        slot.nbslots();  /* appel  fonction */
+                        Butter.LGUE.nbslots();  /* Calling a function */
                         Environment.Exit(0);
                     }
 
                 }
-                else if (Input == 2)
+                else if (Input == 2) //choice of the execution
                 {
                     Console.Clear();
-                    SV.Execute_Travail_Sauvegarde();
+                    SV.Execute_Travail_Sauvegarde(); //function of execution
                 }
-                else if (Input == 3)
+                else if (Input == 3) //choice of gestion
                 {
                     Console.Clear();
-                    SV.Gestion_Travail_Sauvegarde(nbFichiersSD);
+                    SV.Gestion_Travail_Sauvegarde(nbFichiersSD); //function of gestion
                 }
-                else if (Input == 4)
+                else if (Input == 4) //Close the application
                 {
                     Console.Clear();
                     Console.WriteLine("BYE BYE");
@@ -80,8 +65,7 @@ namespace test
                 }
                 else
                 {
-                    Langue choix = new Langue();
-                    choix.Choix();  /* appel  fonction */
+                    Butter.LGUE.Choix();  /* Calling a function */
                     Environment.Exit(0);
                 }
             }

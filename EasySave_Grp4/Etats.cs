@@ -22,12 +22,12 @@ namespace test
     }
     class States
     {
-        public void Creer_Fichier_Etat(string nom_fichier, string source, string destination, string ETAT)
+        public void Creer_Fichier_Etat(string nom_fichier, string source, string destination, string ETAT) //Function to create a state into the state file for the work
         {
             int Taille = 0;
             int TotalFichiersACopier = Directory.GetFiles(source, "*.*", SearchOption.TopDirectoryOnly).Length;
             int TotalFichiersDestination = Directory.GetFiles(destination, "*.*", SearchOption.TopDirectoryOnly).Length;
-            int TotalFichiersRestants = TotalFichiersACopier - TotalFichiersDestination;
+            int TotalFichiersRestants = TotalFichiersACopier - TotalFichiersDestination; //To calculate the remaining files
 
             DirectoryInfo dir = new DirectoryInfo(source);
             DirectoryInfo[] dirs = dir.GetDirectories();
@@ -35,10 +35,10 @@ namespace test
             foreach (FileInfo file in files)
             {
                 int tf = Convert.ToInt32(file.Length);
-                Taille = Taille + tf;
+                Taille = Taille + tf; //The size of the file
             }
-            float Progress = (TotalFichiersDestination / TotalFichiersACopier) * 100;
-            var Temps = new JProperty("Timestamp", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+            float Progress = (TotalFichiersDestination / TotalFichiersACopier) * 100; //To calculate the progress of the copy
+            var Temps = new JProperty("Timestamp", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss")); //To set the time of the copy
             var jsonDataWork = File.ReadAllText(State_File.fileName);
             var workList = JsonConvert.DeserializeObject<List<State_File>>(jsonDataWork) ?? new List<State_File>();
             workList.Add(new State_File()
@@ -53,44 +53,10 @@ namespace test
                 Progression = Convert.ToString(Progress) + "%",
                 Time = Convert.ToString(Temps)
             });
-            //string fileName = @"..\..\..\Config\Etats.json";
+            
             string jsonString = JsonConvert.SerializeObject(workList, Formatting.Indented);
             File.WriteAllText(State_File.fileName, jsonString);
-            /* var File_Var= new State_File
-           {
-               Name = nom_fichier,
-               SourceFilePath = source,
-               TargetFilePath = destination,
-               State = ETAT,
-               TotalFilesToCopy = Convert.ToString(TotalFichiersACopier),
-               TotalFilesSize = Convert.ToString(Taille),
-               NbFilesLeftToDo = Convert.ToString(TotalFichiersRestants),
-               Progression = Convert.ToString(Progress) + "%",
-               Time = Convert.ToString(Temps)
-           };
-          /* string fileName = @"..\..\..\Config\Travaux_Sauvegarde\" + name + ".json";
-           string jsonString = System.Text.Json.JsonSerializer.Serialize(jFile);
-           ETAT = "Inactif";
-           File.WriteAllText(fileName, jsonString);*/
 
-        }
-        public void Modifier_Fichier_Etat(string nom_fichier, string source, string destination, string ETAT)
-        {
-            State_File SF = new State_File();
-            int TotalFichiersACopier = Directory.GetFiles(source, "*.*", SearchOption.TopDirectoryOnly).Length;
-            int TotalFichiersDestination = Directory.GetFiles(destination, "*.*", SearchOption.TopDirectoryOnly).Length;
-            int TotalFichiersRestants = TotalFichiersACopier - TotalFichiersDestination;
-            var jsonDataWork = File.ReadAllText(State_File.fileName);
-            var workList = JsonConvert.DeserializeObject<List<State_File>>(jsonDataWork) ?? new List<State_File>();
-            float Progress = (TotalFichiersDestination / TotalFichiersACopier) * 100;
-
-            workList[3].State = ETAT;
-            workList[6].NbFilesLeftToDo = Convert.ToString(TotalFichiersRestants);
-            workList[7].Progression = Convert.ToString(Progress);
-
-            //string fileName = @"..\..\..\Config\Etats.json";
-            string jsonString = JsonConvert.SerializeObject(workList, Formatting.Indented);
-            File.WriteAllText(State_File.fileName, jsonString);
         }
     }
 }
