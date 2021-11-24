@@ -1,21 +1,31 @@
 Contexte :
 Après notre intégration à l'éditeur de logiciels ProSoft, sous la responsabilité du DSI, nous avons été responsabilisés à gérer le projet "EasySave" qui demande le développement d'un logiciel de sauvegarde.
+
 Le logiciel s'intégrera à la politique tarifaire.
+
 •	Prix unitaire : 200 €HT
+
 •	Contrat de maintenance annuel 5/7 8-17h (mises à jour incluses): 12% prix d'achat (Contrat annuel à tacite reconduction avec revalorisation basée sur l'indice SYNTEC)
 Nous avons eu comme mission d'assurer le développement ainsi que la gestion des versions majeures, mais également les documentations pour les utilisateurs (manuel d'utilisation) et le support client (le rapport technique).
 
 Installation : 
+
 •	Visual Studio 2019 (entreprise version)
+
 •	Visual Paradigm (Pour les diagrammes UML) 
+
 •	Github
 
 Langage, FrameWork :
+
 •	Langage C#
+
 •	Bibliothèque Net.Core 3.X
 
 EasySave Version 1.0 : 
+
 Dans cette première version notre logiciel est réalisé en ligne de console sans interface graphique.
+
 •	Le logiciel est utilisé par des utilisateurs anglophones et francophones.
 •	Le logiciel permet de créer jusqu’à 5 travaux de sauvegarde.
 •	Un travail est défini par : 
