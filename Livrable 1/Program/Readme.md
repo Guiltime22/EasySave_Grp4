@@ -4,6 +4,7 @@ Après notre intégration à l'éditeur de logiciels ProSoft, sous la responsabi
 Le logiciel s'intégrera à la politique tarifaire.
 
 •	Prix unitaire : 200 €HT
+
 •	Contrat de maintenance annuel 5/7 8-17h (mises à jour incluses): 12% prix d'achat (Contrat annuel à tacite reconduction avec revalorisation basée sur l'indice SYNTEC)
 Nous avons eu comme mission d'assurer le développement ainsi que la gestion des versions majeures, mais également les documentations pour les utilisateurs (manuel d'utilisation) et le support client (le rapport technique).
 
