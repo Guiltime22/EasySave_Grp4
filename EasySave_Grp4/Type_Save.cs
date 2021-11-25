@@ -41,7 +41,15 @@ namespace test
                 TimeSpan ts = stopWatch.Elapsed;
                 Butter.LG.Create_Log(file, name, src, dest, ts, Taille); //Function to create a log in log file
             }
-     
+            DirectoryInfo diSource = new DirectoryInfo(src);
+            DirectoryInfo diTarget = new DirectoryInfo(dest);
+
+            foreach (DirectoryInfo diSourceSubDir in diSource.GetDirectories()) //Check the subdirectories
+            {
+                DirectoryInfo nextTargetSubDir =
+                    diTarget.CreateSubdirectory(diSourceSubDir.Name);
+                    CopyRepertoire(name, Convert.ToString(diSourceSubDir), Convert.ToString(nextTargetSubDir), etat);
+            }
             Butter.ST.Creer_Fichier_Etat(name, src, dest, etat); //Function to create a state into the state file for the work
         }
         public void CopyRepertoire_Modifier(string name, string sourcePath, string destinationPath, string etat)  //Function to copy the files differential
