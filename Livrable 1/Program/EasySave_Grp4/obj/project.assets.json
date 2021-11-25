@@ -54,11 +54,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ghile\\Source\\Repos\\Guiltime22\\EasySave_Grp4\\EasySave_Grp4\\EasySave_Grp4.csproj",
+      "projectUniqueName": "C:\\Users\\ghile\\Source\\Repos\\Guiltime22\\EasySave_Grp4\\Livrable 1\\Program\\EasySave_Grp4\\EasySave_Grp4.csproj",
       "projectName": "EasySave_Grp4",
-      "projectPath": "C:\\Users\\ghile\\Source\\Repos\\Guiltime22\\EasySave_Grp4\\EasySave_Grp4\\EasySave_Grp4.csproj",
+      "projectPath": "C:\\Users\\ghile\\Source\\Repos\\Guiltime22\\EasySave_Grp4\\Livrable 1\\Program\\EasySave_Grp4\\EasySave_Grp4.csproj",
       "packagesPath": "C:\\Users\\ghile\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ghile\\Source\\Repos\\Guiltime22\\EasySave_Grp4\\EasySave_Grp4\\obj\\",
+      "outputPath": "C:\\Users\\ghile\\Source\\Repos\\Guiltime22\\EasySave_Grp4\\Livrable 1\\Program\\EasySave_Grp4\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
