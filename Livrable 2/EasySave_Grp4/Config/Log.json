@@ -1,0 +1,58 @@
+[
+  {
+    "Name": "QWERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3 2021-22 FISE info - Référentiel évalutions Cycle Ingénieur.pdf",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3 2021-22 FISE info - Référentiel évalutions Cycle Ingénieur.pdf",
+    "Size": "457065",
+    "Time": "\"Timestamp\": \"12/02/2021 22:32:29\"",
+    "TransitionTime": "00:00:00.0086686"
+  },
+  {
+    "Name": "QWERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_ArchitectureSIEtAnnuaires.xlsx",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_ArchitectureSIEtAnnuaires.xlsx",
+    "Size": "9168",
+    "Time": "\"Timestamp\": \"12/02/2021 22:32:29\"",
+    "TransitionTime": "00:00:00.0039848"
+  },
+  {
+    "Name": "QWERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_Cryptographie.xlsx",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_Cryptographie.xlsx",
+    "Size": "9041",
+    "Time": "\"Timestamp\": \"12/02/2021 22:32:29\"",
+    "TransitionTime": "00:00:00.0040158"
+  },
+  {
+    "Name": "QWERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_InteractionsSystemes.xlsx",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_InteractionsSystemes.xlsx",
+    "Size": "9051",
+    "Time": "\"Timestamp\": \"12/02/2021 22:32:29\"",
+    "TransitionTime": "00:00:00.1686425"
+  },
+  {
+    "Name": "QWERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_SecuriteEtFiltrage.xlsx",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_SecuriteEtFiltrage.xlsx",
+    "Size": "9280",
+    "Time": "\"Timestamp\": \"12/02/2021 22:32:29\"",
+    "TransitionTime": "00:00:00.0037467"
+  },
+  {
+    "Name": "QWERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\Diagramme_De_Classe_Groupe4",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\Diagramme_De_Classe_Groupe4",
+    "Size": "127195",
+    "Time": "\"Timestamp\": \"12/02/2021 22:32:29\"",
+    "TransitionTime": "00:00:00.0041063"
+  },
+  {
+    "Name": "QWERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\kadouche-lydia-tomic-a3-14-09-2021.pdf",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\kadouche-lydia-tomic-a3-14-09-2021.pdf",
+    "Size": "6961264",
+    "Time": "\"Timestamp\": \"12/02/2021 22:32:29\"",
+    "TransitionTime": "00:00:00.0103830"
+  }
+]
