@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasySave_Grp4", "EasySave_Grp4\EasySave_Grp4.csproj", "{7C884C31-C31C-40A5-B78C-A9F3F5731954}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easy_Save_GRP04", "Easy_Save_GRP04\Easy_Save_GRP04.csproj", "{60DF061A-ED0C-44AE-99EB-850C42B2FB10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7C884C31-C31C-40A5-B78C-A9F3F5731954}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C884C31-C31C-40A5-B78C-A9F3F5731954}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C884C31-C31C-40A5-B78C-A9F3F5731954}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C884C31-C31C-40A5-B78C-A9F3F5731954}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60DF061A-ED0C-44AE-99EB-850C42B2FB10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60DF061A-ED0C-44AE-99EB-850C42B2FB10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60DF061A-ED0C-44AE-99EB-850C42B2FB10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60DF061A-ED0C-44AE-99EB-850C42B2FB10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A7E1A4B6-2316-4F62-938C-42870157724E}
+		SolutionGuid = {893A848E-9A90-49F1-BA8E-4C2BAFC1305D}
 	EndGlobalSection
 EndGlobal

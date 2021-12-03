@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Livrable 1\\Program\\EasySave_Grp4",
+    "\\Livrable 2",
+    "\\Livrable 2\\EasySave_Grp4",
+    "\\Livrable 2\\EasySave_Grp4\\Model",
+    "\\Livrable 2\\EasySave_Grp4\\ModelView"
   ],
+  "SelectedNode": "\\Livrable 2\\EasySave_Grp4\\Model\\Etats.cs",
   "PreviewInSolutionExplorer": false
 }
