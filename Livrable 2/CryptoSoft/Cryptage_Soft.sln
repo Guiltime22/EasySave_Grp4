@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryptage_Soft", "Cryptage_Soft.csproj", "{E2FCDEAC-57D6-430E-A316-22E1AE9EDDEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2FCDEAC-57D6-430E-A316-22E1AE9EDDEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2FCDEAC-57D6-430E-A316-22E1AE9EDDEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2FCDEAC-57D6-430E-A316-22E1AE9EDDEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2FCDEAC-57D6-430E-A316-22E1AE9EDDEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1D9D22E-6284-4421-91DF-5E68804DBC3C}
+	EndGlobalSection
+EndGlobal

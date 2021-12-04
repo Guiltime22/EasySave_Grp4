@@ -1,0 +1,48 @@
+C:\Users\ghile\Desktop\EasySave_GRP4\bin\Debug\netcoreapp3.0\EasySave_GRP4.exe
+C:\Users\ghile\Desktop\EasySave_GRP4\bin\Debug\netcoreapp3.0\EasySave_GRP4.deps.json
+C:\Users\ghile\Desktop\EasySave_GRP4\bin\Debug\netcoreapp3.0\EasySave_GRP4.runtimeconfig.json
+C:\Users\ghile\Desktop\EasySave_GRP4\bin\Debug\netcoreapp3.0\EasySave_GRP4.runtimeconfig.dev.json
+C:\Users\ghile\Desktop\EasySave_GRP4\bin\Debug\netcoreapp3.0\EasySave_GRP4.dll
+C:\Users\ghile\Desktop\EasySave_GRP4\bin\Debug\netcoreapp3.0\EasySave_GRP4.pdb
+C:\Users\ghile\Desktop\EasySave_GRP4\obj\Debug\netcoreapp3.0\EasySave_GRP4.csprojAssemblyReference.cache
+C:\Users\ghile\Desktop\EasySave_GRP4\obj\Debug\netcoreapp3.0\App.g.cs
+C:\Users\ghile\Desktop\EasySave_GRP4\obj\Debug\netcoreapp3.0\EasySave_GRP4_MarkupCompile.cache
+C:\Users\ghile\Desktop\EasySave_GRP4\obj\Debug\netcoreapp3.0\EasySave_GRP4_MarkupCompile.lref
+C:\Users\ghile\Desktop\EasySave_GRP4\obj\Debug\netcoreapp3.0\EasySave_GRP4.g.resources
+C:\Users\ghile\Desktop\EasySave_GRP4\obj\Debug\netcoreapp3.0\EasySave_GRP4.AssemblyInfoInputs.cache
+C:\Users\ghile\Desktop\EasySave_GRP4\obj\Debug\netcoreapp3.0\EasySave_GRP4.AssemblyInfo.cs
+C:\Users\ghile\Desktop\EasySave_GRP4\obj\Debug\netcoreapp3.0\EasySave_GRP4.dll
+C:\Users\ghile\Desktop\EasySave_GRP4\obj\Debug\netcoreapp3.0\EasySave_GRP4.pdb
+C:\Users\ghile\Desktop\EasySave_GRP4\obj\Debug\netcoreapp3.0\View\CreateSave.g.cs
+C:\Users\ghile\Desktop\EasySave_GRP4\obj\Debug\netcoreapp3.0\View\MainWindow.g.cs
+C:\Users\ghile\Desktop\EasySave_GRP4\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\ghile\Desktop\EasySave_GRP4\obj\Debug\netcoreapp3.0\View\CreateSave.baml
+C:\Users\ghile\Desktop\EasySave_GRP4\obj\Debug\netcoreapp3.0\View\MainWindow.baml
+C:\Users\ghile\Desktop\EasySave_GRP4\obj\Debug\netcoreapp3.0\EasySave_GRP4.csproj.CopyComplete
+C:\Users\ghile\Desktop\EasySave_GRP4\bin\Debug\netcoreapp3.0\Ookii.Dialogs.Wpf.dll
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\bin\Debug\netcoreapp3.0\EasySave_GRP4.exe
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\bin\Debug\netcoreapp3.0\EasySave_GRP4.deps.json
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\bin\Debug\netcoreapp3.0\EasySave_GRP4.runtimeconfig.json
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\bin\Debug\netcoreapp3.0\EasySave_GRP4.runtimeconfig.dev.json
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\bin\Debug\netcoreapp3.0\EasySave_GRP4.dll
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\bin\Debug\netcoreapp3.0\EasySave_GRP4.pdb
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\bin\Debug\netcoreapp3.0\Ookii.Dialogs.Wpf.dll
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\obj\Debug\netcoreapp3.0\EasySave_GRP4.csprojAssemblyReference.cache
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\obj\Debug\netcoreapp3.0\View\CreateSave.g.cs
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\obj\Debug\netcoreapp3.0\View\MainWindow.g.cs
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\obj\Debug\netcoreapp3.0\App.g.cs
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\obj\Debug\netcoreapp3.0\EasySave_GRP4_MarkupCompile.cache
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\obj\Debug\netcoreapp3.0\EasySave_GRP4_MarkupCompile.lref
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\obj\Debug\netcoreapp3.0\View\CreateSave.baml
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\obj\Debug\netcoreapp3.0\View\MainWindow.baml
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\obj\Debug\netcoreapp3.0\EasySave_GRP4.g.resources
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\obj\Debug\netcoreapp3.0\EasySave_GRP4.AssemblyInfoInputs.cache
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\obj\Debug\netcoreapp3.0\EasySave_GRP4.AssemblyInfo.cs
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\obj\Debug\netcoreapp3.0\EasySave_GRP4.csproj.CopyComplete
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\obj\Debug\netcoreapp3.0\EasySave_GRP4.dll
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\obj\Debug\netcoreapp3.0\EasySave_GRP4.pdb
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\obj\Debug\netcoreapp3.0\View\ExecuteSave.g.cs
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\obj\Debug\netcoreapp3.0\View\ExecuteSave.baml
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\obj\Debug\netcoreapp3.0\View\Parametres.g.cs
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\EasySave_GRP4\obj\Debug\netcoreapp3.0\View\Parametres.baml

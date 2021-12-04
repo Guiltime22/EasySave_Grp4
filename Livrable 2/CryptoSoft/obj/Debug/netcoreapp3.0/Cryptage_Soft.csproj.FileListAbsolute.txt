@@ -1,0 +1,22 @@
+C:\Users\DELL\source\repos\Cryptage_Soft\bin\Debug\netcoreapp3.0\Cryptage_Soft.exe
+C:\Users\DELL\source\repos\Cryptage_Soft\bin\Debug\netcoreapp3.0\Cryptage_Soft.deps.json
+C:\Users\DELL\source\repos\Cryptage_Soft\bin\Debug\netcoreapp3.0\Cryptage_Soft.runtimeconfig.json
+C:\Users\DELL\source\repos\Cryptage_Soft\bin\Debug\netcoreapp3.0\Cryptage_Soft.runtimeconfig.dev.json
+C:\Users\DELL\source\repos\Cryptage_Soft\bin\Debug\netcoreapp3.0\Cryptage_Soft.dll
+C:\Users\DELL\source\repos\Cryptage_Soft\bin\Debug\netcoreapp3.0\Cryptage_Soft.pdb
+C:\Users\DELL\source\repos\Cryptage_Soft\obj\Debug\netcoreapp3.0\Cryptage_Soft.csprojAssemblyReference.cache
+C:\Users\DELL\source\repos\Cryptage_Soft\obj\Debug\netcoreapp3.0\Cryptage_Soft.AssemblyInfoInputs.cache
+C:\Users\DELL\source\repos\Cryptage_Soft\obj\Debug\netcoreapp3.0\Cryptage_Soft.AssemblyInfo.cs
+C:\Users\DELL\source\repos\Cryptage_Soft\obj\Debug\netcoreapp3.0\Cryptage_Soft.dll
+C:\Users\DELL\source\repos\Cryptage_Soft\obj\Debug\netcoreapp3.0\Cryptage_Soft.pdb
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\CryptoSoft\bin\Debug\netcoreapp3.0\Cryptage_Soft.exe
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\CryptoSoft\bin\Debug\netcoreapp3.0\Cryptage_Soft.deps.json
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\CryptoSoft\bin\Debug\netcoreapp3.0\Cryptage_Soft.runtimeconfig.json
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\CryptoSoft\bin\Debug\netcoreapp3.0\Cryptage_Soft.runtimeconfig.dev.json
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\CryptoSoft\bin\Debug\netcoreapp3.0\Cryptage_Soft.dll
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\CryptoSoft\bin\Debug\netcoreapp3.0\Cryptage_Soft.pdb
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\CryptoSoft\obj\Debug\netcoreapp3.0\Cryptage_Soft.csprojAssemblyReference.cache
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\CryptoSoft\obj\Debug\netcoreapp3.0\Cryptage_Soft.AssemblyInfoInputs.cache
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\CryptoSoft\obj\Debug\netcoreapp3.0\Cryptage_Soft.AssemblyInfo.cs
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\CryptoSoft\obj\Debug\netcoreapp3.0\Cryptage_Soft.dll
+C:\Users\ghile\source\repos\Guiltime22\EasySave_Grp4\Livrable 2\CryptoSoft\obj\Debug\netcoreapp3.0\Cryptage_Soft.pdb

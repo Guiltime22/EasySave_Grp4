@@ -1,0 +1,46 @@
+[
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination",
+    "State": "Inactif",
+    "TotalFilesToCopy": "3",
+    "TotalFilesSize": "1594848",
+    "NbFilesLeftToDo": "3",
+    "Progression": "0%",
+    "Time": "\"Timestamp\": \"12/04/2021 00:59:38\""
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\test",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\test",
+    "State": "Actif",
+    "TotalFilesToCopy": "2",
+    "TotalFilesSize": "2451",
+    "NbFilesLeftToDo": "0",
+    "Progression": "100%",
+    "Time": "\"Timestamp\": \"12/04/2021 00:59:47\""
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination",
+    "State": "Actif",
+    "TotalFilesToCopy": "3",
+    "TotalFilesSize": "1594848",
+    "NbFilesLeftToDo": "0",
+    "Progression": "100%",
+    "Time": "\"Timestamp\": \"12/04/2021 00:59:47\""
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination",
+    "State": "Inactif",
+    "TotalFilesToCopy": "3",
+    "TotalFilesSize": "1594848",
+    "NbFilesLeftToDo": "3",
+    "Progression": "0%",
+    "Time": "\"Timestamp\": \"12/04/2021 01:11:08\""
+  }
+]

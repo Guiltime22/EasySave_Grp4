@@ -1,0 +1,18 @@
+﻿<Window x:Class="EasySave_GRP4.View.ExecuteSave"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EasySave_GRP4.View"
+        mc:Ignorable="d"
+        Title="ExecuteTravail" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <DataGrid Name="Aff_Data"  Margin="10,10,10,217" LoadingRow="DataGrid_LoadingRow"/>
+        <Label Content="Nom :" HorizontalAlignment="Left" Margin="51,269,0,0" VerticalAlignment="Top" Width="50"/>
+        <Button Name="Execute_Button" Content="Executer le travail" HorizontalAlignment="Left" Margin="289,332,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.303,0.303" Click="Execute_Button_Click"/>
+        <RadioButton Name="Execute_Unique" Content="Unique" HorizontalAlignment="Left" Margin="337,276,0,0" VerticalAlignment="Top" Checked="Execute_Unique_Checked"/>
+        <RadioButton Name="Execute_Seq" Content="Sequentielle" HorizontalAlignment="Left" Margin="488,276,0,0" VerticalAlignment="Top" Checked="Execute_Seq_Checked"/>
+        <TextBox Name="Execute_N" HorizontalAlignment="Left" Margin="101,274,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
