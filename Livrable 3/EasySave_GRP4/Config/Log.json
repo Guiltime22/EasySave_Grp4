@@ -1,0 +1,42 @@
+[
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\Découpage A3 S5.xlsx",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\Découpage A3 S5.xlsx",
+    "Size": "15242",
+    "Time": "\"Timestamp\": \"12/04/2021 00:59:47\"",
+    "TransitionTime": "00:00:00.0015400"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\Rentrée2021-Cycle_ingeA3.pdf",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\Rentrée2021-Cycle_ingeA3.pdf",
+    "Size": "1579582",
+    "Time": "\"Timestamp\": \"12/04/2021 00:59:47\"",
+    "TransitionTime": "00:00:00.0310864"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\Test_copy_copy.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\Test_copy_copy.txt",
+    "Size": "24",
+    "Time": "\"Timestamp\": \"12/04/2021 00:59:47\"",
+    "TransitionTime": "00:00:00.0009237"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\test\\Livrable 1.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\test\\Livrable 1.txt",
+    "Size": "1798",
+    "Time": "\"Timestamp\": \"12/04/2021 00:59:47\"",
+    "TransitionTime": "00:00:00.0007047"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\test\\Tomic.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\test\\Tomic.txt",
+    "Size": "653",
+    "Time": "\"Timestamp\": \"12/04/2021 00:59:47\"",
+    "TransitionTime": "00:00:00.0007144"
+  }
+]
