@@ -1,0 +1,128 @@
+[
+  {
+    "Name": "Save2",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\Découpage A3 S5.xlsx",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination2\\Découpage A3 S5.xlsx",
+    "Size": "15242",
+    "Time": "\"Timestamp\": \"12/17/2021 14:18:38\"",
+    "TransitionTime": "00:00:00.0025945",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "Save2",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\Rentrée2021-Cycle_ingeA3.pdf",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination2\\Rentrée2021-Cycle_ingeA3.pdf",
+    "Size": "1579582",
+    "Time": "\"Timestamp\": \"12/17/2021 14:18:39\"",
+    "TransitionTime": "00:00:00.0061292",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\Découpage A3 S5.xlsx",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\Découpage A3 S5.xlsx",
+    "Size": "15242",
+    "Time": "\"Timestamp\": \"12/17/2021 14:18:39\"",
+    "TransitionTime": "00:00:00.0025989",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\Rentrée2021-Cycle_ingeA3.pdf",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\Rentrée2021-Cycle_ingeA3.pdf",
+    "Size": "1579582",
+    "Time": "\"Timestamp\": \"12/17/2021 14:18:39\"",
+    "TransitionTime": "00:00:00.0019963",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "Save2",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\Test_copy_copy.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination2\\Test_copy_copy.txt",
+    "Size": "24",
+    "Time": "\"Timestamp\": \"12/17/2021 14:18:39\"",
+    "TransitionTime": "00:00:00.0017551",
+    "CryptTime": "00:00:00.4485392"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\Test_copy_copy.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\Test_copy_copy.txt",
+    "Size": "24",
+    "Time": "\"Timestamp\": \"12/17/2021 14:18:39\"",
+    "TransitionTime": "00:00:00.0008564",
+    "CryptTime": "00:00:00.3766703"
+  },
+  {
+    "Name": "Save2",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\test\\Livrable 1.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination2\\test\\Livrable 1.txt",
+    "Size": "1798",
+    "Time": "\"Timestamp\": \"12/17/2021 14:18:39\"",
+    "TransitionTime": "00:00:00.0011424",
+    "CryptTime": "00:00:00.0416486"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\test\\Livrable 1.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\test\\Livrable 1.txt",
+    "Size": "1798",
+    "Time": "\"Timestamp\": \"12/17/2021 14:18:39\"",
+    "TransitionTime": "00:00:00.0015061",
+    "CryptTime": "00:00:00.0645742"
+  },
+  {
+    "Name": "Save2",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\test\\Tomic.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination2\\test\\Tomic.txt",
+    "Size": "653",
+    "Time": "\"Timestamp\": \"12/17/2021 14:18:39\"",
+    "TransitionTime": "00:00:00.0013187",
+    "CryptTime": "00:00:00.0987970"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\test\\Tomic.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\test\\Tomic.txt",
+    "Size": "653",
+    "Time": "\"Timestamp\": \"12/17/2021 14:18:39\"",
+    "TransitionTime": "00:00:00.0009842",
+    "CryptTime": "00:00:00.1358126"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\Rentrée2021-Cycle_ingeA3.pdf",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\Rentrée2021-Cycle_ingeA3.pdf",
+    "Size": "1579582",
+    "Time": "\"Timestamp\": \"12/17/2021 14:50:28\"",
+    "TransitionTime": "00:00:00.0073619",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\Test_copy_copy.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\Test_copy_copy.txt",
+    "Size": "24",
+    "Time": "\"Timestamp\": \"12/17/2021 14:50:29\"",
+    "TransitionTime": "00:00:00.0046543",
+    "CryptTime": "00:00:00.3459069"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\test\\Livrable 1.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\test\\Livrable 1.txt",
+    "Size": "1798",
+    "Time": "\"Timestamp\": \"12/17/2021 14:50:29\"",
+    "TransitionTime": "00:00:00.0036127",
+    "CryptTime": "00:00:00.0160226"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\test\\Tomic.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\test\\Tomic.txt",
+    "Size": "653",
+    "Time": "\"Timestamp\": \"12/17/2021 14:50:29\"",
+    "TransitionTime": "00:00:00.0010400",
+    "CryptTime": "00:00:00.0340117"
+  }
+]
