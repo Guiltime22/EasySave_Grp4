@@ -1,0 +1,56 @@
+[
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\E_Test_txt_copy_copy.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\E_Test_txt_copy_copy.txt",
+    "Size": "24",
+    "Time": "\"Timestamp\": \"12/17/2021 20:28:04\"",
+    "TransitionTime": "00:00:00.0040785",
+    "CryptTime": "00:00:00.0300351"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\F_Test_txt_Prio_Copy.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\F_Test_txt_Prio_Copy.txt",
+    "Size": "39",
+    "Time": "\"Timestamp\": \"12/17/2021 20:28:04\"",
+    "TransitionTime": "00:00:00.0009983",
+    "CryptTime": "00:00:00.0254640"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\Découpage A3 S5.xlsx",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\Découpage A3 S5.xlsx",
+    "Size": "15242",
+    "Time": "\"Timestamp\": \"12/17/2021 20:28:04\"",
+    "TransitionTime": "00:00:00.0011753",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\Rentrée2021-Cycle_ingeA3.pdf",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\Rentrée2021-Cycle_ingeA3.pdf",
+    "Size": "1579582",
+    "Time": "\"Timestamp\": \"12/17/2021 20:28:04\"",
+    "TransitionTime": "00:00:00.0049350",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\test\\Livrable 1.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\test\\Livrable 1.txt",
+    "Size": "1798",
+    "Time": "\"Timestamp\": \"12/17/2021 20:28:04\"",
+    "TransitionTime": "00:00:00.0008896",
+    "CryptTime": "00:00:00.0212426"
+  },
+  {
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\test\\Tomic.txt",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\test\\Tomic.txt",
+    "Size": "653",
+    "Time": "\"Timestamp\": \"12/17/2021 20:28:04\"",
+    "TransitionTime": "00:00:00.0010757",
+    "CryptTime": "00:00:00.0768790"
+  }
+]

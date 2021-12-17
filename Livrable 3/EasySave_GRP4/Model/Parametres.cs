@@ -9,14 +9,16 @@ namespace EasySave_GRP4.Model
 {
     class Parametres
     {
-        public void Parametres_Generaux(string Langue, string Cryptage, string Metier)
+        public void Parametres_Generaux(string Langue, string Cryptage, string Metier, string Prioritaire, string Taille)
         {
 
             var jFile_parametres = new Model_Factory.JFile_parametres //Objects to insert into our JSON file
             {
                 Langue = Langue,
                 Cryptage = Cryptage,
-                Metier = Metier
+                Metier = Metier,
+                Prioritaire = Prioritaire,
+                Taille = Taille
             };
 
             string fileName = @"..\..\..\Config\Parametres.json"; // Name of the work 

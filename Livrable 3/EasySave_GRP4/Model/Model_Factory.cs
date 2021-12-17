@@ -11,11 +11,14 @@ namespace EasySave_GRP4.Model
             public string Langue { get; set; }
             public string Cryptage { get; set; }
             public string Metier { get; set; }
+            public string Prioritaire { get; set; }
+            public string Taille { get; set; }
 
         }
-        static string path = @"..\..\..\Config\Travaux_Sauvegarde\"; //Folder where the works are
+       
         public class Butter
         {
+            public static string path = @"..\..\..\Config\Travaux_Sauvegarde\"; //Folder where the works are
             public static int v;
             static public Langue LGUE = new Langue(); // Instance to use class Langue
             static public States ST = new States(); // Instance to use class States
