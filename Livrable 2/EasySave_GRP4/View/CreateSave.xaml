@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasySave_GRP4"
         mc:Ignorable="d"
-        Title="CreateTravail" Height="450" Width="800">
-    <Grid Margin="4,4,0,0"  Width="531" Height="282"  RenderTransformOrigin="0.635,0.529">
+        Title="CreateTravail" Height="429" Width="959">
+    <Grid Margin="60,0,57,0" Height="373"  RenderTransformOrigin="0.635,0.529">
         <Grid.RenderTransform>
             <TransformGroup>
                 <ScaleTransform/>
@@ -23,21 +23,25 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="23" Margin="117,18,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="308"/>
-        <TextBox x:Name="textBoxSource" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="117,46,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="308"/>
-        <TextBox x:Name="textBoxDestination" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="117,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308"/>
+        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="37" Margin="225,52,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="474" Background="#FFA1D5F7"/>
+        <TextBox x:Name="textBoxSource" IsEnabled="False" HorizontalAlignment="Left" Height="37" Margin="225,97,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="474" Background="#FFA1D5F7"/>
+        <TextBox x:Name="textBoxDestination" IsEnabled="False" HorizontalAlignment="Left" Height="37" Margin="225,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="474" Background="#FFA1D5F7"/>
 
-        <Label x:Name="labelName" Content="Name" HorizontalAlignment="Left" Margin="0,15,0,0" VerticalAlignment="Top" Width="86" Foreground="Black" Height="26"/>
-        <Label x:Name="labelSource" Content="Source" HorizontalAlignment="Left" Margin="0,43,0,0" VerticalAlignment="Top" Width="86" Foreground="Black" Height="26"/>
-        <Label x:Name="labelDest" Content="Dest" HorizontalAlignment="Left" Margin="0,74,0,0" VerticalAlignment="Top" Width="86" Foreground="Black" Height="26"/>
-        <Label x:Name="labelType" Content="Type" HorizontalAlignment="Left" Margin="0,103,0,0" VerticalAlignment="Top" Width="86" Foreground="Black" Height="26"/>
-        <Button x:Name="buttonCreateSave" Content="Create Save" HorizontalAlignment="Left" Margin="205,183,0,0" VerticalAlignment="Top" Width="101" Height="25" Click="buttonCreateSave_Click" />
-        <Button x:Name="buttonSourceFolderDialog" HorizontalAlignment="Left" Margin="430,46,0,0" VerticalAlignment="Top" Width="19" Height="19" Click="buttonSourceFolderDialog_Click">
+        <Label x:Name="labelName" Content="Nom:" HorizontalAlignment="Left" Margin="47,48,0,0" VerticalAlignment="Top" Width="178" Foreground="Black" Height="43" FontFamily="Leelawadee" FontWeight="Bold" FontSize="18"/>
+        <Label x:Name="labelSource" Content="Source:" HorizontalAlignment="Left" Margin="47,94,0,0" VerticalAlignment="Top" Width="132" Foreground="Black" Height="43" FontWeight="Bold" FontSize="18" FontFamily="Leelawadee"/>
+        <Label x:Name="labelDest" Content="Destination:" HorizontalAlignment="Left" Margin="47,143,0,0" VerticalAlignment="Top" Width="132" Foreground="Black" Height="43" FontFamily="Leelawadee" FontWeight="Bold" FontSize="18"/>
+        <Label x:Name="labelType" Content="Type:" HorizontalAlignment="Left" Margin="47,215,0,0" VerticalAlignment="Top" Width="132" Foreground="Black" Height="43" FontFamily="Leelawadee" FontWeight="Bold" FontSize="18"/>
+        <Button x:Name="buttonCreateSave" Content="Create Save" HorizontalAlignment="Center" Margin="0,296,0,0" VerticalAlignment="Top" Width="124" Height="40" Click="buttonCreateSave_Click" Background="#FF007ACC" Foreground="White" FontSize="18" FontFamily="Leelawadee" FontWeight="Normal" />
+        <Button x:Name="buttonSourceFolderDialog" HorizontalAlignment="Left" Margin="707,97,0,0" VerticalAlignment="Top" Width="30" Height="30" Click="buttonSourceFolderDialog_Click" Content="..." Background="#FF007ACC" Foreground="#FFFEFEFE">
         </Button>
-        <Button x:Name="buttonDestFolderDialog" HorizontalAlignment="Left" Width="19" Margin="430,77,0,0" VerticalAlignment="Top" Height="19" Click="buttonDestFolderDialog_Click">
-
-        </Button>
-        <ComboBox Name="ComboType" HorizontalAlignment="Left" Margin="118,118,0,0" VerticalAlignment="Top" Width="120">
+        <Button x:Name="buttonDestFolderDialog" HorizontalAlignment="Left" Width="30" Margin="707,149,0,0" VerticalAlignment="Top" Height="30" Click="buttonDestFolderDialog_Click" Content="..." Background="#FF007ACC" BorderBrush="#FF786E6E" Foreground="White"/>
+        <ComboBox Name="ComboType" HorizontalAlignment="Left" Margin="228,214,0,0" VerticalAlignment="Top" Width="184" Height="37">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="#FF007ACC" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
             <Label Content="Complet"/>
             <Label Content="Differentiel"/>
         </ComboBox>

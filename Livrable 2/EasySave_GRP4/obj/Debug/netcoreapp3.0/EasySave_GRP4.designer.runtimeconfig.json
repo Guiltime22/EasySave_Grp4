@@ -6,7 +6,7 @@
       "version": "3.0.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\ghile\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\DELL\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\ghile\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
