@@ -62,10 +62,12 @@ namespace EasySave_GRP4.Model
                         p.StartInfo.FileName = @"..\..\..\..\CryptoSoft\bin\Debug\netcoreapp3.0\Cryptage_Soft.exe";
                         p.StartInfo.Arguments = $"{file.FullName} {tempPath}";
                         p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                       if(file.Length < 50)
+                       if(file.Length < Convert.ToInt32(JP.Taille))
                         {
                             CryptWatch.Start(); //timer cryptage bg
+                            mutex.WaitOne();
                             p.Start(); //start theeeeeeeeeeeeee cryptageeeee oléolé
+                            mutex.ReleaseMutex();
                             CryptWatch.Stop(); // kda mna melhih bayna stop the cryptage
                         }
                         else
@@ -77,11 +79,13 @@ namespace EasySave_GRP4.Model
                         }
                     }
                     TimeSpan cts = CryptWatch.Elapsed;
-                    if (file.Length < 50)
+                    if (file.Length < Convert.ToInt32(JP.Taille))
                     {
                         Stopwatch.StartNew();
                         stopWatch.Start();
+                        mutex.WaitOne(); 
                         file.CopyTo(tempPath, true);
+                        mutex.ReleaseMutex();
                         stopWatch.Stop();
                     }
                     else
@@ -89,7 +93,9 @@ namespace EasySave_GRP4.Model
                         lock (_locker) ;
                         Stopwatch.StartNew();
                         stopWatch.Start();
+                        mutex.WaitOne();
                         file.CopyTo(tempPath, true);
+                        mutex.ReleaseMutex();
                         stopWatch.Stop();
                     }
                    
@@ -130,10 +136,16 @@ namespace EasySave_GRP4.Model
         }
         private List<FileInfo> OrderFiles(List<FileInfo> l) //
         {
-            List<FileInfo> lp = l.Where(el => el.Extension == ".txt").ToList();
+            StreamReader r = new StreamReader(@"..\..\..\Config\Parametres.json");
+            string jsonString = r.ReadToEnd();
+            JFile_parametres JP = JsonConvert.DeserializeObject<JFile_parametres>(jsonString);
+
+            List<FileInfo> lp = l.Where(el => el.Extension == "." + JP.Taille).ToList();
             foreach (var t in lp) l.Remove(t);
-            lp.AddRange(l); 
+            lp.AddRange(l);
             return new List<FileInfo>(lp);
+
+
         }
     }
 }
