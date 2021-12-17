@@ -20,16 +20,7 @@ namespace EasySave_GRP4.View
         public ProgressBar()
         {
             InitializeComponent();
-        }
-        private void DataGridS_LoadingRow(object sender, DataGridRowEventArgs e)
-        {
-            e.Row.Header = (e.Row.GetIndex() + 1).ToString();
 
-        }
-
-        private void WindowS_Loaded(object sender, RoutedEventArgs e)
-        {
-            Affi_Data.ItemsSource = View_Factory.CPT.Afficher_Progress();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -52,6 +43,15 @@ namespace EasySave_GRP4.View
 
         }
 
+        private void Window_Loaded_1(object sender, RoutedEventArgs e)
+        {
 
+            Affi_Data.ItemsSource = View_Factory.CPT.Afficher_Progress();
+        }
+
+        private void Affi_Data_LoadingRow(object sender, DataGridRowEventArgs e)
+        {
+            e.Row.Header = (e.Row.GetIndex() + 1).ToString();
+        }
     }
 }

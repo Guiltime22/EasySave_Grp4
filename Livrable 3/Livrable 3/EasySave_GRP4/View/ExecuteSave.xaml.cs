@@ -31,12 +31,12 @@ namespace EasySave_GRP4.View
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Aff_Data.ItemsSource = View_Factory.CET.Afficher_Progress();
+            Aff_Data.ItemsSource = View_Factory.CET.Afficher_Travail();
         }
 
         private void Execute_Button_Click(object sender, RoutedEventArgs e)
         {
-            View.ProgressBar Progress_Dialog = new View.ProgressBar();
+           View.ProgressBar Progress_Dialog = new View.ProgressBar();
            Progress_Dialog.Show();
             /*if (Execute_Unique.IsChecked == true)
             {

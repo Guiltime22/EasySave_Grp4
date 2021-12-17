@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasySave_GRP4.View"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+        Title="Window1" Height="450" Width="800" Loaded="Window_Loaded_1">
     <Grid x:Name="pbstatus" Margin="0,0,10,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="383*"/>
@@ -17,7 +17,7 @@
         <Label HorizontalAlignment="Left" Margin="203,264,0,0" VerticalAlignment="Top"/>
         <Button Content="||" HorizontalAlignment="Left" Height="43" Margin="302,293,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_1" RenderTransformOrigin="1.948,-0.377" FontWeight="Bold" Background="#FF007ACC" Foreground="White"/>
         <Button Content="Stop" HorizontalAlignment="Left" Height="45" Margin="530,294,0,0" VerticalAlignment="Top" Width="69" Click="Button_Click_2" FontWeight="Bold" Foreground="White" Background="#FF007ACC"/>
-        <DataGrid Name="Affi_Data" Margin="33,27,39,175" Background="#CCA1D5F7"/>
+        <DataGrid Name="Affi_Data" Margin="33,27,39,175" Background="#CCA1D5F7" LoadingRow="Affi_Data_LoadingRow"/>
 
 
     </Grid>
