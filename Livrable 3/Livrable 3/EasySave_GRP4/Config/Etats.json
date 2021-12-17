@@ -1,101 +1,112 @@
 [
   {
-    "Name": "Save1",
-    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source",
-    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination",
+    "Name": "Save",
+    "SourceFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Destination",
     "State": "Inactif",
-    "TotalFilesToCopy": "3",
-    "TotalFilesSize": "1594848",
-    "NbFilesLeftToDo": "3",
+    "TotalFilesToCopy": "13",
+    "TotalFilesSize": "14603998",
+    "NbFilesLeftToDo": "12",
     "Progression": "0%",
-    "Time": "\"Timestamp\": \"12/17/2021 14:16:58\""
+    "Time": "\"Timestamp\": \"12/17/2021 19:52:04\""
   },
   {
     "Name": "Save2",
-    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source",
-    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination2",
+    "SourceFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Destination2",
     "State": "Inactif",
-    "TotalFilesToCopy": "3",
-    "TotalFilesSize": "1594848",
-    "NbFilesLeftToDo": "3",
+    "TotalFilesToCopy": "13",
+    "TotalFilesSize": "14603998",
+    "NbFilesLeftToDo": "12",
     "Progression": "0%",
-    "Time": "\"Timestamp\": \"12/17/2021 14:17:23\""
+    "Time": "\"Timestamp\": \"12/17/2021 19:52:36\""
   },
   {
     "Name": "Save2",
-    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\test",
-    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination2\\test",
+    "SourceFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Destination2",
     "State": "Actif",
-    "TotalFilesToCopy": "2",
-    "TotalFilesSize": "2451",
+    "TotalFilesToCopy": "13",
+    "TotalFilesSize": "14603998",
     "NbFilesLeftToDo": "0",
     "Progression": "100%",
-    "Time": "\"Timestamp\": \"12/17/2021 14:18:39\""
+    "Time": "\"Timestamp\": \"12/17/2021 19:52:54\""
   },
   {
-    "Name": "Save2",
-    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source",
-    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination2",
+    "Name": "Save",
+    "SourceFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Destination",
     "State": "Actif",
-    "TotalFilesToCopy": "3",
-    "TotalFilesSize": "1594848",
+    "TotalFilesToCopy": "13",
+    "TotalFilesSize": "14603998",
     "NbFilesLeftToDo": "0",
     "Progression": "100%",
-    "Time": "\"Timestamp\": \"12/17/2021 14:18:39\""
+    "Time": "\"Timestamp\": \"12/17/2021 19:52:58\""
   },
   {
-    "Name": "Save1",
-    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\test",
-    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\test",
-    "State": "Actif",
-    "TotalFilesToCopy": "2",
-    "TotalFilesSize": "2451",
-    "NbFilesLeftToDo": "0",
-    "Progression": "100%",
-    "Time": "\"Timestamp\": \"12/17/2021 14:18:39\""
-  },
-  {
-    "Name": "Save1",
-    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source",
-    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination",
-    "State": "Actif",
-    "TotalFilesToCopy": "3",
-    "TotalFilesSize": "1594848",
-    "NbFilesLeftToDo": "0",
-    "Progression": "100%",
-    "Time": "\"Timestamp\": \"12/17/2021 14:18:39\""
-  },
-  {
-    "Name": "Save1",
-    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source",
-    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination",
+    "Name": "Mimo",
+    "SourceFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Destination",
     "State": "Inactif",
-    "TotalFilesToCopy": "3",
-    "TotalFilesSize": "1594848",
+    "TotalFilesToCopy": "13",
+    "TotalFilesSize": "14603998",
     "NbFilesLeftToDo": "0",
     "Progression": "100%",
-    "Time": "\"Timestamp\": \"12/17/2021 14:50:15\""
+    "Time": "\"Timestamp\": \"12/17/2021 20:19:12\""
   },
   {
-    "Name": "Save1",
-    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source\\test",
-    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination\\test",
-    "State": "Actif",
-    "TotalFilesToCopy": "2",
-    "TotalFilesSize": "2451",
+    "Name": "Ghiles",
+    "SourceFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Destination2",
+    "State": "Inactif",
+    "TotalFilesToCopy": "13",
+    "TotalFilesSize": "14603998",
     "NbFilesLeftToDo": "0",
     "Progression": "100%",
-    "Time": "\"Timestamp\": \"12/17/2021 14:50:29\""
+    "Time": "\"Timestamp\": \"12/17/2021 20:19:30\""
   },
   {
-    "Name": "Save1",
-    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source",
-    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination",
+    "Name": "Mimo",
+    "SourceFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Destination",
     "State": "Actif",
-    "TotalFilesToCopy": "3",
-    "TotalFilesSize": "1594848",
+    "TotalFilesToCopy": "13",
+    "TotalFilesSize": "14603998",
     "NbFilesLeftToDo": "0",
     "Progression": "100%",
-    "Time": "\"Timestamp\": \"12/17/2021 14:50:29\""
+    "Time": "\"Timestamp\": \"12/17/2021 20:19:49\""
+  },
+  {
+    "Name": "Ghiles",
+    "SourceFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Destination2",
+    "State": "Actif",
+    "TotalFilesToCopy": "13",
+    "TotalFilesSize": "14603998",
+    "NbFilesLeftToDo": "0",
+    "Progression": "100%",
+    "Time": "\"Timestamp\": \"12/17/2021 20:19:49\""
+  },
+  {
+    "Name": "Chiraz",
+    "SourceFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Destination",
+    "State": "Inactif",
+    "TotalFilesToCopy": "13",
+    "TotalFilesSize": "14603998",
+    "NbFilesLeftToDo": "13",
+    "Progression": "0%",
+    "Time": "\"Timestamp\": \"12/17/2021 20:26:06\""
+  },
+  {
+    "Name": "Chiraz",
+    "SourceFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Destination",
+    "State": "Actif",
+    "TotalFilesToCopy": "13",
+    "TotalFilesSize": "14603998",
+    "NbFilesLeftToDo": "0",
+    "Progression": "100%",
+    "Time": "\"Timestamp\": \"12/17/2021 20:26:18\""
   }
 ]
