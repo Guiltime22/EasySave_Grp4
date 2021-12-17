@@ -11338,5 +11338,266 @@
     "Time": "\"Timestamp\": \"12/17/2021 21:55:21\"",
     "TransitionTime": "00:00:00.0017694",
     "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3 2021-22 FISE info - Référentiel évalutions Cycle Ingénieur.pdf",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3 2021-22 FISE info - Référentiel évalutions Cycle Ingénieur.pdf",
+    "Size": "457065",
+    "Time": "\"Timestamp\": \"12/17/2021 22:36:42\"",
+    "TransitionTime": "00:00:00.0083516",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_-_Bloc_2_Langage_CSharp_-_Fiche_de_revision_v2.1.0-addition.pdf",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_-_Bloc_2_Langage_CSharp_-_Fiche_de_revision_v2.1.0-addition.pdf",
+    "Size": "2565488",
+    "Time": "\"Timestamp\": \"12/17/2021 22:36:42\"",
+    "TransitionTime": "00:00:00.0098180",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_ArchitectureSIEtAnnuaires.xlsx",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_ArchitectureSIEtAnnuaires.xlsx",
+    "Size": "9168",
+    "Time": "\"Timestamp\": \"12/17/2021 22:36:42\"",
+    "TransitionTime": "00:00:00.0057602",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_Cryptographie.xlsx",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_Cryptographie.xlsx",
+    "Size": "9041",
+    "Time": "\"Timestamp\": \"12/17/2021 22:36:43\"",
+    "TransitionTime": "00:00:00.0043668",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_InteractionsSystemes.xlsx",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_InteractionsSystemes.xlsx",
+    "Size": "9051",
+    "Time": "\"Timestamp\": \"12/17/2021 22:36:43\"",
+    "TransitionTime": "00:00:00.0040646",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_SecuriteEtFiltrage.xlsx",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_SecuriteEtFiltrage.xlsx",
+    "Size": "9280",
+    "Time": "\"Timestamp\": \"12/17/2021 22:36:43\"",
+    "TransitionTime": "00:00:00.0040796",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\Diagramme_De_Classe_Groupe4",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\Diagramme_De_Classe_Groupe4",
+    "Size": "127195",
+    "Time": "\"Timestamp\": \"12/17/2021 22:36:43\"",
+    "TransitionTime": "00:00:00.0042390",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\kadouche-lydia-tomic-a3-14-09-2021.pdf",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\kadouche-lydia-tomic-a3-14-09-2021.pdf",
+    "Size": "6961264",
+    "Time": "\"Timestamp\": \"12/17/2021 22:36:43\"",
+    "TransitionTime": "00:00:00.0098219",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\Lydia.txt",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\Lydia.txt",
+    "Size": "25",
+    "Time": "\"Timestamp\": \"12/17/2021 22:36:43\"",
+    "TransitionTime": "00:00:00.0013715",
+    "CryptTime": "00:00:00.0302371"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\Programmation_Sys.zip",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\Programmation_Sys.zip",
+    "Size": "4217933",
+    "Time": "\"Timestamp\": \"12/17/2021 22:36:43\"",
+    "TransitionTime": "00:00:00.0085918",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "SAVE",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_-_Bloc_2_Langage_CSharp_-_Fiche_de_revision_v2.1.0-addition.pdf",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_-_Bloc_2_Langage_CSharp_-_Fiche_de_revision_v2.1.0-addition.pdf",
+    "Size": "2565488",
+    "Time": "\"Timestamp\": \"12/18/2021 00:00:07\"",
+    "TransitionTime": "00:00:00.0127750",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "SAVE",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_ArchitectureSIEtAnnuaires.xlsx",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_ArchitectureSIEtAnnuaires.xlsx",
+    "Size": "9168",
+    "Time": "\"Timestamp\": \"12/18/2021 00:00:07\"",
+    "TransitionTime": "00:00:00.0040058",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "SAVE",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_Cryptographie.xlsx",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_Cryptographie.xlsx",
+    "Size": "9041",
+    "Time": "\"Timestamp\": \"12/18/2021 00:00:07\"",
+    "TransitionTime": "00:00:00.0035540",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "SAVE",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_InteractionsSystemes.xlsx",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_InteractionsSystemes.xlsx",
+    "Size": "9051",
+    "Time": "\"Timestamp\": \"12/18/2021 00:00:07\"",
+    "TransitionTime": "00:00:00.0083720",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "SAVE",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_SecuriteEtFiltrage.xlsx",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_SecuriteEtFiltrage.xlsx",
+    "Size": "9280",
+    "Time": "\"Timestamp\": \"12/18/2021 00:00:07\"",
+    "TransitionTime": "00:00:00.0032091",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "SAVE",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\Diagramme_De_Classe_Groupe4",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\Diagramme_De_Classe_Groupe4",
+    "Size": "127195",
+    "Time": "\"Timestamp\": \"12/18/2021 00:00:07\"",
+    "TransitionTime": "00:00:00.0044329",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "SAVE",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\kadouche-lydia-tomic-a3-14-09-2021.pdf",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\kadouche-lydia-tomic-a3-14-09-2021.pdf",
+    "Size": "6961264",
+    "Time": "\"Timestamp\": \"12/18/2021 00:00:07\"",
+    "TransitionTime": "00:00:00.0122364",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "SAVE",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\Lydia.txt",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\Lydia.txt",
+    "Size": "25",
+    "Time": "\"Timestamp\": \"12/18/2021 00:00:07\"",
+    "TransitionTime": "00:00:00.0012399",
+    "CryptTime": "00:00:00.0312848"
+  },
+  {
+    "Name": "SAVE",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\Programmation_Sys.zip",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\Programmation_Sys.zip",
+    "Size": "4217933",
+    "Time": "\"Timestamp\": \"12/18/2021 00:00:07\"",
+    "TransitionTime": "00:00:00.0100009",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3 2021-22 FISE info - Référentiel évalutions Cycle Ingénieur.pdf",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3 2021-22 FISE info - Référentiel évalutions Cycle Ingénieur.pdf",
+    "Size": "457065",
+    "Time": "\"Timestamp\": \"12/18/2021 00:01:39\"",
+    "TransitionTime": "00:00:00.0089422",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_-_Bloc_2_Langage_CSharp_-_Fiche_de_revision_v2.1.0-addition.pdf",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_-_Bloc_2_Langage_CSharp_-_Fiche_de_revision_v2.1.0-addition.pdf",
+    "Size": "2565488",
+    "Time": "\"Timestamp\": \"12/18/2021 00:01:40\"",
+    "TransitionTime": "00:00:00.0119941",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_ArchitectureSIEtAnnuaires.xlsx",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_ArchitectureSIEtAnnuaires.xlsx",
+    "Size": "9168",
+    "Time": "\"Timestamp\": \"12/18/2021 00:01:40\"",
+    "TransitionTime": "00:00:00.0044063",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_Cryptographie.xlsx",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_Cryptographie.xlsx",
+    "Size": "9041",
+    "Time": "\"Timestamp\": \"12/18/2021 00:01:40\"",
+    "TransitionTime": "00:00:00.0040610",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_InteractionsSystemes.xlsx",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_InteractionsSystemes.xlsx",
+    "Size": "9051",
+    "Time": "\"Timestamp\": \"12/18/2021 00:01:40\"",
+    "TransitionTime": "00:00:00.0085152",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_SecuriteEtFiltrage.xlsx",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\A3_SecuriteEtFiltrage.xlsx",
+    "Size": "9280",
+    "Time": "\"Timestamp\": \"12/18/2021 00:01:40\"",
+    "TransitionTime": "00:00:00.0032309",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\Diagramme_De_Classe_Groupe4",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\Diagramme_De_Classe_Groupe4",
+    "Size": "127195",
+    "Time": "\"Timestamp\": \"12/18/2021 00:01:40\"",
+    "TransitionTime": "00:00:00.0034424",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\kadouche-lydia-tomic-a3-14-09-2021.pdf",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\kadouche-lydia-tomic-a3-14-09-2021.pdf",
+    "Size": "6961264",
+    "Time": "\"Timestamp\": \"12/18/2021 00:01:40\"",
+    "TransitionTime": "00:00:00.0097789",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\Lydia.txt",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\Lydia.txt",
+    "Size": "25",
+    "Time": "\"Timestamp\": \"12/18/2021 00:01:40\"",
+    "TransitionTime": "00:00:00.0013645",
+    "CryptTime": "00:00:00.0317108"
+  },
+  {
+    "Name": "AZERTY",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\Programmation_Sys.zip",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination\\Programmation_Sys.zip",
+    "Size": "4217933",
+    "Time": "\"Timestamp\": \"12/18/2021 00:01:40\"",
+    "TransitionTime": "00:00:00.0079604",
+    "CryptTime": "00:00:00"
   }
 ]

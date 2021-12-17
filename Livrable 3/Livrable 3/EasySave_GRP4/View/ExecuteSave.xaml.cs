@@ -31,14 +31,14 @@ namespace EasySave_GRP4.View
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Aff_Data.ItemsSource = View_Factory.CET.Afficher_Travail();
+            Aff_Data.ItemsSource = View_Factory.CET.Afficher_Progress();
         }
 
         private void Execute_Button_Click(object sender, RoutedEventArgs e)
         {
-            View.ProgressBar Execute_Dialog = new View.ProgressBar();
-            Execute_Dialog.Show();
-            if (Execute_Unique.IsChecked == true)
+            View.ProgressBar Progress_Dialog = new View.ProgressBar();
+           Progress_Dialog.Show();
+            /*if (Execute_Unique.IsChecked == true)
             {
                 
                 View_Factory.CET.Executer_Travail_Unique(Execute_N.Text);
@@ -54,7 +54,7 @@ namespace EasySave_GRP4.View
             }
        
 
-
+    */
         }
 
         private void Execute_Unique_Checked(object sender, RoutedEventArgs e)

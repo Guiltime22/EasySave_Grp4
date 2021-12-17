@@ -13,12 +13,12 @@
             <ColumnDefinition Width="10*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="lb_etat_prog_server" Content="" HorizontalAlignment="Left" Margin="305,0,0,0" VerticalAlignment="Center" Height="58" Width="108" FontSize="24"/>
-        <Button Content="Play" HorizontalAlignment="Left" Margin="94,294,0,0" VerticalAlignment="Top" Click="Button_Click" Height="42" Width="64" RenderTransformOrigin="3.153,1.081" FontWeight="Bold"/>
+        <Button Content="Play" HorizontalAlignment="Left" Margin="94,294,0,0" VerticalAlignment="Top" Click="Button_Click" Height="42" Width="64" RenderTransformOrigin="3.153,1.081" FontWeight="Bold" Background="#FF007ACC" Foreground="White"/>
         <Label HorizontalAlignment="Left" Margin="203,264,0,0" VerticalAlignment="Top"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="43" Margin="302,293,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_1" RenderTransformOrigin="1.948,-0.377"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="45" Margin="530,294,0,0" VerticalAlignment="Top" Width="69" Click="Button_Click_2"/>
-        <DataGrid Name="Aff_Data"  Margin="21,27,0,175" Background="#CCA1D5F7" Grid.ColumnSpan="2" SelectionChanged="Aff_Data_SelectionChanged" LoadingRow="DataGrid_LoadingRow"/>
+        <Button Content="||" HorizontalAlignment="Left" Height="43" Margin="302,293,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_1" RenderTransformOrigin="1.948,-0.377" FontWeight="Bold" Background="#FF007ACC" Foreground="White"/>
+        <Button Content="Stop" HorizontalAlignment="Left" Height="45" Margin="530,294,0,0" VerticalAlignment="Top" Width="69" Click="Button_Click_2" FontWeight="Bold" Foreground="White" Background="#FF007ACC"/>
+        <DataGrid Name="Affi_Data" Margin="33,27,39,175" Background="#CCA1D5F7"/>
+
 
     </Grid>
 </Window>
