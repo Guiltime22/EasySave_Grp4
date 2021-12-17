@@ -14,7 +14,15 @@ namespace EasySave_Grp4.ModelView
         public string dest_name { get; set; }
         public string type_save { get; set; }
     }
+    public class State_List
+    {
+        public static string fileName = @"..\..\..\Config\Etats.json";
+        public string Name { get; set; }
+        public string source_name { get; set; }
+        public string dest_name { get; set; }
+        public string Progression { get; set; }
 
+    }
     class CL_Execute_Travail
     {
         public CL_Execute_Travail(){
@@ -47,5 +55,28 @@ namespace EasySave_Grp4.ModelView
         {
             VM_Factory.ET.Execute_Seq();
         }
+        public List<State_List> Afficher_Progress()
+        {
+            List<State_List> State_List = new List<State_List>();
+            string[] files = Directory.GetFiles(@"..\..\..\Config\Travaux_Sauvegarde", "*.json");
+            foreach (string file in files)
+            {
+
+                State_List tesT = JsonConvert.DeserializeObject<State_List>(File.ReadAllText(file));
+                var taille_fichier_source = tesT.source_name.Length;
+                var taille_fichier_dest = tesT.dest_name.Length;
+                var Action_Progress = (taille_fichier_dest * 100) / taille_fichier_source;
+                State_List.Add(new State_List() //parameter that the JSON file will contains
+                {
+                    Name = tesT.Name,
+                    Progression = Convert.ToString(Action_Progress)
+                    // List<string> progressList = new List<string>();
+                    //progressList.Add(tesT.name);
+                    //progressList.Add(Convert.ToString(Action_Progress));
+                });
+
+            }
+            return State_List;
+        }
     }
-}
+    }

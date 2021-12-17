@@ -36,18 +36,25 @@ namespace EasySave_GRP4.View
 
         private void Execute_Button_Click(object sender, RoutedEventArgs e)
         {
-            if(Execute_Unique.IsChecked == true)
+            View.ProgressBar Execute_Dialog = new View.ProgressBar();
+            Execute_Dialog.Show();
+            if (Execute_Unique.IsChecked == true)
             {
                 
                 View_Factory.CET.Executer_Travail_Unique(Execute_N.Text);
                 Close();
+           
             }
             else if(Execute_Seq.IsChecked == true)
             {
 
                 View_Factory.CET.Executer_Travail_Seq();
                 Close();
+               
             }
+       
+
+
         }
 
         private void Execute_Unique_Checked(object sender, RoutedEventArgs e)
@@ -59,5 +66,6 @@ namespace EasySave_GRP4.View
         {
             Execute_N.IsEnabled = false;
         }
+
     }
 }
