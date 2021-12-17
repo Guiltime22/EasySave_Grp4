@@ -74,7 +74,9 @@ namespace EasySave_GRP4.Model
                         {
                             lock (_locker) ; // verrou 
                             CryptWatch.Start();
+                            mutex.WaitOne();
                             p.Start();
+                            mutex.ReleaseMutex();
                             CryptWatch.Stop();
                         }
                     }
