@@ -124,5 +124,86 @@
     "Time": "\"Timestamp\": \"12/17/2021 14:50:29\"",
     "TransitionTime": "00:00:00.0010400",
     "CryptTime": "00:00:00.0340117"
+  },
+  {
+    "Name": "gtg",
+    "SourceFilePath": "C:\\Users\\Darners\\Desktop\\DARK.SOULS.3.V1.14.PLUS28TRN.FLING\\DARK.SOULS.3.V1.14.PLUS28TRN.FLING.ZIP",
+    "TargetFilePath": "C:\\Users\\Darners\\Desktop\\hilo\\DARK.SOULS.3.V1.14.PLUS28TRN.FLING.ZIP",
+    "Size": "826566",
+    "Time": "\"Timestamp\": \"12/17/2021 15:58:57\"",
+    "TransitionTime": "00:00:00.0178245",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "gtg",
+    "SourceFilePath": "C:\\Users\\Darners\\Desktop\\DARK.SOULS.3.V1.14.PLUS28TRN.FLING\\DARK.SOULS.3.V1.14.PLUS28TRN.FLING.ZIP",
+    "TargetFilePath": "C:\\Users\\Darners\\Desktop\\hilo\\DARK.SOULS.3.V1.14.PLUS28TRN.FLING.ZIP",
+    "Size": "826566",
+    "Time": "\"Timestamp\": \"12/17/2021 15:59:24\"",
+    "TransitionTime": "00:00:00.0015532",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "gtg",
+    "SourceFilePath": "C:\\Users\\Darners\\Desktop\\DARK.SOULS.3.V1.14.PLUS28TRN.FLING\\DARK.SOULS.3.V1.14.PLUS28TRN.FLING.ZIP",
+    "TargetFilePath": "C:\\Users\\Darners\\Desktop\\hilo\\DARK.SOULS.3.V1.14.PLUS28TRN.FLING.ZIP",
+    "Size": "826566",
+    "Time": "\"Timestamp\": \"12/17/2021 15:59:28\"",
+    "TransitionTime": "00:00:00.0012327",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "test",
+    "SourceFilePath": "C:\\Users\\Darners\\Desktop\\hilo\\DARK.SOULS.3.V1.14.PLUS28TRN.FLING.ZIP",
+    "TargetFilePath": "C:\\Users\\Darners\\Desktop\\ralo\\DARK.SOULS.3.V1.14.PLUS28TRN.FLING.ZIP",
+    "Size": "826566",
+    "Time": "\"Timestamp\": \"12/17/2021 16:02:24\"",
+    "TransitionTime": "00:00:00.0072690",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "test",
+    "SourceFilePath": "C:\\Users\\Darners\\Desktop\\hilo\\DARK.SOULS.3.V1.14.PLUS28TRN.FLING.ZIP",
+    "TargetFilePath": "C:\\Users\\Darners\\Desktop\\ralo\\DARK.SOULS.3.V1.14.PLUS28TRN.FLING.ZIP",
+    "Size": "826566",
+    "Time": "\"Timestamp\": \"12/17/2021 16:02:30\"",
+    "TransitionTime": "00:00:00.0011226",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "test1",
+    "SourceFilePath": "C:\\Users\\Darners\\Desktop\\ralo\\DARK.SOULS.3.V1.14.PLUS28TRN.FLING.ZIP",
+    "TargetFilePath": "C:\\Users\\Darners\\Desktop\\hilo\\DARK.SOULS.3.V1.14.PLUS28TRN.FLING.ZIP",
+    "Size": "826566",
+    "Time": "\"Timestamp\": \"12/17/2021 16:06:13\"",
+    "TransitionTime": "00:00:00.0087698",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "test1",
+    "SourceFilePath": "C:\\Users\\Darners\\Desktop\\ralo\\test.txt",
+    "TargetFilePath": "C:\\Users\\Darners\\Desktop\\hilo\\test.txt",
+    "Size": "6",
+    "Time": "\"Timestamp\": \"12/17/2021 16:06:13\"",
+    "TransitionTime": "00:00:00.0015680",
+    "CryptTime": "00:00:00.0162867"
+  },
+  {
+    "Name": "test4",
+    "SourceFilePath": "C:\\Users\\Darners\\Desktop\\ralo\\DARK.SOULS.3.V1.14.PLUS28TRN.FLING.ZIP",
+    "TargetFilePath": "C:\\Users\\Darners\\Desktop\\hilo\\DARK.SOULS.3.V1.14.PLUS28TRN.FLING.ZIP",
+    "Size": "826566",
+    "Time": "\"Timestamp\": \"12/17/2021 16:12:14\"",
+    "TransitionTime": "00:00:00.0021023",
+    "CryptTime": "00:00:00"
+  },
+  {
+    "Name": "test4",
+    "SourceFilePath": "C:\\Users\\Darners\\Desktop\\ralo\\test.txt",
+    "TargetFilePath": "C:\\Users\\Darners\\Desktop\\hilo\\test.txt",
+    "Size": "6",
+    "Time": "\"Timestamp\": \"12/17/2021 16:12:14\"",
+    "TransitionTime": "00:00:00.0005990",
+    "CryptTime": "00:00:00.0160812"
   }
 ]

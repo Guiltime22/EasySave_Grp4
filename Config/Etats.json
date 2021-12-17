@@ -97,5 +97,71 @@
     "NbFilesLeftToDo": "0",
     "Progression": "100%",
     "Time": "\"Timestamp\": \"12/17/2021 14:50:29\""
+  },
+  {
+    "Name": "gtg",
+    "SourceFilePath": "C:\\Users\\Darners\\Desktop\\DARK.SOULS.3.V1.14.PLUS28TRN.FLING",
+    "TargetFilePath": "C:\\Users\\Darners\\Desktop\\hilo",
+    "State": "Inactif",
+    "TotalFilesToCopy": "3",
+    "TotalFilesSize": "826635",
+    "NbFilesLeftToDo": "2",
+    "Progression": "0%",
+    "Time": "\"Timestamp\": \"12/17/2021 15:58:40\""
+  },
+  {
+    "Name": "test",
+    "SourceFilePath": "C:\\Users\\Darners\\Desktop\\hilo",
+    "TargetFilePath": "C:\\Users\\Darners\\Desktop\\ralo",
+    "State": "Inactif",
+    "TotalFilesToCopy": "2",
+    "TotalFilesSize": "826572",
+    "NbFilesLeftToDo": "2",
+    "Progression": "0%",
+    "Time": "\"Timestamp\": \"12/17/2021 16:02:06\""
+  },
+  {
+    "Name": "test1",
+    "SourceFilePath": "C:\\Users\\Darners\\Desktop\\ralo",
+    "TargetFilePath": "C:\\Users\\Darners\\Desktop\\hilo",
+    "State": "Inactif",
+    "TotalFilesToCopy": "2",
+    "TotalFilesSize": "826572",
+    "NbFilesLeftToDo": "2",
+    "Progression": "0%",
+    "Time": "\"Timestamp\": \"12/17/2021 16:06:10\""
+  },
+  {
+    "Name": "test1",
+    "SourceFilePath": "C:\\Users\\Darners\\Desktop\\ralo",
+    "TargetFilePath": "C:\\Users\\Darners\\Desktop\\hilo",
+    "State": "Actif",
+    "TotalFilesToCopy": "2",
+    "TotalFilesSize": "826572",
+    "NbFilesLeftToDo": "0",
+    "Progression": "100%",
+    "Time": "\"Timestamp\": \"12/17/2021 16:06:13\""
+  },
+  {
+    "Name": "test4",
+    "SourceFilePath": "C:\\Users\\Darners\\Desktop\\ralo",
+    "TargetFilePath": "C:\\Users\\Darners\\Desktop\\hilo",
+    "State": "Inactif",
+    "TotalFilesToCopy": "2",
+    "TotalFilesSize": "826572",
+    "NbFilesLeftToDo": "2",
+    "Progression": "0%",
+    "Time": "\"Timestamp\": \"12/17/2021 16:12:11\""
+  },
+  {
+    "Name": "test4",
+    "SourceFilePath": "C:\\Users\\Darners\\Desktop\\ralo",
+    "TargetFilePath": "C:\\Users\\Darners\\Desktop\\hilo",
+    "State": "Actif",
+    "TotalFilesToCopy": "2",
+    "TotalFilesSize": "826572",
+    "NbFilesLeftToDo": "0",
+    "Progression": "100%",
+    "Time": "\"Timestamp\": \"12/17/2021 16:12:14\""
   }
 ]
