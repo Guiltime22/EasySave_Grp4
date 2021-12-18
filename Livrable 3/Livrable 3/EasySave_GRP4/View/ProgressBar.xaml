@@ -15,9 +15,9 @@
         </Grid.ColumnDefinitions>
         <Button Content="Play" HorizontalAlignment="Left" Margin="94,294,0,0" VerticalAlignment="Top" Click="Button_Click" Height="42" Width="64" RenderTransformOrigin="3.153,1.081" FontWeight="Bold" Background="#FF007ACC" Foreground="White"/>
         <Label HorizontalAlignment="Left" Margin="203,264,0,0" VerticalAlignment="Top"/>
-        <Button Content="||" HorizontalAlignment="Left" Height="43" Margin="302,293,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_1" RenderTransformOrigin="1.948,-0.377" FontWeight="Bold" Background="#FF007ACC" Foreground="White"/>
-        <Button Content="Stop" HorizontalAlignment="Left" Height="45" Margin="530,294,0,0" VerticalAlignment="Top" Width="69" Click="Button_Click_2" FontWeight="Bold" Foreground="White" Background="#FF007ACC"/>
-        <DataGrid Name="Affi_Data" Margin="33,27,39,175" Background="#CCA1D5F7" LoadingRow="Affi_Data_LoadingRow"/>
+        <Button Content="||" HorizontalAlignment="Center" Height="43" Margin="0,296,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_1" RenderTransformOrigin="1.948,-0.377" FontWeight="Bold" Background="#FF007ACC" Foreground="White"/>
+        <Button Content="Stop" HorizontalAlignment="Left" Height="45" Margin="560,294,0,0" VerticalAlignment="Top" Width="69" Click="Button_Click_2" FontWeight="Bold" Foreground="White" Background="#FF007ACC" RenderTransformOrigin="0.522,1.001"/>
+        <DataGrid Name="Affi_Data" Margin="33,27,22,175" Background="#CCA1D5F7" LoadingRow="Affi_Data_LoadingRow"/>
 
 
     </Grid>

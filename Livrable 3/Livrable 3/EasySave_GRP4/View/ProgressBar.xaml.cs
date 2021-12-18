@@ -20,12 +20,11 @@ namespace EasySave_GRP4.View
         public ProgressBar()
         {
             InitializeComponent();
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+          
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -45,7 +44,6 @@ namespace EasySave_GRP4.View
 
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
-
             Affi_Data.ItemsSource = View_Factory.CPT.Afficher_Progress();
         }
 

@@ -69,7 +69,7 @@ namespace EasySave_GRP4.Model
                 {
                     while (Process.GetProcessesByName(JP.Metier).Length != 0)
                     {
-                        MessageBox.Show("Votre logiciel métier est en cours d'éxecution, veuillez le fermer !");
+                        MessageBox.Show("Votre logiciel métier est en cours d'execution, veuillez le fermer !");
                     }
                 }
             }
