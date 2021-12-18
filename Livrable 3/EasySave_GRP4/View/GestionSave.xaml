@@ -30,8 +30,8 @@
             <Label Content="Complet"/>
             <Label Content="Differentiel"/>
         </ComboBox>
-        <Button Content="Modifier" HorizontalAlignment="Left" Margin="612,338,0,0" VerticalAlignment="Top" Height="43" Width="142" Click="Button_Click" Background="#FF007ACC" FontSize="16" Foreground="White" FontWeight="Bold"/>
-        <Button Content="Supprimer" HorizontalAlignment="Left" Margin="827,337,0,0" VerticalAlignment="Top" Height="42" Width="142" Background="#FF007ACC" FontSize="16" Foreground="White" FontWeight="Bold"/>
+        <Button  x:Name="Modifier" Content="Modifier" HorizontalAlignment="Left" Margin="612,338,0,0" VerticalAlignment="Top" Height="43" Width="142" Click="Modifier_Click" Background="#FF007ACC" FontSize="16" Foreground="White" FontWeight="Bold"/>
+        <Button x:Name="Supprimer" Content="Supprimer" HorizontalAlignment="Left" Margin="827,337,0,0" VerticalAlignment="Top" Height="42" Width="142" Background="#FF007ACC" FontSize="16" Foreground="White" FontWeight="Bold" Click="Supprimer_Click"/>
 
     </Grid>
 </Window>

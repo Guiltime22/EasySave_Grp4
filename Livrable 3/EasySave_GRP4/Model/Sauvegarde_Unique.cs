@@ -55,14 +55,14 @@ namespace EasySave_GRP4.Model
                     Stopwatch CryptWatch = new Stopwatch();
 
                     string tempPath = Path.Combine(dest, file.Name);
-                    if (file.Extension == "." + JP.Cryptage)
+                    if (file.Extension == "." + JP.Cryptage) 
                     {
                         Stopwatch.StartNew();
                         var p = new Process();
                         p.StartInfo.FileName = @"..\..\..\..\CryptoSoft\bin\Debug\netcoreapp3.0\Cryptage_Soft.exe";
                         p.StartInfo.Arguments = $"{file.FullName} {tempPath}";
                         p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                       if(file.Length < Convert.ToInt32(JP.Taille))
+                       if(file.Length < Convert.ToInt32(JP.Taille)) //Interdiction de transférer en simultané des fichiers de plus n Ko
                         {
                             CryptWatch.Start(); //timer cryptage bg
                             mutex.WaitOne();
@@ -136,7 +136,7 @@ namespace EasySave_GRP4.Model
             }
             Butter.ST.Creer_Fichier_Etat(name, src, dest, etat); //Function to create a state into the state file for the work
         }
-        private List<FileInfo> OrderFiles(List<FileInfo> l) //
+        private List<FileInfo> OrderFiles(List<FileInfo> l) // Gestion des fichiers prioritaires
         {
             StreamReader r = new StreamReader(@"..\..\..\Config\Parametres.json");
             string jsonString = r.ReadToEnd();

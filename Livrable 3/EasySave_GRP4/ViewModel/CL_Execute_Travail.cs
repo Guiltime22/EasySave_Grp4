@@ -45,6 +45,7 @@ namespace EasySave_Grp4.ModelView
                 });
             
             }
+
             return LT;
         }
         public void Executer_Travail_Unique(string nom_fichier)
@@ -55,6 +56,28 @@ namespace EasySave_Grp4.ModelView
         {
             VM_Factory.ET.Execute_Seq();
         }
+
+        public List<JFile> Afficher_le_travail()
+        {
+            List<JFile> LT = new List<JFile>();
+            string[] files = Directory.GetFiles(@"..\..\..\Config\Travaux_Sauvegarde", "*.json");
+            foreach (string file in files)
+            {
+                JFile test = JsonConvert.DeserializeObject<JFile>(File.ReadAllText(file));
+
+                LT.Add(new JFile() //parameter that the JSON file will contains
+                {
+                    name = test.name,
+                    source_name = test.source_name,
+                    dest_name = test.dest_name,
+                    type_save = test.type_save
+                });
+
+            }
+
+            return LT;
+        }
+
         public List<State_List> Afficher_Progress()
         {
             List<State_List> State_List = new List<State_List>();
@@ -79,4 +102,5 @@ namespace EasySave_Grp4.ModelView
             return State_List;
         }
     }
+
     }

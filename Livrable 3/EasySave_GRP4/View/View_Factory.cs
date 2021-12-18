@@ -11,5 +11,6 @@ namespace EasySave_GRP4.View
         static public CL_Execute_Travail CPT = new CL_Execute_Travail();
         static public CL_Create_Travail CCT = new CL_Create_Travail();
         static public CL_Parametres PR = new CL_Parametres();
+        static public CL_Gestion GT = new CL_Gestion(); //call la classe GT 
     }
 }

@@ -26,6 +26,7 @@ namespace EasySave_GRP4.Model
             static public Sauvegarde_Differentiel SVS = new Sauvegarde_Differentiel(); // Instance to use class Sauvegarde Sequentielle
             static public Sauvegarde_Unique SVU = new Sauvegarde_Unique(); // Instance to use class Sauvegarde Sequentielle
             //static public JFile_p JP = new JFile_p();
+            static public Create_Travail CT = new Create_Travail() ;
         }
 
         

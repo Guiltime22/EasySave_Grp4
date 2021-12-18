@@ -10,5 +10,6 @@ namespace EasySave_Grp4.ModelView
             static public Create_Travail TR = new Create_Travail();
             static public Execute_Travail ET = new Execute_Travail();
             static public Parametres P = new Parametres();
+            static public Gestion_Travail GT = new Gestion_Travail(); //instancier gt qui se trouve f model
     }
 }

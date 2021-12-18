@@ -49,7 +49,7 @@ namespace EasySave_GRP4.Model
             }
         }
         public void Execute_Seq()
-        {
+        { 
 
             string[] files = Directory.GetFiles(@"..\..\..\Config\Travaux_Sauvegarde", "*.json"); //Table to put the different works
             foreach (var file in files) //For each work
@@ -57,20 +57,20 @@ namespace EasySave_GRP4.Model
 
                 string jsonString = File.ReadAllText(file); //Open the file to read the work
                 JFile jFile = System.Text.Json.JsonSerializer.Deserialize<JFile>(jsonString);//Convert the content of the file into Objects
-                var Exe_Unique = new Thread(() => Butter.SVU.CopyRepertoire(jFile.name, jFile.source_name, jFile.dest_name, ETAT));
+                var Exe_Unique = new Thread(() => Butter.SVU.CopyRepertoire(jFile.name, jFile.source_name, jFile.dest_name, ETAT)); // Sauvegarde en parallèle
                 var Exe_Diff = new Thread(() => Butter.SVS.CopyRepertoire_Modifier(jFile.name, jFile.source_name, jFile.dest_name, ETAT));
 
-                if (jFile.type_save == "Complet" || jFile.type_save == "Full")
+                if (jFile.type_save == "Complet" || jFile.type_save == "Full") 
                 {
                     //Butter.SVU.CopyRepertoire(jFile.name, jFile.source_name, jFile.dest_name, ETAT); //Function to copy the files completly
 
-                    Exe_Unique.Start();
+                    Exe_Unique.Start(); //Tebda la sauvegarde
                     File.Delete(file);
                 }
                 else if (jFile.type_save == "Differentiel" || jFile.type_save == " Differential")
                 {
                     //Butter.SVS.CopyRepertoire_Modifier(jFile.name, jFile.source_name, jFile.dest_name, ETAT); //Function to copy the files Differential
-                    Exe_Diff.Start();
+                    Exe_Diff.Start(); //Tebda la sauvegarde
                     File.Delete(file);
                 }
             }

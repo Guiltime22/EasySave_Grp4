@@ -9,67 +9,18 @@ namespace EasySave_GRP4.Model
 {
     class Gestion_Travail
     {
-        Create_Travail TV = new Create_Travail();
-        public void Gestion_Travail_Sauvegarde(int nbFichiersSD) //function to manage a work of saving
+
+        public void Modifier_Travail(string name, string Source_File, string Destination_File, string type_save)
         {
-            Butter.LGUE.Gest_Tr_sauvegarde();  /* Calling a function */
-            int Gest = Convert.ToInt32(Console.ReadLine()); //Input of the User
-            if (Gest == 1)
-            {
-                {
-                    Console.Clear();
-                    Butter.LGUE.Affichage(); /* Calling a function */
-
-                    Console.ReadKey();
-                    Console.Clear();
-                }
-
-            }
-            else if (Gest == 2)
-            {
-                Console.Clear();
-                Butter.LGUE.Modifiernb();  /* Calling a function */
-                int choice = Convert.ToInt32(Console.ReadLine()); //Input of the User
-                for (int i = 1; i <= choice; i++)
-                {
-                    Console.Clear();
-                    Butter.LGUE.ModifierTr();  /* Calling a function */
-                    string modif = Console.ReadLine(); //Input of the User
-                    string m = @"..\..\..\Config\Travaux_Sauvegarde\" + modif + ".json";
-                    try
-                    {
-                        File.Delete(m);
-                    }
-                    catch
-                    {
-                        Console.Clear();
-                        Butter.LGUE.Travail_introuvable();  /* Calling a function */
-                        Console.ReadKey();
-                        return;
-                    }
-                   //TV.Create_Travail_Sauvegarde();
-                }
-            }
-            else if (Gest == 3)
-            {
-                Console.Clear();
-                Butter.LGUE.Supprimer();  /* Calling a function */
-
-                string suppp = Console.ReadLine(); //Input of the User
-                string f = @"..\..\..\Config\Travaux_Sauvegarde\" + suppp + ".json";
-                File.Delete(f);
-                Butter.LGUE.Supprimer_Terminer();  /* Calling a function */
-                Console.ReadKey();
-                return;
-
-            }
-            else if (Gest == 4)
-            {
-                Console.Clear();
-                return;
-            }
-            return;
+            string f = @"..\..\..\Config\Travaux_Sauvegarde" + name + ".json";
+            File.Delete(f);
+            Butter.CT.Create_Travail_Sauvegarde(name, Source_File, Destination_File, type_save);
         }
-
+        public void Supprimer_Travail(string name)
+        {
+            string f = @"..\..\..\Config\Travaux_Sauvegarde" + name + ".json";
+            FileInfo file = new FileInfo(f);
+            file.Delete();
+        }
     }
-}
+} 

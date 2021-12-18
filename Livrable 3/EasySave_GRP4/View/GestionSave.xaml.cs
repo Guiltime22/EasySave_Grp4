@@ -79,11 +79,33 @@ namespace EasySave_GRP4.View
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Modifier_Click(object sender, RoutedEventArgs e) //bouton modifier +supprimer, passe en paramètres ce qu'il faut 
         {
+            if (textBoxName.Text != "" && textBoxSource.Text != "" && textBoxDestination.Text != "" && ComboType.Text != "")
+            {
+
+                View_Factory.GT.Modifier_Travail(textBoxName.Text, textBoxSource.Text, textBoxDestination.Text, ComboType.Text);
+               
+            }
+            else
+            {
+                MessageBox.Show("Veuillez remplir tout les champs");
+            }
 
         }
 
-        
+        private void Supprimer_Click(object sender, RoutedEventArgs e)
+        {
+            if (textBoxName.Text != "")
+            {
+
+                View_Factory.GT.Supprimer_Travail(textBoxName.Text);
+               
+            }
+            else
+            {
+                MessageBox.Show("Veuillez remplir tout les champs");
+            }
+        }
     }
 }
