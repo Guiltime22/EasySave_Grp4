@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Threading;
 
 namespace EasySave_GRP4.View
 {
@@ -20,8 +21,23 @@ namespace EasySave_GRP4.View
         public ProgressBar()
         {
             InitializeComponent();
+            Thread Recup_Etat = new Thread(Suivit_Loaded);
+            Recup_Etat.Start();
         }
+        private void Suivit_Loaded()
+        {
+            while (true)
+            {
+                //
+                Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Send, new Action(delegate ()
+                {
+                    Affi_Data.ItemsSource = View_Factory.CPT.Afficher_Data();
 
+
+                }));
+                Thread.Sleep(800);
+            }
+        }
         private void Play_Click(object sender, RoutedEventArgs e)
         {
             View_Factory.CET.Play_Travail();
@@ -47,7 +63,7 @@ namespace EasySave_GRP4.View
 
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
-            Affi_Data.ItemsSource = View_Factory.CPT.Afficher_Progress();
+            //Affi_Data.ItemsSource = View_Factory.CPT.Afficher_Data();
         }
 
         private void Affi_Data_LoadingRow(object sender, DataGridRowEventArgs e)

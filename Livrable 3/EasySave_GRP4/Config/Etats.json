@@ -1,0 +1,24 @@
+[
+  {
+    "Name": "Save",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination",
+    "State": "Inactif",
+    "TotalFilesToCopy": "34",
+    "TotalFilesSize": "3026805844",
+    "NbFilesLeftToDo": "34",
+    "Progression": "0%",
+    "Time": "\"Timestamp\": \"12/19/2021 00:28:54\""
+  },
+  {
+    "Name": "Save",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination",
+    "State": "Actif",
+    "TotalFilesToCopy": "34",
+    "TotalFilesSize": "3026805844",
+    "NbFilesLeftToDo": "0",
+    "Progression": "100%",
+    "Time": "\"Timestamp\": \"12/19/2021 00:29:22\""
+  }
+]

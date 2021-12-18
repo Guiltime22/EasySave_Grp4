@@ -30,7 +30,7 @@ namespace EasySave_GRP4.Model
             int TotalFichiersACopier = Directory.GetFiles(source, "*.*", SearchOption.AllDirectories).Length;
             int TotalFichiersDestination = Directory.GetFiles(destination, "*.*", SearchOption.AllDirectories).Length;
             int TotalFichiersRestants = TotalFichiersACopier - TotalFichiersDestination; //To calculate the remaining files
-
+            float Progressioune=0;
             DirectoryInfo dir = new DirectoryInfo(source);
             DirectoryInfo[] dirs = dir.GetDirectories();
             FileInfo[] files = dir.GetFiles();
@@ -38,8 +38,9 @@ namespace EasySave_GRP4.Model
             {
                 long tf = Convert.ToInt64(file.Length);
                 Taille = Taille + tf; //The size of the file
+
             }
-            float Progress = 0 ; //(TotalFichiersDestination / TotalFichiersACopier) * 100; //To calculate the progress of the copy
+            Progressioune = (TotalFichiersDestination / TotalFichiersACopier) * 100; //To calculate the progress of the copy
             var Temps = new JProperty("Timestamp", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss")); //To set the time of the copy
             mutex.WaitOne();
             var jsonDataWork = File.ReadAllText(State_File.fileName);
@@ -54,7 +55,7 @@ namespace EasySave_GRP4.Model
                 TotalFilesToCopy = Convert.ToString(TotalFichiersACopier),
                 TotalFilesSize = Convert.ToString(Taille),
                 NbFilesLeftToDo = Convert.ToString(TotalFichiersRestants),
-                Progression = Convert.ToString(Progress) + "%",
+                Progression = Convert.ToString(Progressioune) + "%",
                 Time = Convert.ToString(Temps)
             });
             
@@ -64,6 +65,47 @@ namespace EasySave_GRP4.Model
             mutex.ReleaseMutex();
             
 
+        }
+
+        public void Executer_Fichier_Etat(string nom_fichier, string source, string destination, string ETAT) //Function to create a state into the state file for the work
+        {
+            long Taille = 0;
+            int TotalFichiersACopier = Directory.GetFiles(source, "*.*", SearchOption.AllDirectories).Length;
+            int TotalFichiersDestination = Directory.GetFiles(destination, "*.*", SearchOption.AllDirectories).Length;
+            int TotalFichiersRestants = TotalFichiersACopier - TotalFichiersDestination; //To calculate the remaining files
+            float Progressioune = 0;
+            DirectoryInfo dir = new DirectoryInfo(source);
+            DirectoryInfo[] dirs = dir.GetDirectories();
+            FileInfo[] files = dir.GetFiles();
+            foreach (FileInfo file in files)
+            {
+                long tf = Convert.ToInt64(file.Length);
+                Taille = Taille + tf; //The size of the file
+                Progressioune = (TotalFichiersDestination / TotalFichiersACopier) * 100; //To calculate the progress of the copy
+            }
+
+            var Temps = new JProperty("Timestamp", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss")); //To set the time of the copy
+            mutex.WaitOne();
+            var jsonDataWork = File.ReadAllText(State_File.fileName);
+            mutex.ReleaseMutex();
+            var workList = JsonConvert.DeserializeObject<List<State_File>>(jsonDataWork) ?? new List<State_File>();
+            workList.Add(new State_File()
+            {
+                Name = nom_fichier,
+                SourceFilePath = source,
+                TargetFilePath = destination,
+                State = ETAT,
+                TotalFilesToCopy = Convert.ToString(TotalFichiersACopier),
+                TotalFilesSize = Convert.ToString(Taille),
+                NbFilesLeftToDo = Convert.ToString(TotalFichiersRestants),
+                Progression = Convert.ToString(Progressioune) + "%",
+                Time = Convert.ToString(Temps)
+            });
+
+            string jsonString = JsonConvert.SerializeObject(workList, Formatting.Indented);
+            mutex.WaitOne();
+            File.WriteAllText(State_File.fileName, jsonString);
+            mutex.ReleaseMutex();
         }
     }
 }

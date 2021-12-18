@@ -23,8 +23,6 @@ namespace EasySave_GRP4.Model
 
         public void CopyRepertoire(string name, string src, string dest, string etat) //Function to copy the files completly
         {
-            while (true)
-            {
                 string path = @"..\..\..\Config\Travaux_Sauvegarde\";
                 int nbFichiersSD = Directory.GetFiles(path, "*.*", SearchOption.TopDirectoryOnly).Length;
 
@@ -140,12 +138,8 @@ namespace EasySave_GRP4.Model
                 }
 
                 **/
-                Butter.ST.Creer_Fichier_Etat(name, src, dest, etat); //Function to create a state into the state file for the work
+                Butter.ST.Executer_Fichier_Etat(name, src, dest, etat); //Function to create a state into the state file for the work
 
-                // show some random text in a label control (btw. you have to
-                // dispatch the action onto the main thread)
-                Butter.waitHandle.WaitOne(Timeout.Infinite); // waits for the signal to be set
-            }
             
         }
         private List<FileInfo> OrderFiles(List<FileInfo> l) // Gestion des fichiers prioritaires

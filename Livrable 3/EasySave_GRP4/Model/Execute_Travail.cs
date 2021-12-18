@@ -36,13 +36,13 @@ namespace EasySave_GRP4.Model
                 if (jFile.type_save == "Complet" || jFile.type_save == "Full")
                 {
                     Butter.SVU.CopyRepertoire(jFile.name, jFile.source_name, jFile.dest_name, ETAT); //Function to copy the files completly
-                    File.Delete(fileName); //Delete the work after the execution
+                    //File.Delete(fileName); //Delete the work after the execution
                 }
                 else if (jFile.type_save == "Differentiel" || jFile.type_save == " Differential")
                 {
 
                     Butter.SVS.CopyRepertoire_Modifier(jFile.name, jFile.source_name, jFile.dest_name, ETAT); //Function to copy the files differential
-                    File.Delete(fileName);
+                    //File.Delete(fileName);
                 }
                 MessageBox.Show("Execution du travail réussi");
             }
@@ -77,19 +77,18 @@ namespace EasySave_GRP4.Model
                     File.Delete(file);
                 }
             }
-            MessageBox.Show("Execution du travail réussi");
+            //MessageBox.Show("Execution du travail réussi");
         }
 
         public void Pause()
         {
 
-            Butter.waitHandle.Reset();
         }
 
 
         public void Play()
         {
-            Butter.waitHandle.Set();
+
         }
         public void Stop()
         {
@@ -104,12 +103,6 @@ namespace EasySave_GRP4.Model
             Exe_Unique.Join();
             */
         }
-        public enum Etat_Svg
-        {
-            pause,
-            play,
-            stop,
 
-        }
     }
 }
