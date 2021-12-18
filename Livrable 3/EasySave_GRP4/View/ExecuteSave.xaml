@@ -10,7 +10,7 @@
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>
-        <DataGrid Name="Aff_Data"  Margin="10,10,10,170" LoadingRow="DataGrid_LoadingRow" Background="#CCA1D5F7"/>
+        <DataGrid Name="Aff_Data"  Margin="10,10,10,170" LoadingRow="DataGrid_LoadingRow" Background="#CCA1D5F7" SelectionChanged="Aff_Data_SelectionChanged"/>
         <Label Content="Nom :" HorizontalAlignment="Left" Margin="40,307,0,0" VerticalAlignment="Top" Width="95" FontSize="14"/>
         <Button Name="Execute_Button" Content="Executer le travail" HorizontalAlignment="Left" Margin="473,316,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.303,0.303" Click="Execute_Button_Click" Background="#FF007ACC" Foreground="White" FontSize="14" FontWeight="Bold" BorderThickness="0" Width="257" Height="64" />
         <RadioButton Name="Execute_Unique" Content="Unique" HorizontalAlignment="Left" Margin="46,365,0,0" VerticalAlignment="Top" Checked="Execute_Unique_Checked" FontSize="14" VerticalContentAlignment="Center"/>

@@ -59,5 +59,10 @@ namespace EasySave_GRP4.View
         {
             Execute_N.IsEnabled = false;
         }
+
+        private void Aff_Data_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

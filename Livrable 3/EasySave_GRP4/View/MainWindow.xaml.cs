@@ -42,5 +42,11 @@ namespace EasySave_GRP4.View
             View.Parametres parametres = new View.Parametres();
             parametres.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            View.GestionSave Execute_Dialog = new View.GestionSave();
+            Execute_Dialog.Show();
+        }
     }
 }

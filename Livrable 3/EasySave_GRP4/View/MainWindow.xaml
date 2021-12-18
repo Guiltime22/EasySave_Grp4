@@ -25,6 +25,7 @@
                 <ImageBrush ImageSource="../image/test.png"/>
             </Button.Background>
         </Button>
+        <Button Content="Gestion" HorizontalAlignment="Left" Margin="360,133,0,0" VerticalAlignment="Top" Grid.Row="1" Click="Button_Click" Height="44" Width="109" Background="#FF007ACC" Foreground="White" FontWeight="Bold" FontSize="14"/>
 
     </Grid>
 </Window>

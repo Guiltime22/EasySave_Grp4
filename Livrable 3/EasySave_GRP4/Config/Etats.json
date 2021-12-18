@@ -724,5 +724,16 @@
     "NbFilesLeftToDo": "0",
     "Progression": "100%",
     "Time": "\"Timestamp\": \"12/17/2021 23:06:36\""
+  },
+  {
+    "Name": "Chiraz",
+    "SourceFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\Mazouni Chiraz\\Desktop\\Destination",
+    "State": "Inactif",
+    "TotalFilesToCopy": "13",
+    "TotalFilesSize": "14603998",
+    "NbFilesLeftToDo": "0",
+    "Progression": "100%",
+    "Time": "\"Timestamp\": \"12/18/2021 01:10:17\""
   }
 ]
