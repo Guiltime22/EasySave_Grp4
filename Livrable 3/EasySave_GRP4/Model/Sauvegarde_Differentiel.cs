@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 //using Newtonsoft.Json;
 using System.Text.Json;
+using System.Threading;
 using System.Windows;
 using static EasySave_GRP4.Model.Model_Factory;
 
@@ -11,6 +12,9 @@ namespace EasySave_GRP4.Model
 {
     class Sauvegarde_Differentiel
     {
+        private static Object _locker = new Object();
+        private static Mutex mutex = new Mutex();
+
         public void CopyRepertoire_Modifier(string name, string sourcePath, string destinationPath, string etat)  //Function to copy the files differential
         {
             StreamReader r = new StreamReader(@"..\..\..\Config\Parametres.json");
@@ -41,11 +45,15 @@ namespace EasySave_GRP4.Model
                                         p.StartInfo.FileName = @"..\..\..\..\CryptoSoft\bin\Debug\netcoreapp3.0\Cryptage_Soft.exe";
                                         p.StartInfo.Arguments = $"{sourceFiles[source].FullName} {tempPath}";
                                         CryptWatch.Start();
+                                        mutex.WaitOne();
                                         p.Start();
+                                        mutex.ReleaseMutex(); 
                                         CryptWatch.Stop();
                                     }
                                     TimeSpan cts = CryptWatch.Elapsed;
+                                    mutex.ReleaseMutex();//pour éviter les conflits 
                                     sourceFiles[source].CopyTo(Path.Combine(destinationDir.FullName, sourceFiles[source].Name), true); //Execute the copy
+                                    mutex.ReleaseMutex(); //release the mutex my son
                                     Butter.ST.Creer_Fichier_Etat(name, sourcePath, destinationPath, etat);
                                     Stopwatch stopWatch = new Stopwatch(); //Instance the Timer
                                     Stopwatch.StartNew(); //Reset the Timer
@@ -61,7 +69,9 @@ namespace EasySave_GRP4.Model
                         }
                         else
                         {
+                            mutex.WaitOne();
                             sourceFiles[source].CopyTo(Path.Combine(destinationDir.FullName, sourceFiles[source].Name), true);
+                            mutex.ReleaseMutex();
                         }
                     }
                 }
