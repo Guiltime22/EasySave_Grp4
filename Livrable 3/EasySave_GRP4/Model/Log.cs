@@ -22,7 +22,7 @@ namespace EasySave_GRP4.Model
     }
     class Log
     {
-        public void Create_Log(FileInfo name, string nom_fichier, string src, string dest, TimeSpan ts, TimeSpan cts, int Taille) //Function to create a log into the log file for the work
+        public void Create_Log(FileInfo name, string nom_fichier, string src, string dest, TimeSpan ts, TimeSpan cts, long Taille) //Function to create a log into the log file for the work
         {
             while (true)
             {

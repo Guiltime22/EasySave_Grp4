@@ -22,6 +22,9 @@ namespace EasySave_GRP4.Model
     //
     class Execute_Travail
     {
+        Thread Exe_Unique;
+        Thread Exe_Diff;
+        
         string ETAT = "Actif";
         public void Execute_Unique(string nom_fichier) //function to execute a work of saving
         {
@@ -57,8 +60,8 @@ namespace EasySave_GRP4.Model
 
                 string jsonString = File.ReadAllText(file); //Open the file to read the work
                 JFile jFile = System.Text.Json.JsonSerializer.Deserialize<JFile>(jsonString);//Convert the content of the file into Objects
-                var Exe_Unique = new Thread(() => Butter.SVU.CopyRepertoire(jFile.name, jFile.source_name, jFile.dest_name, ETAT)); // Sauvegarde en parallèle
-                var Exe_Diff = new Thread(() => Butter.SVS.CopyRepertoire_Modifier(jFile.name, jFile.source_name, jFile.dest_name, ETAT));
+                Exe_Unique = new Thread(() => Butter.SVU.CopyRepertoire(jFile.name, jFile.source_name, jFile.dest_name, ETAT)); // Sauvegarde en parallèle
+                Exe_Diff = new Thread(() => Butter.SVS.CopyRepertoire_Modifier(jFile.name, jFile.source_name, jFile.dest_name, ETAT));
 
                 if (jFile.type_save == "Complet" || jFile.type_save == "Full") 
                 {
@@ -76,18 +79,30 @@ namespace EasySave_GRP4.Model
             }
             MessageBox.Show("Execution du travail réussi");
         }
+
         public void Pause()
         {
-            Thread.Sleep(200000);
 
+            Butter.waitHandle.Reset();
         }
+
+
         public void Play()
         {
-
+            Butter.waitHandle.Set();
         }
         public void Stop()
         {
+            /*
+            // Signal the shutdown event
+            Butter._shutdownEvent.Set();
 
+            // Make sure to resume any paused threads
+            Butter._pauseEvent.Set();
+
+            // Wait for the thread to exit
+            Exe_Unique.Join();
+            */
         }
         public enum Etat_Svg
         {

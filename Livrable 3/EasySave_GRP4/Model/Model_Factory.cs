@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Threading;
 //using Newtonsoft.Json;
 
 namespace EasySave_GRP4.Model
@@ -27,6 +28,8 @@ namespace EasySave_GRP4.Model
             static public Sauvegarde_Unique SVU = new Sauvegarde_Unique(); // Instance to use class Sauvegarde Sequentielle
             //static public JFile_p JP = new JFile_p();
             static public Create_Travail CT = new Create_Travail() ;
+
+            public static EventWaitHandle waitHandle = new ManualResetEvent(initialState: true);
         }
 
         

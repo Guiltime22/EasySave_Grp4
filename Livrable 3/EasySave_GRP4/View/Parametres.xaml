@@ -36,7 +36,7 @@
             <Label Content="xlsx"/>
         </ComboBox>
         <Label Content="Limite en ko :" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="28,292,0,0" VerticalAlignment="Top" FontFamily="Leelawadee" FontSize="18" FontWeight="Bold" Height="32" Width="163"/>
-        <TextBox Name="Taille" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="190,299,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Height="25"/>
+        <TextBox Name="Taille" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="190,299,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Height="25"/>
 
 
     </Grid>

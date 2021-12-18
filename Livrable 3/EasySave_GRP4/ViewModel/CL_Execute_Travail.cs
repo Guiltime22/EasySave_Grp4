@@ -88,7 +88,7 @@ namespace EasySave_Grp4.ModelView
                 State_List tesT = JsonConvert.DeserializeObject<State_List>(File.ReadAllText(file));
                 var taille_fichier_source = tesT.source_name.Length;
                 var taille_fichier_dest = tesT.dest_name.Length;
-                var Action_Progress = (taille_fichier_dest * 100) / taille_fichier_source;
+                var Action_Progress = (taille_fichier_dest / taille_fichier_source) * 100;
                 State_List.Add(new State_List() //parameter that the JSON file will contains
                 {
                     Name = tesT.Name,
@@ -100,6 +100,18 @@ namespace EasySave_Grp4.ModelView
 
             }
             return State_List;
+        }
+        public void Play_Travail()
+        {
+            VM_Factory.ET.Play();
+        }
+        public void Pause_Travail()
+        {
+            VM_Factory.ET.Pause();
+        }
+        public void Stop_Travail()
+        {
+            VM_Factory.ET.Stop();
         }
     }
 

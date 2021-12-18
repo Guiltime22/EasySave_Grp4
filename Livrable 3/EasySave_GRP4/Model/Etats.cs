@@ -4,6 +4,7 @@ using System.Text;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Threading;
 
 namespace EasySave_GRP4.Model
 {
@@ -22,11 +23,12 @@ namespace EasySave_GRP4.Model
     }
     class States
     {
+        private static Mutex mutex = new Mutex();
         public void Creer_Fichier_Etat(string nom_fichier, string source, string destination, string ETAT) //Function to create a state into the state file for the work
         {
-            int Taille = 0;
-            int TotalFichiersACopier = Directory.GetFiles(source, "*.*", SearchOption.TopDirectoryOnly).Length;
-            int TotalFichiersDestination = Directory.GetFiles(destination, "*.*", SearchOption.TopDirectoryOnly).Length;
+            long Taille = 0;
+            int TotalFichiersACopier = Directory.GetFiles(source, "*.*", SearchOption.AllDirectories).Length;
+            int TotalFichiersDestination = Directory.GetFiles(destination, "*.*", SearchOption.AllDirectories).Length;
             int TotalFichiersRestants = TotalFichiersACopier - TotalFichiersDestination; //To calculate the remaining files
 
             DirectoryInfo dir = new DirectoryInfo(source);
@@ -34,12 +36,14 @@ namespace EasySave_GRP4.Model
             FileInfo[] files = dir.GetFiles();
             foreach (FileInfo file in files)
             {
-                int tf = Convert.ToInt32(file.Length);
+                long tf = Convert.ToInt64(file.Length);
                 Taille = Taille + tf; //The size of the file
             }
-            float Progress = (TotalFichiersDestination / TotalFichiersACopier) * 100; //To calculate the progress of the copy
+            float Progress = 0 ; //(TotalFichiersDestination / TotalFichiersACopier) * 100; //To calculate the progress of the copy
             var Temps = new JProperty("Timestamp", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss")); //To set the time of the copy
+            mutex.WaitOne();
             var jsonDataWork = File.ReadAllText(State_File.fileName);
+            mutex.ReleaseMutex();
             var workList = JsonConvert.DeserializeObject<List<State_File>>(jsonDataWork) ?? new List<State_File>();
             workList.Add(new State_File()
             {
@@ -55,7 +59,10 @@ namespace EasySave_GRP4.Model
             });
             
             string jsonString = JsonConvert.SerializeObject(workList, Formatting.Indented);
+            mutex.WaitOne();
             File.WriteAllText(State_File.fileName, jsonString);
+            mutex.ReleaseMutex();
+            
 
         }
     }

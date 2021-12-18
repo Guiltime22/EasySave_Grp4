@@ -22,19 +22,22 @@ namespace EasySave_GRP4.View
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Play_Click(object sender, RoutedEventArgs e)
         {
-          
+            View_Factory.CET.Play_Travail();
+            MessageBox.Show("Play my dude");
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Pause_Click(object sender, RoutedEventArgs e)
         {
-
+            View_Factory.CET.Pause_Travail();
+            MessageBox.Show("Pause my dude");
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void Stop_Click(object sender, RoutedEventArgs e)
         {
-
+            View_Factory.CET.Stop_Travail();
+            MessageBox.Show("Hbess hnaya khir");
         }
 
         private void Aff_Data_SelectionChanged(object sender, SelectionChangedEventArgs e)
