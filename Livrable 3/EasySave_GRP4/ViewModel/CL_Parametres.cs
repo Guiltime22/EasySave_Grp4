@@ -10,9 +10,9 @@ namespace EasySave_Grp4.ModelView
         {
 
         }
-        public void Parametres(string Langue, string type, string Metier)
+        public void Parametres(string Langue, string type, string Metier, string Prioritaire, string Taille)
         {
-            VM_Factory.P.Parametres_Generaux(Langue, type, Metier);
+            VM_Factory.P.Parametres_Generaux(Langue, type, Metier, Prioritaire, Taille);
         }
     }
 }

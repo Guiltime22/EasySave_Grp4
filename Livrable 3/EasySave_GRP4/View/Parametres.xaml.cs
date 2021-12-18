@@ -24,7 +24,7 @@ namespace EasySave_GRP4.View
 
         private void Parametres_Button_Click(object sender, RoutedEventArgs e)
         {
-          View_Factory.PR.Parametres(Langue.Text, Cryptage.Text, Metier.Text);
+          View_Factory.PR.Parametres(Langue.Text, Cryptage.Text, Metier.Text, Prioritaire_Copy.Text, Taille.Text);
           
         }
     }
