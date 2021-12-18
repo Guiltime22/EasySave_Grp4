@@ -36,7 +36,9 @@ namespace EasySave_GRP4.View
 
         private void Execute_Button_Click(object sender, RoutedEventArgs e)
         {
-            if(Execute_Unique.IsChecked == true)
+            View.ProgressBar Progress_Dialog = new View.ProgressBar();
+            Progress_Dialog.Show();
+            if (Execute_Unique.IsChecked == true)
             {
                 
                 View_Factory.CET.Executer_Travail_Unique(Execute_N.Text);
