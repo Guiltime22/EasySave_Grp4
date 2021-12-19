@@ -1,123 +1,13 @@
 [
   {
-    "Name": "azert",
-    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
-    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
-    "State": "Actif",
-    "TotalFilesToCopy": "34",
-    "TotalFilesSize": "3026811181",
-    "NbFilesLeftToDo": "-981",
-    "Progression": "2985%",
-    "Time": "\"Timestamp\": \"12/19/2021 02:43:07\""
-  },
-  {
-    "Name": "azert",
-    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
-    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
-    "State": "Actif",
-    "TotalFilesToCopy": "34",
-    "TotalFilesSize": "3026811181",
-    "NbFilesLeftToDo": "0",
-    "Progression": "100%",
-    "Time": "\"Timestamp\": \"12/19/2021 02:43:18\""
-  },
-  {
-    "Name": "azert",
-    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
-    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
-    "State": "Actif",
-    "TotalFilesToCopy": "34",
-    "TotalFilesSize": "3026811181",
-    "NbFilesLeftToDo": "0",
-    "Progression": "100%",
-    "Time": "\"Timestamp\": \"12/19/2021 02:43:19\""
-  },
-  {
-    "Name": "azert",
-    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
-    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
-    "State": "Actif",
-    "TotalFilesToCopy": "34",
-    "TotalFilesSize": "3026811181",
-    "NbFilesLeftToDo": "0",
-    "Progression": "100%",
-    "Time": "\"Timestamp\": \"12/19/2021 02:43:19\""
-  },
-  {
-    "Name": "azert",
-    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
-    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
-    "State": "Actif",
-    "TotalFilesToCopy": "34",
-    "TotalFilesSize": "3026811181",
-    "NbFilesLeftToDo": "0",
-    "Progression": "100%",
-    "Time": "\"Timestamp\": \"12/19/2021 02:43:20\""
-  },
-  {
-    "Name": "azert",
-    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
-    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
-    "State": "Actif",
-    "TotalFilesToCopy": "34",
-    "TotalFilesSize": "3026811181",
-    "NbFilesLeftToDo": "0",
-    "Progression": "100%",
-    "Time": "\"Timestamp\": \"12/19/2021 02:43:21\""
-  },
-  {
-    "Name": "azert",
-    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
-    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
-    "State": "Actif",
-    "TotalFilesToCopy": "34",
-    "TotalFilesSize": "3026811181",
-    "NbFilesLeftToDo": "0",
-    "Progression": "100%",
-    "Time": "\"Timestamp\": \"12/19/2021 02:43:23\""
-  },
-  {
-    "Name": "azert",
-    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
-    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
-    "State": "Actif",
-    "TotalFilesToCopy": "34",
-    "TotalFilesSize": "3026811181",
-    "NbFilesLeftToDo": "0",
-    "Progression": "100%",
-    "Time": "\"Timestamp\": \"12/19/2021 02:43:23\""
-  },
-  {
-    "Name": "azert",
-    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
-    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
-    "State": "Actif",
-    "TotalFilesToCopy": "34",
-    "TotalFilesSize": "3026811181",
-    "NbFilesLeftToDo": "0",
-    "Progression": "100%",
-    "Time": "\"Timestamp\": \"12/19/2021 02:43:25\""
-  },
-  {
-    "Name": "Alors",
-    "SourceFilePath": "C:\\Users\\mesbah\\Desktop\\Test1",
-    "TargetFilePath": "C:\\Users\\mesbah\\Desktop\\lol",
-    "State": "Inactif",
-    "TotalFilesToCopy": "13",
-    "TotalFilesSize": "2455534",
-    "NbFilesLeftToDo": "-1",
-    "Progression": "100%",
-    "Time": "\"Timestamp\": \"12/19/2021 03:18:29\""
-  },
-  {
-    "Name": "alors1",
-    "SourceFilePath": "C:\\Users\\mesbah\\Desktop\\Test1",
-    "TargetFilePath": "C:\\Users\\mesbah\\Desktop\\destination",
+    "Name": "Save1",
+    "SourceFilePath": "C:\\Users\\ghile\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\ghile\\Desktop\\Destination",
     "State": "END",
-    "TotalFilesToCopy": "13",
-    "TotalFilesSize": "2455534",
+    "TotalFilesToCopy": "6",
+    "TotalFilesSize": "1594887",
     "NbFilesLeftToDo": "0",
     "Progression": "100%",
-    "Time": "19/12/2021 03:20:48"
+    "Time": "19/12/2021 04:24:14"
   }
 ]

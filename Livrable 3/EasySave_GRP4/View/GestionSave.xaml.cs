@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -72,11 +73,25 @@ namespace EasySave_GRP4.View
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Aff_Data.ItemsSource = View_Factory.CET.Afficher_le_travail();
+            
+        }
+        private void Aff_Loaded()
+        {
+            while (true)
+            {
+                //
+                Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Send, new Action(delegate ()
+                {
+                    Aff_Data.ItemsSource = View_Factory.CET.Afficher_le_travail();
+                }));
+                Thread.Sleep(800);
+            }
         }
         public GestionSave()
         {
             InitializeComponent();
+            Thread Aff = new Thread(Aff_Loaded);
+            Aff.Start();
         }
 
         private void Modifier_Click(object sender, RoutedEventArgs e) //modify and delete button 
@@ -85,6 +100,7 @@ namespace EasySave_GRP4.View
             {
 
                 View_Factory.GT.Modifier_Travail(textBoxName.Text, textBoxSource.Text, textBoxDestination.Text, ComboType.Text);
+                MessageBox.Show("Travail modifié");
                
             }
             else
@@ -100,6 +116,7 @@ namespace EasySave_GRP4.View
             {
 
                 View_Factory.GT.Supprimer_Travail(textBoxName.Text);
+                MessageBox.Show("Travail supprimé");
                
             }
             else

@@ -12,15 +12,15 @@ namespace EasySave_GRP4.Model
 
         public void Modifier_Travail(string name, string Source_File, string Destination_File, string type_save)
         {
-            string f = @"..\..\..\Config\Travaux_Sauvegarde" + name + ".json";
-            File.Delete(f);
+            string fileName = @"..\..\..\Config\Travaux_Sauvegarde\" + name + ".json";
+            File.Delete(fileName);
             Butter.CT.Create_Travail_Sauvegarde(name, Source_File, Destination_File, type_save);
         }
         public void Supprimer_Travail(string name)
         {
-            string f = @"..\..\..\Config\Travaux_Sauvegarde" + name + ".json";
-            FileInfo file = new FileInfo(f);
-            file.Delete();
+            string fileName = @"..\..\..\Config\Travaux_Sauvegarde\" + name + ".json";
+            //FileInfo file = new FileInfo(f);
+            File.Delete(fileName);
         }
     }
 } 

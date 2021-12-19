@@ -11,6 +11,7 @@ using System.Xml.Serialization;
 
 namespace EasySave_GRP4.Model
 {
+    [XmlRoot("State_File"), XmlType("State_File")]
     public class State_File
     {
         public static string fileName = @"..\..\..\Config\Etats.json";
@@ -31,7 +32,7 @@ namespace EasySave_GRP4.Model
 
         public void Creer_Fichier_Etatx(string nom_fichier, string source, string destination, string ETAT) //Function to create a state into the state file for the work
         {
-            int Taille = 0;
+            long Taille = 0;
             int TotalFichiersACopier = Directory.GetFiles(source, "*.*", SearchOption.TopDirectoryOnly).Length;
             int TotalFichiersDestination = Directory.GetFiles(destination, "*.*", SearchOption.TopDirectoryOnly).Length;
             int TotalFichiersRestants = TotalFichiersACopier - TotalFichiersDestination; //To calculate the remaining files
@@ -41,7 +42,7 @@ namespace EasySave_GRP4.Model
             FileInfo[] files = dir.GetFiles();
             foreach (FileInfo file in files)
             {
-                int tf = Convert.ToInt32(file.Length);
+                long tf = Convert.ToInt64(file.Length);
                 Taille = Taille + tf; //The size of the file
             }
             float Progress = (TotalFichiersDestination / TotalFichiersACopier) * 100; //To calculate the progress of the copy
@@ -87,8 +88,8 @@ namespace EasySave_GRP4.Model
         public void Creer_Fichier_Etat(string nom_fichier, string source, string destination, string ETAT) //Function to create a state into the state file for the work
         {
             long Taille = 0;
-            int TotalFichiersACopier = Directory.GetFiles(source, "*.*", SearchOption.AllDirectories).Length;
-            int TotalFichiersDestination = Directory.GetFiles(destination, "*.*", SearchOption.AllDirectories).Length;
+            int TotalFichiersACopier = Directory.GetFiles(source, "*.*", SearchOption.TopDirectoryOnly).Length;
+            int TotalFichiersDestination = Directory.GetFiles(destination, "*.*", SearchOption.TopDirectoryOnly).Length;
             int TotalFichiersRestants = TotalFichiersACopier - TotalFichiersDestination; //To calculate the remaining files
             float Progressioune=0;
             DirectoryInfo dir = new DirectoryInfo(source);

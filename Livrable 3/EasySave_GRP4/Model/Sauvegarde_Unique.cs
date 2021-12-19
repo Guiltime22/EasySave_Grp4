@@ -63,19 +63,25 @@ namespace EasySave_GRP4.Model
                             p.StartInfo.FileName = @"..\..\..\..\CryptoSoft\bin\Debug\netcoreapp3.0\Cryptage_Soft.exe";
                             p.StartInfo.Arguments = $"{file.FullName} {tempPath}";
                             p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                            if (file.Length < Convert.ToInt32(JP.Taille)) //Prohibition of simultaneous transfer of files larger than n KB
-                        {
-                                CryptWatch.Start(); //Start of the encryption
+                            if (file.Length < Convert.ToInt32(JP.Taille)) //Interdiction de transférer en simultané des fichiers de plus n Ko
+                            {
+                                CryptWatch.Start(); //timer cryptage bg
                                 mutex.WaitOne();
-                                p.Start(); 
+                                p.StartInfo.UseShellExecute = false;
+                                p.StartInfo.CreateNoWindow = true;
+                                p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                                p.Start(); //start theeeeeeeeeeeeee cryptageeeee oléolé
                                 mutex.ReleaseMutex();
-                                CryptWatch.Stop(); 
+                                CryptWatch.Stop(); // kda mna melhih bayna stop the cryptage
                             }
                             else
                             {
-                                lock (_locker) ; 
+                                lock (_locker) ; // verrou 
                                 CryptWatch.Start();
                                 mutex.WaitOne();
+                                p.StartInfo.UseShellExecute = false;
+                                p.StartInfo.CreateNoWindow = true;
+                                p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                                 p.Start();
                                 mutex.ReleaseMutex();
                                 CryptWatch.Stop();
@@ -173,8 +179,6 @@ namespace EasySave_GRP4.Model
             foreach (var t in lp) l.Remove(t);
             lp.AddRange(l);
             return new List<FileInfo>(lp);
-
-
         }
     }
 }
