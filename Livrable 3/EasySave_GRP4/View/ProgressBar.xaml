@@ -13,10 +13,12 @@
             <ColumnDefinition Width="10*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Name="Play" Content="Play" HorizontalAlignment="Left" Margin="349,298,0,0" VerticalAlignment="Top" Click="Play_Click" Height="44" Width="76" RenderTransformOrigin="3.153,1.081" FontWeight="Bold" Background="#FF007ACC" Foreground="White"/>
+
+        <Button Name="Play" Content="Play" HorizontalAlignment="Left" Margin="176,405,0,0" VerticalAlignment="Top" Click="Play_Click" Height="42" Width="64" RenderTransformOrigin="3.153,1.081" FontWeight="Bold" Background="#FF007ACC" Foreground="White"/>
         <Label HorizontalAlignment="Left" Margin="203,264,0,0" VerticalAlignment="Top"/>
-        <Button Name="Pause" Content="||" HorizontalAlignment="Left" Height="44" Margin="439,0,0,0" VerticalAlignment="Center" Width="76" Click="Pause_Click" RenderTransformOrigin="1.948,-0.377" FontWeight="Bold" Background="#FF007ACC" Foreground="White"/>
-        <Button Name="Stop" Content="Stop" HorizontalAlignment="Left" Height="44" Margin="533,0,0,0" VerticalAlignment="Center" Width="76" Click="Stop_Click" FontWeight="Bold" Foreground="White" Background="#FF007ACC" RenderTransformOrigin="0.522,1.001"/>
+        <Button Name="Pause" Content="||" HorizontalAlignment="Center" Height="43" Margin="0,403,0,0" VerticalAlignment="Top" Width="76" Click="Pause_Click" RenderTransformOrigin="1.948,-0.377" FontWeight="Bold" Background="#FF007ACC" Foreground="White"/>
+        <Button Name="Stop" Content="Stop" HorizontalAlignment="Left" Height="45" Margin="746,402,0,0" VerticalAlignment="Top" Width="69" Click="Stop_Click" FontWeight="Bold" Foreground="White" Background="#FF007ACC" RenderTransformOrigin="0.522,1.001"/>
+
         <DataGrid Name="Affi_Data" Margin="32,27,0,375" Background="#CCA1D5F7" LoadingRow="Affi_Data_LoadingRow" Grid.ColumnSpan="4"/>
 
 

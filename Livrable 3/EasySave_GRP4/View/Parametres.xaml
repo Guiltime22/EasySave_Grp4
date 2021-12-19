@@ -13,30 +13,30 @@
             <ColumnDefinition Width="123*"/>
             <ColumnDefinition Width="127*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Langue: " Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="28,41,0,0" VerticalAlignment="Top" FontFamily="Leelawadee" FontSize="18" FontWeight="Bold" Height="32" Width="81"/>
-        <ComboBox Name="Langue" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="166,41,0,0" VerticalAlignment="Top" Width="229" Height="32">
+        <Label x:Name="Lang" Content="Langue: " Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="28,41,0,0" VerticalAlignment="Top" FontFamily="Leelawadee" FontSize="18" FontWeight="Bold" Height="32" Width="186"/>
+        <ComboBox Name="Langue" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="250,41,0,0" VerticalAlignment="Top" Width="230" Height="32">
             <Label Content="French"/>
             <Label Content="English"/>
         </ComboBox>
-        <Label Content="Cryptage :" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="28,116,0,0" VerticalAlignment="Top" FontFamily="Leelawadee" FontSize="18" FontWeight="Bold" Height="32" Width="97"/>
-        <ComboBox Name="Cryptage" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="166,116,0,0" VerticalAlignment="Top" Width="229" Height="30">
+        <Label x:Name="crypt" Content="Cryptage :" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="28,116,0,0" VerticalAlignment="Top" FontFamily="Leelawadee" FontSize="18" FontWeight="Bold" Height="32" Width="186"/>
+        <ComboBox Name="Cryptage" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="251,116,0,0" VerticalAlignment="Top" Width="229" Height="30">
             <Label Content="pdf"/>
             <Label Content="txt"/>
             <Label Content="xlsx"/>
         </ComboBox>
-        <Button Name="Parametres_Button" Content="Enregistrer" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="196,359,0,0" VerticalAlignment="Top" Click="Parametres_Button_Click" Background="#FF007ACC" Foreground="White" Height="35" Width="109" FontFamily="Leelawadee" FontSize="18"/>
-        <Label Content="Logiciel métier :" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="28,184,0,0" VerticalAlignment="Top" FontFamily="Leelawadee" FontSize="18" FontWeight="Bold" Height="32" Width="146"/>
-        <ComboBox x:Name="Metier" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="196,184,0,0" VerticalAlignment="Top" Width="229" Height="30">
+        <Button Name="Parametres_Button" Content="Enregistrer" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="202,343,0,0" VerticalAlignment="Top" Click="Parametres_Button_Click" Background="#FF007ACC" Foreground="White" Height="35" Width="109" FontFamily="Leelawadee" FontSize="18"/>
+        <Label x:Name="met" Content="Logiciel métier :" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="28,184,0,0" VerticalAlignment="Top" FontFamily="Leelawadee" FontSize="18" FontWeight="Bold" Height="32" Width="186"/>
+        <ComboBox x:Name="Metier" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="251,184,0,0" VerticalAlignment="Top" Width="229" Height="30">
             <Label Content="Calculator"/>
         </ComboBox>
-        <Label Content="Type prioritaire :" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="28,237,0,0" VerticalAlignment="Top" FontFamily="Leelawadee" FontSize="18" FontWeight="Bold" Height="32" Width="163"/>
-        <ComboBox x:Name="Prioritaire_Copy" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="196,237,0,0" VerticalAlignment="Top" Width="229" Height="30">
+        <Label x:Name="prio" Content="Type prioritaire :" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="28,237,0,0" VerticalAlignment="Top" FontFamily="Leelawadee" FontSize="18" FontWeight="Bold" Height="32" Width="186"/>
+        <ComboBox x:Name="Prioritaire_Copy" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="251,243,0,0" VerticalAlignment="Top" Width="229" Height="30">
             <Label Content="txt"/>
             <Label Content="pdf"/>
             <Label Content="xlsx"/>
         </ComboBox>
-        <Label Content="Limite en ko :" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="28,292,0,0" VerticalAlignment="Top" FontFamily="Leelawadee" FontSize="18" FontWeight="Bold" Height="32" Width="163"/>
-        <TextBox Name="Taille" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="190,299,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Height="25"/>
+        <Label x:Name="nko" Content="Limite en ko :" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="28,292,0,0" VerticalAlignment="Top" FontFamily="Leelawadee" FontSize="18" FontWeight="Bold" Height="32" Width="186"/>
+        <TextBox Name="Taille" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="251,299,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Height="25"/>
 
 
     </Grid>

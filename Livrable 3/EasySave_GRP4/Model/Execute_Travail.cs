@@ -53,11 +53,31 @@ namespace EasySave_GRP4.Model
                     //File.Delete(fileName);
                 }
 
+                StreamReader rlang = new StreamReader(@"..\..\..\Config\Parametres.json");
+                string jsonlang = rlang.ReadToEnd();
+                JFile_parametres Jlang = JsonConvert.DeserializeObject<JFile_parametres>(jsonlang);
+                if (Jlang.Langue == "French")
+                {
                 MessageBox.Show("Execution du travail réussi");
+                }
+                else if (Jlang.Langue == "English")
+                {
+                    MessageBox.Show("Save executed succesfully");
+                }
             }
             catch
             {
-                MessageBox.Show("Travail introuvable");
+                StreamReader rlang = new StreamReader(@"..\..\..\Config\Parametres.json");
+                string jsonlang = rlang.ReadToEnd();
+                JFile_parametres Jlang = JsonConvert.DeserializeObject<JFile_parametres>(jsonlang);
+                if (Jlang.Langue == "French")
+                {
+                    MessageBox.Show("Travail Introuvable");
+                }
+                else if (Jlang.Langue == "English")
+                {
+                    MessageBox.Show("Save job not found");
+                }
             }
         }
         public void Execute_Seq()
@@ -96,7 +116,18 @@ namespace EasySave_GRP4.Model
                 }
 
             }
+            StreamReader rlang = new StreamReader(@"..\..\..\Config\Parametres.json");
+            string jsonlang = rlang.ReadToEnd();
+            JFile_parametres Jlang = JsonConvert.DeserializeObject<JFile_parametres>(jsonlang);
+            if (Jlang.Langue == "French")
+            {
             MessageBox.Show("Execution du travail réussi");
+            
+            }
+            else if (Jlang.Langue == "English")
+            {
+                MessageBox.Show("Save job not found");
+            }
         }
 
         public void Pause()

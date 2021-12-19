@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -9,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static EasySave_GRP4.Model.Model_Factory;
 
 namespace EasySave_GRP4.View
 {
@@ -18,6 +21,24 @@ namespace EasySave_GRP4.View
         public ExecuteSave()
         {
             InitializeComponent();
+            SwapLanguage();
+        }
+
+        public void SwapLanguage()
+        {
+            StreamReader rlang = new StreamReader(@"..\..\..\Config\Parametres.json");
+            string jsonlang = rlang.ReadToEnd();
+            JFile_parametres Jlang = JsonConvert.DeserializeObject<JFile_parametres>(jsonlang);
+            if (Jlang.Langue == "French")
+            {
+                LabelName.Content = "Nom : ";
+                Execute_Button.Content = "Executer le travail";
+            }
+            else if (Jlang.Langue == "English")
+            {
+                LabelName.Content = "Name : ";
+                Execute_Button.Content = "Execute the job";
+            }
         }
 
         private void DataGrid_LoadingRow(object sender, DataGridRowEventArgs e)

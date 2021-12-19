@@ -125,8 +125,18 @@ namespace EasySave_GRP4.Model
                     {
                         while (Process.GetProcessesByName(JP.Metier).Length != 0)
                         {
-                            MessageBox.Show("Votre logiciel métier est en cours d'éxecution, veuillez le fermer !");
+                        StreamReader rlang = new StreamReader(@"..\..\..\Config\Parametres.json");
+                        string jsonlang = rlang.ReadToEnd();
+                        JFile_parametres Jlang = JsonConvert.DeserializeObject<JFile_parametres>(jsonlang);
+                        if (Jlang.Langue == "French")
+                        {
+                            MessageBox.Show("Votre logiciel métier est en cours d'execution, veuillez le fermer !");
                         }
+                        else if (Jlang.Langue == "English")
+                        {
+                            MessageBox.Show("Job application is running, Please close it !");
+                        }
+                    }
                     }
                 i++;
                 int nbfichiers = Directory.GetFiles(src, "*", SearchOption.TopDirectoryOnly).Length;
@@ -135,6 +145,7 @@ namespace EasySave_GRP4.Model
 
                 List<State_File> stateList = CES.readOnlyState();
                 List<State_File> stateListx = CES.readOnlyStatex();
+
 
                 stateList[index].NbFilesLeftToDo = filesLeftToDo.ToString();
                 stateList[index].Progression = progress;

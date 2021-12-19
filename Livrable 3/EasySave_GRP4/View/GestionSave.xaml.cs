@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Text;
 using System.Threading;
 using System.Windows;
@@ -11,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static EasySave_GRP4.Model.Model_Factory;
 
 namespace EasySave_GRP4.View
 {
@@ -32,7 +35,20 @@ namespace EasySave_GRP4.View
             }
             else
             {
-                MessageBox.Show("Le répertoire source précisé est vide");
+
+
+                StreamReader rlang = new StreamReader(@"..\..\..\Config\Parametres.json");
+                string jsonlang = rlang.ReadToEnd();
+                JFile_parametres Jlang = JsonConvert.DeserializeObject<JFile_parametres>(jsonlang);
+                if (Jlang.Langue == "French")
+                {
+                    MessageBox.Show("Le répertoire source précisé est vide");
+                }
+                else if (Jlang.Langue == "English")
+                {
+                    MessageBox.Show("Source directory is empty");
+                }
+
             }
         }
         private void buttonDestFolderDialog_Click(object sender, RoutedEventArgs e)
@@ -47,7 +63,19 @@ namespace EasySave_GRP4.View
             }
             else
             {
-                MessageBox.Show("Le répertoire Destination précisé est vide");
+
+                StreamReader rlang = new StreamReader(@"..\..\..\Config\Parametres.json");
+                string jsonlang = rlang.ReadToEnd();
+                JFile_parametres Jlang = JsonConvert.DeserializeObject<JFile_parametres>(jsonlang);
+                if (Jlang.Langue == "French")
+                {
+                    MessageBox.Show("Le répertoire destinataire précisé est vide");
+                }
+                else if (Jlang.Langue == "English")
+                {
+                    MessageBox.Show("destination directory is empty");
+                }
+
             }
         }
         private void DataGrid_LoadingRow(object sender, DataGridRowEventArgs e)
@@ -75,8 +103,35 @@ namespace EasySave_GRP4.View
         public GestionSave()
         {
             InitializeComponent();
+            SwapLanguage();
             Thread Aff = new Thread(Aff_Loaded);
             Aff.Start();
+        }
+
+        public void SwapLanguage()
+        {
+            StreamReader rlang = new StreamReader(@"..\..\..\Config\Parametres.json");
+            string jsonlang = rlang.ReadToEnd();
+            JFile_parametres Jlang = JsonConvert.DeserializeObject<JFile_parametres>(jsonlang);
+            if (Jlang.Langue == "French")
+            {
+                labelName.Content = "Nom : ";
+                labelDest.Content = "Destination : ";
+                labelSource.Content = "Source : ";
+                labelType.Content = "Type : ";
+                Modifier.Content = "Modifier";
+                Supprimer.Content = "Supprimer";
+            }
+            else if (Jlang.Langue == "English")
+            {
+                labelName.Content = "Name : ";
+                labelDest.Content = "Destination : ";
+                labelSource.Content = "Source : ";
+                labelType.Content = "Type : ";
+                Modifier.Content = "Modify";
+                Supprimer.Content = "Delete";
+            }
+
         }
 
         private void Modifier_Click(object sender, RoutedEventArgs e) //modify and delete button 
@@ -90,7 +145,17 @@ namespace EasySave_GRP4.View
             }
             else
             {
+                StreamReader rlang = new StreamReader(@"..\..\..\Config\Parametres.json");
+                string jsonlang = rlang.ReadToEnd();
+                JFile_parametres Jlang = JsonConvert.DeserializeObject<JFile_parametres>(jsonlang);
+                if (Jlang.Langue == "French")
+                {
                 MessageBox.Show("Veuillez remplir tout les champs");
+                }
+                else if (Jlang.Langue == "English")
+                {
+                    MessageBox.Show("Please fill all the fields");
+                }
             }
 
         }
@@ -106,7 +171,17 @@ namespace EasySave_GRP4.View
             }
             else
             {
-                MessageBox.Show("Veuillez remplir tout les champs");
+                StreamReader rlang = new StreamReader(@"..\..\..\Config\Parametres.json");
+                string jsonlang = rlang.ReadToEnd();
+                JFile_parametres Jlang = JsonConvert.DeserializeObject<JFile_parametres>(jsonlang);
+                if (Jlang.Langue == "French")
+                {
+                    MessageBox.Show("Veuillez remplir tout les champs");
+                }
+                else if (Jlang.Langue == "English")
+                {
+                    MessageBox.Show("Please fill all the fields");
+                }
             }
         }
     }

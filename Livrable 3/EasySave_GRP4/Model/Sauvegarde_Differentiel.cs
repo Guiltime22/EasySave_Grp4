@@ -84,7 +84,17 @@ namespace EasySave_GRP4.Model
                 {
                     while (Process.GetProcessesByName(JP.Metier).Length != 0)
                     {
+                        StreamReader rlang = new StreamReader(@"..\..\..\Config\Parametres.json");
+                        string jsonlang = rlang.ReadToEnd();
+                        JFile_parametres Jlang = JsonConvert.DeserializeObject<JFile_parametres>(jsonlang);
+                        if (Jlang.Langue == "French")
+                        {
                         MessageBox.Show("Votre logiciel métier est en cours d'execution, veuillez le fermer !");
+                        }
+                        else if (Jlang.Langue == "English")
+                        {
+                            MessageBox.Show("Job application is running, Please close it !");
+                        }
                     }
                 }
             }

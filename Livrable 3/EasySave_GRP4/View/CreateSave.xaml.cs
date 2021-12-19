@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -9,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using static EasySave_GRP4.Model.Model_Factory;
 
 namespace EasySave_GRP4.View
 {
@@ -18,8 +20,36 @@ namespace EasySave_GRP4.View
         public CreateSave()
         {
             InitializeComponent();
+            SwapLanguage();
         }
-        private void buttonSourceFolderDialog_Click(object sender, RoutedEventArgs e)
+
+
+        public void SwapLanguage()
+        {
+            StreamReader rlang = new StreamReader(@"..\..\..\Config\Parametres.json");
+            string jsonlang = rlang.ReadToEnd();
+            JFile_parametres Jlang = JsonConvert.DeserializeObject<JFile_parametres>(jsonlang);
+            if (Jlang.Langue == "French")
+            {
+                labelName.Content = "Nom : ";
+                labelDest.Content = "Destination : ";
+                labelSource.Content = "Source : ";
+                labelType.Content = "Type : ";
+                buttonCreateSave.Content ="Crée la sauvegarde" ;
+            }
+            else if (Jlang.Langue == "English")
+            {
+                labelName.Content = "Name : ";
+                labelDest.Content = "Destination : ";
+                labelSource.Content = "Source : ";
+                labelType.Content = "Type : ";
+                buttonCreateSave.Content = "Create save";
+            }
+        }
+
+
+
+private void buttonSourceFolderDialog_Click(object sender, RoutedEventArgs e)
         {
             
             Ookii.Dialogs.Wpf.VistaFolderBrowserDialog openDlg = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog(); // Create OpenFileDialog
@@ -31,8 +61,21 @@ namespace EasySave_GRP4.View
                 
             }
             else
-            { 
-               MessageBox.Show("Le répertoire source précisé est vide");   
+
+            {
+                StreamReader rlang = new StreamReader(@"..\..\..\Config\Parametres.json");
+                string jsonlang = rlang.ReadToEnd();
+                JFile_parametres Jlang = JsonConvert.DeserializeObject<JFile_parametres>(jsonlang);
+                if (Jlang.Langue == "French")
+                {
+                MessageBox.Show("Le répertoire source précisé est vide");
+                }
+                else if (Jlang.Langue == "English")
+                {
+                    MessageBox.Show("Source directory is empty");
+                }
+                
+
             }
         }
         private void buttonDestFolderDialog_Click(object sender, RoutedEventArgs e)
@@ -47,7 +90,19 @@ namespace EasySave_GRP4.View
             }
             else
             {
-                MessageBox.Show("Le répertoire Destination précisé est vide");   
+
+                StreamReader rlang = new StreamReader(@"..\..\..\Config\Parametres.json");
+                string jsonlang = rlang.ReadToEnd();
+                JFile_parametres Jlang = JsonConvert.DeserializeObject<JFile_parametres>(jsonlang);
+                if (Jlang.Langue == "French")
+                {
+                    MessageBox.Show("Le répertoire destinataire précisé est vide");
+                }
+                else if (Jlang.Langue == "English")
+                {
+                    MessageBox.Show("destination directory is empty");
+                }
+
             }
         }
 
@@ -60,7 +115,17 @@ namespace EasySave_GRP4.View
             }
             else
             {
+                StreamReader rlang = new StreamReader(@"..\..\..\Config\Parametres.json");
+                string jsonlang = rlang.ReadToEnd();
+                JFile_parametres Jlang = JsonConvert.DeserializeObject<JFile_parametres>(jsonlang);
+                if (Jlang.Langue == "French")
+                {
                 MessageBox.Show("Veuillez remplir tout les champs");
+                }
+                else if (Jlang.Langue == "English")
+                {
+                    MessageBox.Show("Please fill all the fields");
+                }
             }
 
         }
