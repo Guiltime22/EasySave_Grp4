@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 //using Newtonsoft.Json;
@@ -14,9 +15,10 @@ namespace EasySave_GRP4.Model
     {
         private static Object _locker = new Object();
         private static Mutex mutex = new Mutex();
-
-        public void CopyRepertoire_Modifier(string name, string sourcePath, string destinationPath, string etat)  //Function to copy the files differential
+        States CED = new States();
+        public void CopyRepertoire_Modifier(string name, string sourcePath, string destinationPath, string etat,int index)  //Function to copy the files differential
         {
+            var i = 0;
             StreamReader r = new StreamReader(@"..\..\..\Config\Parametres.json");
             string jsonString = r.ReadToEnd();
             JFile_parametres JP = JsonConvert.DeserializeObject<JFile_parametres>(jsonString);
@@ -51,7 +53,7 @@ namespace EasySave_GRP4.Model
                                         CryptWatch.Stop();
                                     }
                                     TimeSpan cts = CryptWatch.Elapsed;
-                                    mutex.ReleaseMutex();//pour éviter les conflits 
+                                    mutex.WaitOne();//pour éviter les conflits 
                                     sourceFiles[source].CopyTo(Path.Combine(destinationDir.FullName, sourceFiles[source].Name), true); //Execute the copy
                                     mutex.ReleaseMutex(); //release the mutex my son
                                     Butter.ST.Creer_Fichier_Etat(name, sourcePath, destinationPath, etat);
@@ -73,6 +75,17 @@ namespace EasySave_GRP4.Model
                             sourceFiles[source].CopyTo(Path.Combine(destinationDir.FullName, sourceFiles[source].Name), true);
                             mutex.ReleaseMutex();
                         }
+                        i++;
+                        int nbfichiers = Directory.GetFiles(sourcePath, "*", SearchOption.TopDirectoryOnly).Length;
+                        int filesLeftToDo = nbfichiers - i;
+                        string progress = Convert.ToString((100 - (filesLeftToDo * 100) / nbfichiers)) + "%";
+
+                        List<State_File> stateList = CED.readOnlyState();
+
+                        stateList[index].NbFilesLeftToDo = filesLeftToDo.ToString();
+                        stateList[index].Progression = progress;
+                        stateList[index].State = etat;
+                        CED.writeOnlyState(stateList);
                     }
                 }
                 else
@@ -82,7 +95,15 @@ namespace EasySave_GRP4.Model
                         MessageBox.Show("Votre logiciel métier est en cours d'execution, veuillez le fermer !");
                     }
                 }
+                
+
             }
+            List<State_File> modifyStateList = CED.readOnlyState();
+
+            modifyStateList[index].Time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+            modifyStateList[index].State = "END";
+
+            CED.writeOnlyState(modifyStateList);
         }
 
     }

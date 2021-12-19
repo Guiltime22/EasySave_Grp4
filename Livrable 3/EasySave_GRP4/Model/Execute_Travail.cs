@@ -35,6 +35,7 @@ namespace EasySave_GRP4.Model
                 string jsonString = File.ReadAllText(fileName); //Open the file to read the work
                 JFile jFile = System.Text.Json.JsonSerializer.Deserialize<JFile>(jsonString); //Convert the content of the file into Objects
 
+
                 Model.States state = new Model.States();
                 var stateList = state.readOnlyState();
 
@@ -47,15 +48,18 @@ namespace EasySave_GRP4.Model
                         break;
                     }
                 }
+                Exe_Unique = new Thread(() => Butter.SVU.CopyRepertoire(jFile.name, jFile.source_name, jFile.dest_name, ETAT, indexState)); // Sauvegarde en parallèle
+                Exe_Diff = new Thread(() => Butter.SVS.CopyRepertoire_Modifier(jFile.name, jFile.source_name, jFile.dest_name, ETAT,indexState));
                 if (jFile.type_save == "Complet" || jFile.type_save == "Full")
                 {
-                    Butter.SVU.CopyRepertoire(jFile.name, jFile.source_name, jFile.dest_name, ETAT,indexState); //Function to copy the files completly
+                    Exe_Unique.Start();
+                    //Butter.SVU.CopyRepertoire(jFile.name, jFile.source_name, jFile.dest_name, ETAT,indexState); //Function to copy the files completly
                     //File.Delete(fileName); //Delete the work after the execution
                 }
                 else if (jFile.type_save == "Differentiel" || jFile.type_save == " Differential")
                 {
-
-                    Butter.SVS.CopyRepertoire_Modifier(jFile.name, jFile.source_name, jFile.dest_name, ETAT); //Function to copy the files differential
+                    Exe_Diff.Start();
+                    //Butter.SVS.CopyRepertoire_Modifier(jFile.name, jFile.source_name, jFile.dest_name, ETAT); //Function to copy the files differential
                     //File.Delete(fileName);
                 }
                 MessageBox.Show("Execution du travail réussi");
@@ -87,20 +91,20 @@ namespace EasySave_GRP4.Model
                     }
                 }
                 Exe_Unique = new Thread(() => Butter.SVU.CopyRepertoire(jFile.name, jFile.source_name, jFile.dest_name, ETAT, indexState)); // Sauvegarde en parallèle
-                Exe_Diff = new Thread(() => Butter.SVS.CopyRepertoire_Modifier(jFile.name, jFile.source_name, jFile.dest_name, ETAT));
+                Exe_Diff = new Thread(() => Butter.SVS.CopyRepertoire_Modifier(jFile.name, jFile.source_name, jFile.dest_name, ETAT,indexState));
 
                 if (jFile.type_save == "Complet" || jFile.type_save == "Full") 
                 {
                     //Butter.SVU.CopyRepertoire(jFile.name, jFile.source_name, jFile.dest_name, ETAT); //Function to copy the files completly
 
                     Exe_Unique.Start(); //Tebda la sauvegarde
-                    File.Delete(file);
+                    //File.Delete(file);
                 }
                 else if (jFile.type_save == "Differentiel" || jFile.type_save == " Differential")
                 {
                     //Butter.SVS.CopyRepertoire_Modifier(jFile.name, jFile.source_name, jFile.dest_name, ETAT); //Function to copy the files Differential
                     Exe_Diff.Start(); //Tebda la sauvegarde
-                    File.Delete(file);
+                    //File.Delete(file);
                 }
 
             }

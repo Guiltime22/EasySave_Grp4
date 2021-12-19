@@ -1,24 +1,101 @@
 [
   {
-    "Name": "AZERTY",
-    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
-    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination",
-    "State": "END",
-    "TotalFilesToCopy": "34",
-    "TotalFilesSize": "3026805844",
-    "NbFilesLeftToDo": "0",
-    "Progression": "100%",
-    "Time": "19/12/2021 02:04:05"
-  },
-  {
-    "Name": "QSDFGH",
+    "Name": "azert",
     "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
     "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
     "State": "Actif",
     "TotalFilesToCopy": "34",
-    "TotalFilesSize": "3026805844",
+    "TotalFilesSize": "3026811181",
+    "NbFilesLeftToDo": "-981",
+    "Progression": "2985%",
+    "Time": "\"Timestamp\": \"12/19/2021 02:43:07\""
+  },
+  {
+    "Name": "azert",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
+    "State": "Actif",
+    "TotalFilesToCopy": "34",
+    "TotalFilesSize": "3026811181",
     "NbFilesLeftToDo": "0",
     "Progression": "100%",
-    "Time": "\"Timestamp\": \"12/19/2021 02:02:25\""
+    "Time": "\"Timestamp\": \"12/19/2021 02:43:18\""
+  },
+  {
+    "Name": "azert",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
+    "State": "Actif",
+    "TotalFilesToCopy": "34",
+    "TotalFilesSize": "3026811181",
+    "NbFilesLeftToDo": "0",
+    "Progression": "100%",
+    "Time": "\"Timestamp\": \"12/19/2021 02:43:19\""
+  },
+  {
+    "Name": "azert",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
+    "State": "Actif",
+    "TotalFilesToCopy": "34",
+    "TotalFilesSize": "3026811181",
+    "NbFilesLeftToDo": "0",
+    "Progression": "100%",
+    "Time": "\"Timestamp\": \"12/19/2021 02:43:19\""
+  },
+  {
+    "Name": "azert",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
+    "State": "Actif",
+    "TotalFilesToCopy": "34",
+    "TotalFilesSize": "3026811181",
+    "NbFilesLeftToDo": "0",
+    "Progression": "100%",
+    "Time": "\"Timestamp\": \"12/19/2021 02:43:20\""
+  },
+  {
+    "Name": "azert",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
+    "State": "Actif",
+    "TotalFilesToCopy": "34",
+    "TotalFilesSize": "3026811181",
+    "NbFilesLeftToDo": "0",
+    "Progression": "100%",
+    "Time": "\"Timestamp\": \"12/19/2021 02:43:21\""
+  },
+  {
+    "Name": "azert",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
+    "State": "Actif",
+    "TotalFilesToCopy": "34",
+    "TotalFilesSize": "3026811181",
+    "NbFilesLeftToDo": "0",
+    "Progression": "100%",
+    "Time": "\"Timestamp\": \"12/19/2021 02:43:23\""
+  },
+  {
+    "Name": "azert",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
+    "State": "Actif",
+    "TotalFilesToCopy": "34",
+    "TotalFilesSize": "3026811181",
+    "NbFilesLeftToDo": "0",
+    "Progression": "100%",
+    "Time": "\"Timestamp\": \"12/19/2021 02:43:23\""
+  },
+  {
+    "Name": "azert",
+    "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
+    "State": "Actif",
+    "TotalFilesToCopy": "34",
+    "TotalFilesSize": "3026811181",
+    "NbFilesLeftToDo": "0",
+    "Progression": "100%",
+    "Time": "\"Timestamp\": \"12/19/2021 02:43:25\""
   }
 ]

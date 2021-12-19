@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Threading;
 using System.Windows;
 
 namespace EasySave_Grp4.ModelView
@@ -31,6 +32,7 @@ namespace EasySave_Grp4.ModelView
     }
     class CL_Execute_Travail
     {
+        private static Mutex mutex = new Mutex();
         public CL_Execute_Travail(){
 
         }
@@ -125,9 +127,12 @@ namespace EasySave_Grp4.ModelView
         }*/
         public List<State_List> Afficher_Data()//Show the information of state file
         {
+            mutex.WaitOne();
             var Fichier_Json = File.ReadAllText(State_List.fileName); //Read the JSON file
             var Etat_Travail = JsonConvert.DeserializeObject<List<State_List>>(Fichier_Json) ?? new List<State_List>(); //convert a string into an object for JSON
+            mutex.ReleaseMutex();
             return Etat_Travail;
+
         }
         public void Play_Travail()
         {
