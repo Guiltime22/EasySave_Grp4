@@ -62,6 +62,7 @@ namespace EasySave_GRP4.Model
                     //Butter.SVS.CopyRepertoire_Modifier(jFile.name, jFile.source_name, jFile.dest_name, ETAT); //Function to copy the files differential
                     //File.Delete(fileName);
                 }
+
                 MessageBox.Show("Execution du travail réussi");
             }
             catch
@@ -108,7 +109,7 @@ namespace EasySave_GRP4.Model
                 }
 
             }
-            //MessageBox.Show("Execution du travail réussi");
+            MessageBox.Show("Execution du travail réussi");
         }
 
         public void Pause()

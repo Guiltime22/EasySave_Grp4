@@ -36,7 +36,7 @@ namespace EasySave_GRP4.Model
     }
     class Log
     {
-
+        private static Mutex mutex = new Mutex();
         public void Create_Logxml(FileInfo name, string nom_fichier, string src, string dest, TimeSpan ts, TimeSpan cts, long Taille) //Function to create a log into the log file for the work
         {
             while (true)
@@ -45,8 +45,9 @@ namespace EasySave_GRP4.Model
                 {
                     var Temps = ("Timestamp", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
 
-
+            mutex.WaitOne();
             string xml = File.ReadAllText(LogFile.filepathx);
+            mutex.ReleaseMutex();
             XmlRootAttribute xRoot = new XmlRootAttribute();
             xRoot.ElementName = "LogFile";
             xRoot.IsNullable = true;
@@ -77,8 +78,10 @@ namespace EasySave_GRP4.Model
             var writer1 = new StringWriter();
             serializer.Serialize(writer1, worklist);
             var xml1 = writer1.ToString();
+            mutex.WaitOne();
             File.WriteAllText(LogFile.filepathx, xml1);
-                    break;
+            mutex.ReleaseMutex();
+            break;
                 }
                 catch (Exception e)
                 {
@@ -98,7 +101,9 @@ namespace EasySave_GRP4.Model
                 try
                 {
                     var Temps = new JProperty("Timestamp", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+                    mutex.WaitOne();
                     var jsonDataWork = File.ReadAllText(LogFile.filepath);
+                    mutex.ReleaseMutex();
                     var File_Var = new LogFile()
                     {
                         Name = nom_fichier,
@@ -121,7 +126,9 @@ namespace EasySave_GRP4.Model
                         CryptTime = Convert.ToString(cts)
                     });
                     string jsonString = JsonConvert.SerializeObject(workList, Newtonsoft.Json.Formatting.Indented);
+                    mutex.WaitOne();
                     File.WriteAllText(LogFile.filepath, jsonString);
+                    mutex.ReleaseMutex();
                     break;
                 }
                 catch(Exception e)

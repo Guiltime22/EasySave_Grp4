@@ -48,8 +48,9 @@ namespace EasySave_GRP4.Model
             float Progress = (TotalFichiersDestination / TotalFichiersACopier) * 100; //To calculate the progress of the copy
             var Temps = ("Timestamp", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss")); //To set the time of the copy
 
-
+            mutex.WaitOne();
             string xml = File.ReadAllText(State_File.fileNamex);
+            mutex.ReleaseMutex();
             XmlRootAttribute xRoot = new XmlRootAttribute();
             xRoot.ElementName = "State_File";
             xRoot.IsNullable = true;
@@ -141,6 +142,47 @@ namespace EasySave_GRP4.Model
             mutex.ReleaseMutex();
 
             return workList;
+
+        }
+        public void writeOnlyStatex(List<State_File> stateList)
+        {
+            XmlRootAttribute xRoot = new XmlRootAttribute();
+            xRoot.ElementName = "State_File";
+            xRoot.IsNullable = true;
+
+
+            XmlSerializer serializer = new XmlSerializer(typeof(List<State_File>), xRoot);
+
+
+
+            var writer1 = new StringWriter();
+            serializer.Serialize(writer1, stateList);
+            var xml1 = writer1.ToString();
+            mutex.WaitOne();
+            File.WriteAllText(State_File.fileNamex, xml1);
+            mutex.ReleaseMutex();
+        }
+        public List<State_File> readOnlyStatex()
+        {
+            
+            string xml = File.ReadAllText(State_File.fileNamex);
+            XmlRootAttribute xRoot = new XmlRootAttribute();
+            xRoot.ElementName = "State_File";
+            xRoot.IsNullable = true;
+
+            XmlSerializer serializer = new XmlSerializer(typeof(List<State_File>), xRoot);
+            TextReader textReader = new StringReader(xml);
+            List<State_File> worklist = (List<State_File>)serializer.Deserialize(textReader);
+
+
+
+            var writer1 = new StringWriter();
+            serializer.Serialize(writer1, worklist);
+            var xml1 = writer1.ToString();
+            mutex.WaitOne();
+            File.WriteAllText(State_File.fileNamex, xml1);
+            mutex.ReleaseMutex();
+            return worklist;
 
         }
     }

@@ -85,11 +85,17 @@ namespace EasySave_GRP4.Model
                         string progress = Convert.ToString((100 - (filesLeftToDo * 100) / nbfichiers)) + "%";
 
                         List<State_File> stateList = CED.readOnlyState();
+                       List<State_File> stateListx = CED.readOnlyStatex();
 
                         stateList[index].NbFilesLeftToDo = filesLeftToDo.ToString();
                         stateList[index].Progression = progress;
                         stateList[index].State = etat;
+
+                         stateListx[index].NbFilesLeftToDo = filesLeftToDo.ToString();
+                        stateListx[index].Progression = progress;
+                        stateListx[index].State = etat;
                         CED.writeOnlyState(stateList);
+                         CED.writeOnlyStatex(stateListx);
                         */
                     }
                 }
@@ -102,12 +108,18 @@ namespace EasySave_GRP4.Model
                 }
             }
             /*
-            List<State_File> modifyStateList = CED.readOnlyState();
+           List<State_File> modifyStateList = CED.readOnlyState();
+             List<State_File> modifyStateListx = CED.readOnlyStatex();
 
             modifyStateList[index].Time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             modifyStateList[index].State = "END";
 
+            
+            modifyStateListx[index].Time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+            modifyStateListx[index].State = "END";
+
             CED.writeOnlyState(modifyStateList);
+              CED.writeOnlyStatex(modifyStateList);
             */
         }
 

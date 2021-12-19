@@ -122,25 +122,38 @@ namespace EasySave_GRP4.Model
                             MessageBox.Show("Votre logiciel métier est en cours d'éxecution, veuillez le fermer !");
                         }
                     }
-                     i++;
-                    int nbfichiers = Directory.GetFiles(src, "*", SearchOption.TopDirectoryOnly).Length;
-                     int filesLeftToDo =  nbfichiers - i;
-                     string progress = Convert.ToString((100 - (filesLeftToDo * 100) / nbfichiers)) + "%";
+                i++;
+                int nbfichiers = Directory.GetFiles(src, "*", SearchOption.TopDirectoryOnly).Length;
+                int filesLeftToDo = nbfichiers - i;
+                string progress = Convert.ToString((100 - (filesLeftToDo * 100) / nbfichiers)) + "%";
 
-                     List<State_File> stateList = CES.readOnlyState();
+                List<State_File> stateList = CES.readOnlyState();
+                List<State_File> stateListx = CES.readOnlyStatex();
 
-                     stateList[index].NbFilesLeftToDo = filesLeftToDo.ToString();
-                     stateList[index].Progression = progress;
-                     stateList[index].State = etat;
+                stateList[index].NbFilesLeftToDo = filesLeftToDo.ToString();
+                stateList[index].Progression = progress;
+                stateList[index].State = etat;
+
+
+                stateListx[index].NbFilesLeftToDo = filesLeftToDo.ToString();
+                stateListx[index].Progression = progress;
+                stateListx[index].State = etat;
+
                 CES.writeOnlyState(stateList);
+                CES.writeOnlyStatex(stateListx);
 
             }
             List<State_File> modifyStateList = CES.readOnlyState();
+            List<State_File> modifyStateListx = CES.readOnlyStatex();
 
             modifyStateList[index].Time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             modifyStateList[index].State = "END";
 
+            modifyStateListx[index].Time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+            modifyStateListx[index].State = "END";
+
             CES.writeOnlyState(modifyStateList);
+            CES.writeOnlyStatex(modifyStateListx);
 
             /**
             DirectoryInfo diSource = new DirectoryInfo(src);
