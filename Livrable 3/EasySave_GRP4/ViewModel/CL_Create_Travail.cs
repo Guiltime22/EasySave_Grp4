@@ -7,7 +7,7 @@ namespace EasySave_Grp4.ModelView
 {
     class CL_Create_Travail
     {
-        public CL_Create_Travail() //constructeur
+        public CL_Create_Travail() //constructor
 
         {
             
