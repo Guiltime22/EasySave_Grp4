@@ -75,6 +75,7 @@ namespace EasySave_GRP4.Model
                             sourceFiles[source].CopyTo(Path.Combine(destinationDir.FullName, sourceFiles[source].Name), true);
                             mutex.ReleaseMutex();
                         }
+                        /*
                         i++;
                         int nbfichiers = Directory.GetFiles(sourcePath, "*", SearchOption.TopDirectoryOnly).Length;
                         int filesLeftToDo = nbfichiers - i;
@@ -86,6 +87,7 @@ namespace EasySave_GRP4.Model
                         stateList[index].Progression = progress;
                         stateList[index].State = etat;
                         CED.writeOnlyState(stateList);
+                        */
                     }
                 }
                 else
@@ -95,15 +97,15 @@ namespace EasySave_GRP4.Model
                         MessageBox.Show("Votre logiciel métier est en cours d'execution, veuillez le fermer !");
                     }
                 }
-                
-
             }
+            /*
             List<State_File> modifyStateList = CED.readOnlyState();
 
             modifyStateList[index].Time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             modifyStateList[index].State = "END";
 
             CED.writeOnlyState(modifyStateList);
+            */
         }
 
     }
