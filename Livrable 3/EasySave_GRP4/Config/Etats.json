@@ -1,24 +1,24 @@
 [
   {
-    "Name": "Save",
+    "Name": "AZERTY",
     "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
     "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination",
-    "State": "Inactif",
+    "State": "END",
     "TotalFilesToCopy": "34",
     "TotalFilesSize": "3026805844",
-    "NbFilesLeftToDo": "34",
-    "Progression": "0%",
-    "Time": "\"Timestamp\": \"12/19/2021 00:28:54\""
+    "NbFilesLeftToDo": "0",
+    "Progression": "100%",
+    "Time": "19/12/2021 02:04:05"
   },
   {
-    "Name": "Save",
+    "Name": "QSDFGH",
     "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source",
-    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination",
+    "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2",
     "State": "Actif",
     "TotalFilesToCopy": "34",
     "TotalFilesSize": "3026805844",
     "NbFilesLeftToDo": "0",
     "Progression": "100%",
-    "Time": "\"Timestamp\": \"12/19/2021 00:29:22\""
+    "Time": "\"Timestamp\": \"12/19/2021 02:02:25\""
   }
 ]

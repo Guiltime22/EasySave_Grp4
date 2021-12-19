@@ -30,12 +30,26 @@ namespace EasySave_GRP4.Model
         {
             try
             {
+
                 string fileName = @"..\..\..\Config\Travaux_Sauvegarde\" + nom_fichier + ".json";
                 string jsonString = File.ReadAllText(fileName); //Open the file to read the work
                 JFile jFile = System.Text.Json.JsonSerializer.Deserialize<JFile>(jsonString); //Convert the content of the file into Objects
+
+                Model.States state = new Model.States();
+                var stateList = state.readOnlyState();
+
+                int indexState = 0;
+                for (int i = 0; i < stateList.Count; i++)
+                {
+                    if (stateList[i].Name == jFile.name)
+                    {
+                        indexState = i;
+                        break;
+                    }
+                }
                 if (jFile.type_save == "Complet" || jFile.type_save == "Full")
                 {
-                    Butter.SVU.CopyRepertoire(jFile.name, jFile.source_name, jFile.dest_name, ETAT); //Function to copy the files completly
+                    Butter.SVU.CopyRepertoire(jFile.name, jFile.source_name, jFile.dest_name, ETAT,indexState); //Function to copy the files completly
                     //File.Delete(fileName); //Delete the work after the execution
                 }
                 else if (jFile.type_save == "Differentiel" || jFile.type_save == " Differential")
@@ -57,10 +71,22 @@ namespace EasySave_GRP4.Model
             string[] files = Directory.GetFiles(@"..\..\..\Config\Travaux_Sauvegarde", "*.json"); //Table to put the different works
             foreach (var file in files) //For each work
             {
-
+              
                 string jsonString = File.ReadAllText(file); //Open the file to read the work
                 JFile jFile = System.Text.Json.JsonSerializer.Deserialize<JFile>(jsonString);//Convert the content of the file into Objects
-                Exe_Unique = new Thread(() => Butter.SVU.CopyRepertoire(jFile.name, jFile.source_name, jFile.dest_name, ETAT)); // Sauvegarde en parallèle
+                Model.States state = new Model.States();
+                var stateList = state.readOnlyState();
+
+                int indexState = 0;
+                for (int i = 0; i < stateList.Count; i++)
+                {
+                    if (stateList[i].Name == jFile.name)
+                    {
+                        indexState = i;
+                        break;
+                    }
+                }
+                Exe_Unique = new Thread(() => Butter.SVU.CopyRepertoire(jFile.name, jFile.source_name, jFile.dest_name, ETAT, indexState)); // Sauvegarde en parallèle
                 Exe_Diff = new Thread(() => Butter.SVS.CopyRepertoire_Modifier(jFile.name, jFile.source_name, jFile.dest_name, ETAT));
 
                 if (jFile.type_save == "Complet" || jFile.type_save == "Full") 
@@ -76,6 +102,7 @@ namespace EasySave_GRP4.Model
                     Exe_Diff.Start(); //Tebda la sauvegarde
                     File.Delete(file);
                 }
+
             }
             //MessageBox.Show("Execution du travail réussi");
         }

@@ -21,7 +21,7 @@ namespace EasySave_GRP4.Model
         States CES = new States();
         //private static EventWaitHandle waitHandle = new ManualResetEvent(initialState: true);
 
-        public void CopyRepertoire(string name, string src, string dest, string etat) //Function to copy the files completly
+        public void CopyRepertoire(string name, string src, string dest, string etat,int index) //Function to copy the files completly
         {
                 string path = @"..\..\..\Config\Travaux_Sauvegarde\";
                 int nbFichiersSD = Directory.GetFiles(path, "*.*", SearchOption.TopDirectoryOnly).Length;
@@ -122,38 +122,44 @@ namespace EasySave_GRP4.Model
 
                      List<State_File> stateList = CES.readOnlyState();
 
-                     stateList[getStateIndex].NbFilesLeftToDo = filesLeftToDo.ToString();
-                     stateList[getStateIndex].Progression = progress;
+                     stateList[index].NbFilesLeftToDo = filesLeftToDo.ToString();
+                     stateList[index].Progression = progress;
+                     stateList[index].State = etat;
+                CES.writeOnlyState(stateList);
 
-
-                     state.writeOnlyState(stateList);
             }
+            List<State_File> modifyStateList = CES.readOnlyState();
 
-                /**
-                DirectoryInfo diSource = new DirectoryInfo(src);
-                DirectoryInfo diTarget = new DirectoryInfo(dest);
+            modifyStateList[index].Time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+            modifyStateList[index].State = "END";
 
-                foreach (DirectoryInfo diSourceSubDir in diSource.GetDirectories()) //Check the subdirectories
+            CES.writeOnlyState(modifyStateList);
+
+            /**
+            DirectoryInfo diSource = new DirectoryInfo(src);
+            DirectoryInfo diTarget = new DirectoryInfo(dest);
+
+            foreach (DirectoryInfo diSourceSubDir in diSource.GetDirectories()) //Check the subdirectories
+            {
+                if (Process.GetProcessesByName(JP.Metier).Length == 0)
                 {
-                    if (Process.GetProcessesByName(JP.Metier).Length == 0)
+                    DirectoryInfo nextTargetSubDir =
+                    diTarget.CreateSubdirectory(diSourceSubDir.Name);
+                    CopyRepertoire(name, Convert.ToString(diSourceSubDir), Convert.ToString(nextTargetSubDir), etat);
+                }
+                else
+                {
+                    while (Process.GetProcessesByName(JP.Metier).Length != 0)
                     {
-                        DirectoryInfo nextTargetSubDir =
-                        diTarget.CreateSubdirectory(diSourceSubDir.Name);
-                        CopyRepertoire(name, Convert.ToString(diSourceSubDir), Convert.ToString(nextTargetSubDir), etat);
-                    }
-                    else
-                    {
-                        while (Process.GetProcessesByName(JP.Metier).Length != 0)
-                        {
-                            MessageBox.Show("Votre logiciel métier est en cours d'éxecution, veuillez le fermer !");
-                        }
+                        MessageBox.Show("Votre logiciel métier est en cours d'éxecution, veuillez le fermer !");
                     }
                 }
+            }
 
-                **/
-               // Butter.ST.Creer_Fichier_Etat(name, src, dest, etat); //Function to create a state into the state file for the work
+            **/
+            // Butter.ST.Creer_Fichier_Etat(name, src, dest, etat); //Function to create a state into the state file for the work
 
-            
+
         }
         private List<FileInfo> OrderFiles(List<FileInfo> l) // Gestion des fichiers prioritaires
         {
