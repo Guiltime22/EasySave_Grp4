@@ -13,9 +13,6 @@ using System.Threading;
 
 namespace EasySave_GRP4.View
 {
-    /// <summary>
-    /// Logique d'interaction pour Window1.xaml
-    /// </summary>
     public partial class ProgressBar : Window
     {
         public ProgressBar()
@@ -28,7 +25,7 @@ namespace EasySave_GRP4.View
         {
             while (true)
             {
-                //
+                
                 Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Send, new Action(delegate ()
                 {
                     Affi_Data.ItemsSource = View_Factory.CPT.Afficher_Data();
@@ -63,7 +60,7 @@ namespace EasySave_GRP4.View
 
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
-            //Affi_Data.ItemsSource = View_Factory.CPT.Afficher_Data();
+            
         }
 
         private void Affi_Data_LoadingRow(object sender, DataGridRowEventArgs e)

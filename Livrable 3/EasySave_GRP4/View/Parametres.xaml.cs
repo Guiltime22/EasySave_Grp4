@@ -12,9 +12,6 @@ using System.Windows.Shapes;
 
 namespace EasySave_GRP4.View
 {
-    /// <summary>
-    /// Logique d'interaction pour Window1.xaml
-    /// </summary>
     public partial class Parametres : Window
     {
         public Parametres()
@@ -24,8 +21,8 @@ namespace EasySave_GRP4.View
 
         private void Parametres_Button_Click(object sender, RoutedEventArgs e)
         {
-          View_Factory.PR.Parametres(Langue.Text, Cryptage.Text, Metier.Text, Prioritaire_Copy.Text, Taille.Text);
-          
+            View_Factory.PR.Parametres(Langue.Text, Cryptage.Text, Metier.Text, Prioritaire_Copy.Text, Taille.Text);
+            Close();
         }
     }
 }

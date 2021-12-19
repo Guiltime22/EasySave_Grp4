@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace EasySave_GRP4.View
 {
-    /// <summary>
-    /// Logique d'interaction pour Window1.xaml
-    /// </summary>
     public partial class GestionSave : Window
     {
 
@@ -25,44 +22,32 @@ namespace EasySave_GRP4.View
         }
         private void buttonSourceFolderDialog_Click(object sender, RoutedEventArgs e)
         {
-            // Create OpenFileDialog
+            
             Ookii.Dialogs.Wpf.VistaFolderBrowserDialog openDlg = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog();
-
-            // Launch OpenFileDialog by calling ShowDialog method
             Nullable<bool> result = openDlg.ShowDialog();
-            // Get the selected file name and display in a TextBox.
-            // Load content of file in a TextBlock
+            
             if (result == true)
             {
                 textBoxSource.Text = openDlg.SelectedPath;
-                // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
             }
             else
             {
-
                 MessageBox.Show("Le répertoire source précisé est vide");
-
             }
         }
         private void buttonDestFolderDialog_Click(object sender, RoutedEventArgs e)
         {
-            // Create OpenFileDialog
+            
             Ookii.Dialogs.Wpf.VistaFolderBrowserDialog openDlg = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog();
-
-            // Launch OpenFileDialog by calling ShowDialog method
             Nullable<bool> result = openDlg.ShowDialog();
-            // Get the selected file name and display in a TextBox.
-            // Load content of file in a TextBlock
+            
             if (result == true)
             {
                 textBoxDestination.Text = openDlg.SelectedPath;
-                // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
             }
             else
             {
-
                 MessageBox.Show("Le répertoire Destination précisé est vide");
-
             }
         }
         private void DataGrid_LoadingRow(object sender, DataGridRowEventArgs e)
@@ -79,7 +64,7 @@ namespace EasySave_GRP4.View
         {
             while (true)
             {
-                //
+                
                 Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Send, new Action(delegate ()
                 {
                     Aff_Data.ItemsSource = View_Factory.CET.Afficher_le_travail();

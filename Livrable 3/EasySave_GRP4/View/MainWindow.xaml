@@ -18,14 +18,14 @@
             <ColumnDefinition Width="127*"/>
             <ColumnDefinition Width="33*"/>
         </Grid.ColumnDefinitions>
-        <Button Name="CreateSave" Content="Créer un travail de sauvegarde" HorizontalAlignment="Left" Margin="286,164,0,0" VerticalAlignment="Top" Click="CreateSave_Click" Height="39" Width="246" Background="#FF007ACC" Foreground="White" FontWeight="Bold" FontSize="14" BorderThickness="0"/>
-        <Button Name="ExecuteSave" Content="Executer un travail de sauvegarde" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.891,0.353" Width="246" Click="ExecuteSave_Click" Margin="286,27,0,0" Background="#FF007ACC" FontWeight="Bold" Foreground="#FFEEEEEE" Height="39" FontSize="14" Grid.Row="1" BorderThickness="0"/>
+        <Button Name="CreateSave" Content="Créer un travail de sauvegarde" HorizontalAlignment="Left" Margin="277,100,0,0" VerticalAlignment="Top" Click="CreateSave_Click" Height="39" Width="246" Background="#FF007ACC" Foreground="White" FontWeight="Bold" FontSize="14" BorderThickness="0"/>
+        <Button Name="ExecuteSave" Content="Executer un travail de sauvegarde" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.891,0.353" Width="246" Click="ExecuteSave_Click" Margin="277,198,0,0" Background="#FF007ACC" FontWeight="Bold" Foreground="#FFEEEEEE" Height="39" FontSize="14" BorderThickness="0"/>
         <Button Name="Parametres" Content="" HorizontalAlignment="Left" Margin="67,29,0,0" VerticalAlignment="Top" Height="47" Width="62" Click="Parametres_Click" Grid.Column="1" BorderThickness="0">
             <Button.Background>
                 <ImageBrush ImageSource="../image/test.png"/>
             </Button.Background>
         </Button>
-        <Button Content="Gestion" HorizontalAlignment="Left" Margin="286,113,0,0" VerticalAlignment="Top" Grid.Row="1" Click="Button_Click" Height="41" Width="246" Background="#FF007ACC" Foreground="White" FontWeight="Bold" FontSize="14"/>
+        <Button Content="Gestion" HorizontalAlignment="Left" Margin="277,53,0,0" VerticalAlignment="Top" Grid.Row="1" Click="Button_Click" Height="41" Width="246" Background="#FF007ACC" Foreground="White" FontWeight="Bold" FontSize="14"/>
 
     </Grid>
 </Window>

@@ -10,21 +10,13 @@ using System.Threading;
 
 namespace EasySave_GRP4.Model
 {
-    /*
-    public class JFile
-    {
-        public string name { get; set; }
-        public string source_name { get; set; }
-        public string dest_name { get; set; }
-        public string type_save { get; set; }
-    }
-    */
-    //
     class Execute_Travail
     {
         Thread Exe_Unique;
         Thread Exe_Diff;
-        
+
+        private EventWaitHandle Event = new ManualResetEvent(false);
+
         string ETAT = "Actif";
         public void Execute_Unique(string nom_fichier) //function to execute a work of saving
         {
@@ -53,13 +45,11 @@ namespace EasySave_GRP4.Model
                 if (jFile.type_save == "Complet" || jFile.type_save == "Full")
                 {
                     Exe_Unique.Start();
-                    //Butter.SVU.CopyRepertoire(jFile.name, jFile.source_name, jFile.dest_name, ETAT,indexState); //Function to copy the files completly
                     //File.Delete(fileName); //Delete the work after the execution
                 }
                 else if (jFile.type_save == "Differentiel" || jFile.type_save == " Differential")
                 {
                     Exe_Diff.Start();
-                    //Butter.SVS.CopyRepertoire_Modifier(jFile.name, jFile.source_name, jFile.dest_name, ETAT); //Function to copy the files differential
                     //File.Delete(fileName);
                 }
 
@@ -96,14 +86,11 @@ namespace EasySave_GRP4.Model
 
                 if (jFile.type_save == "Complet" || jFile.type_save == "Full") 
                 {
-                    //Butter.SVU.CopyRepertoire(jFile.name, jFile.source_name, jFile.dest_name, ETAT); //Function to copy the files completly
-
                     Exe_Unique.Start(); //Tebda la sauvegarde
                     //File.Delete(file);
                 }
                 else if (jFile.type_save == "Differentiel" || jFile.type_save == " Differential")
                 {
-                    //Butter.SVS.CopyRepertoire_Modifier(jFile.name, jFile.source_name, jFile.dest_name, ETAT); //Function to copy the files Differential
                     Exe_Diff.Start(); //Tebda la sauvegarde
                     //File.Delete(file);
                 }
@@ -114,26 +101,23 @@ namespace EasySave_GRP4.Model
 
         public void Pause()
         {
-
+            Event.Reset(); // Pause the thread
         }
 
 
         public void Play()
         {
-
+            Event.Set(); // Resume the thread
         }
         public void Stop()
         {
-            /*
-            // Signal the shutdown event
-            Butter._shutdownEvent.Set();
 
             // Make sure to resume any paused threads
-            Butter._pauseEvent.Set();
+            Event.Set();
 
             // Wait for the thread to exit
             Exe_Unique.Join();
-            */
+            
         }
 
     }

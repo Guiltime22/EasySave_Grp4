@@ -18,7 +18,6 @@ namespace EasySave_GRP4.Model
         States CED = new States();
         public void CopyRepertoire_Modifier(string name, string sourcePath, string destinationPath, string etat,int index)  //Function to copy the files differential
         {
-            var i = 0;
             StreamReader r = new StreamReader(@"..\..\..\Config\Parametres.json");
             string jsonString = r.ReadToEnd();
             JFile_parametres JP = JsonConvert.DeserializeObject<JFile_parametres>(jsonString);
@@ -78,25 +77,7 @@ namespace EasySave_GRP4.Model
                             sourceFiles[source].CopyTo(Path.Combine(destinationDir.FullName, sourceFiles[source].Name), true);
                             mutex.ReleaseMutex();
                         }
-                        /*
-                        i++;
-                        int nbfichiers = Directory.GetFiles(sourcePath, "*", SearchOption.TopDirectoryOnly).Length;
-                        int filesLeftToDo = nbfichiers - i;
-                        string progress = Convert.ToString((100 - (filesLeftToDo * 100) / nbfichiers)) + "%";
-
-                        List<State_File> stateList = CED.readOnlyState();
-                       List<State_File> stateListx = CED.readOnlyStatex();
-
-                        stateList[index].NbFilesLeftToDo = filesLeftToDo.ToString();
-                        stateList[index].Progression = progress;
-                        stateList[index].State = etat;
-
-                         stateListx[index].NbFilesLeftToDo = filesLeftToDo.ToString();
-                        stateListx[index].Progression = progress;
-                        stateListx[index].State = etat;
-                        CED.writeOnlyState(stateList);
-                         CED.writeOnlyStatex(stateListx);
-                        */
+                        
                     }
                 }
                 else
@@ -107,20 +88,7 @@ namespace EasySave_GRP4.Model
                     }
                 }
             }
-            /*
-           List<State_File> modifyStateList = CED.readOnlyState();
-             List<State_File> modifyStateListx = CED.readOnlyStatex();
-
-            modifyStateList[index].Time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
-            modifyStateList[index].State = "END";
-
-            
-            modifyStateListx[index].Time = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
-            modifyStateListx[index].State = "END";
-
-            CED.writeOnlyState(modifyStateList);
-              CED.writeOnlyStatex(modifyStateList);
-            */
+           
         }
 
     }

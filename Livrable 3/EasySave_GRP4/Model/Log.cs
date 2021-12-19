@@ -52,7 +52,7 @@ namespace EasySave_GRP4.Model
             xRoot.ElementName = "LogFile";
             xRoot.IsNullable = true;
 
-            // List<LogFile> worklist =  new List<LogFile>();
+          
             XmlSerializer serializer = new XmlSerializer(typeof(List<LogFile>), xRoot);
 
             TextReader textReader = new StringReader(xml);

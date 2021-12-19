@@ -12,9 +12,6 @@ using System.Windows.Shapes;
 
 namespace EasySave_GRP4.View
 {
-    /// <summary>
-    /// Logique d'interaction pour Window1.xaml
-    /// </summary>
     public partial class ExecuteSave : Window
     {
         

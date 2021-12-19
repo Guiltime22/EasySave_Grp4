@@ -26,10 +26,8 @@ namespace EasySave_GRP4.Model
             static public Log LG = new Log(); // Instance to use class Log
             static public Sauvegarde_Differentiel SVS = new Sauvegarde_Differentiel(); // Instance to use class Sauvegarde Sequentielle
             static public Sauvegarde_Unique SVU = new Sauvegarde_Unique(); // Instance to use class Sauvegarde Sequentielle
-            //static public JFile_p JP = new JFile_p();
-            static public Create_Travail CT = new Create_Travail() ;
-
-            public static EventWaitHandle waitHandle = new ManualResetEvent(initialState: true);
+            static public Create_Travail CT = new Create_Travail() ; //Instance to use class Create Travail
+            public static EventWaitHandle waitHandle = new ManualResetEvent(initialState: true); //waitHandle
         }
 
         

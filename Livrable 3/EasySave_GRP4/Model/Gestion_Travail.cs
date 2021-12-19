@@ -19,7 +19,6 @@ namespace EasySave_GRP4.Model
         public void Supprimer_Travail(string name)
         {
             string fileName = @"..\..\..\Config\Travaux_Sauvegarde\" + name + ".json";
-            //FileInfo file = new FileInfo(f);
             File.Delete(fileName);
         }
     }

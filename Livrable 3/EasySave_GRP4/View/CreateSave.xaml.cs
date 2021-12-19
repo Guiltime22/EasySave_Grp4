@@ -13,9 +13,6 @@ using System.Windows.Shapes;
 
 namespace EasySave_GRP4.View
 {
-    /// <summary>
-    /// Logique d'interaction pour Window1.xaml
-    /// </summary>
     public partial class CreateSave : Window
     {
         public CreateSave()
@@ -24,44 +21,33 @@ namespace EasySave_GRP4.View
         }
         private void buttonSourceFolderDialog_Click(object sender, RoutedEventArgs e)
         {
-            // Create OpenFileDialog
-            Ookii.Dialogs.Wpf.VistaFolderBrowserDialog openDlg = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog();
-
-            // Launch OpenFileDialog by calling ShowDialog method
+            
+            Ookii.Dialogs.Wpf.VistaFolderBrowserDialog openDlg = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog(); // Create OpenFileDialog
             Nullable<bool> result = openDlg.ShowDialog();
-            // Get the selected file name and display in a TextBox.
-            // Load content of file in a TextBlock
+            
             if (result == true)
             {
                 textBoxSource.Text = openDlg.SelectedPath;
-                // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
+                
             }
             else
-            {
-              
-               MessageBox.Show("Le répertoire source précisé est vide");
-                
+            { 
+               MessageBox.Show("Le répertoire source précisé est vide");   
             }
         }
         private void buttonDestFolderDialog_Click(object sender, RoutedEventArgs e)
         {
-            // Create OpenFileDialog
-            Ookii.Dialogs.Wpf.VistaFolderBrowserDialog openDlg = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog();
-
-            // Launch OpenFileDialog by calling ShowDialog method
+            
+            Ookii.Dialogs.Wpf.VistaFolderBrowserDialog openDlg = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog(); // Create OpenFileDialog
             Nullable<bool> result = openDlg.ShowDialog();
-            // Get the selected file name and display in a TextBox.
-            // Load content of file in a TextBlock
+            
             if (result == true)
             {
                 textBoxDestination.Text = openDlg.SelectedPath;
-                // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
             }
             else
             {
-               
-                MessageBox.Show("Le répertoire Destination précisé est vide");
-                
+                MessageBox.Show("Le répertoire Destination précisé est vide");   
             }
         }
 
@@ -69,7 +55,6 @@ namespace EasySave_GRP4.View
         {
             if(textBoxName.Text !="" && textBoxSource.Text !="" && textBoxDestination.Text !="" && ComboType.Text !="")
             {
-               
                 View_Factory.CCT.Create_Travail(textBoxName.Text, textBoxSource.Text, textBoxDestination.Text, ComboType.Text);
                 Close();
             }

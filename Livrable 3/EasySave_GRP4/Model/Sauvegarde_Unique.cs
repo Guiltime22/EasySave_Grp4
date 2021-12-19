@@ -16,13 +16,16 @@ namespace EasySave_GRP4.Model
 {
     class Sauvegarde_Unique
     {
+       
         private static Object _locker = new Object();
         private static Mutex mutex = new Mutex();
         States CES = new States();
-        //private static EventWaitHandle waitHandle = new ManualResetEvent(initialState: true);
+        private EventWaitHandle Event = new ManualResetEvent(false);
+
 
         public void CopyRepertoire(string name, string src, string dest, string etat,int index) //Function to copy the files completly
         {
+
                 string path = @"..\..\..\Config\Travaux_Sauvegarde\";
                 int nbFichiersSD = Directory.GetFiles(path, "*.*", SearchOption.TopDirectoryOnly).Length;
 
@@ -50,9 +53,12 @@ namespace EasySave_GRP4.Model
             var i = 0;
             foreach (FileInfo file in files)
                 {
-                    if (Process.GetProcessesByName(JP.Metier).Length == 0)
+                     if (etat == "END") return;
+                     if (etat == "Actif") Event.Set();
+                    Event.WaitOne();
+                if (Process.GetProcessesByName(JP.Metier).Length == 0)
                     {
-                        Stopwatch stopWatch = new Stopwatch();
+                    Stopwatch stopWatch = new Stopwatch();
                         Stopwatch CryptWatch = new Stopwatch();
 
                         string tempPath = Path.Combine(dest, file.Name);
@@ -155,6 +161,8 @@ namespace EasySave_GRP4.Model
             CES.writeOnlyState(modifyStateList);
             CES.writeOnlyStatex(modifyStateListx);
 
+            //In development ---
+
             /**
             DirectoryInfo diSource = new DirectoryInfo(src);
             DirectoryInfo diTarget = new DirectoryInfo(dest);
@@ -175,12 +183,9 @@ namespace EasySave_GRP4.Model
                     }
                 }
             }
-
             **/
-            // Butter.ST.Creer_Fichier_Etat(name, src, dest, etat); //Function to create a state into the state file for the work
-            // Butter.ST.Creer_Fichier_Etatx(name, src, dest, etat); //Function to create a state into the state file for the work
 
-
+            //In development
         }
         private List<FileInfo> OrderFiles(List<FileInfo> l) // Gestion des fichiers prioritaires
         {
