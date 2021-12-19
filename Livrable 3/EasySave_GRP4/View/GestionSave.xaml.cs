@@ -79,7 +79,7 @@ namespace EasySave_GRP4.View
             InitializeComponent();
         }
 
-        private void Modifier_Click(object sender, RoutedEventArgs e) //bouton modifier +supprimer, passe en paramètres ce qu'il faut 
+        private void Modifier_Click(object sender, RoutedEventArgs e) //modify and delete button 
         {
             if (textBoxName.Text != "" && textBoxSource.Text != "" && textBoxDestination.Text != "" && ComboType.Text != "")
             {

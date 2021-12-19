@@ -63,17 +63,17 @@ namespace EasySave_GRP4.Model
                             p.StartInfo.FileName = @"..\..\..\..\CryptoSoft\bin\Debug\netcoreapp3.0\Cryptage_Soft.exe";
                             p.StartInfo.Arguments = $"{file.FullName} {tempPath}";
                             p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                            if (file.Length < Convert.ToInt32(JP.Taille)) //Interdiction de transférer en simultané des fichiers de plus n Ko
-                            {
-                                CryptWatch.Start(); //timer cryptage bg
+                            if (file.Length < Convert.ToInt32(JP.Taille)) //Prohibition of simultaneous transfer of files larger than n KB
+                        {
+                                CryptWatch.Start(); //Start of the encryption
                                 mutex.WaitOne();
-                                p.Start(); //start theeeeeeeeeeeeee cryptageeeee oléolé
+                                p.Start(); 
                                 mutex.ReleaseMutex();
-                                CryptWatch.Stop(); // kda mna melhih bayna stop the cryptage
+                                CryptWatch.Stop(); 
                             }
                             else
                             {
-                                lock (_locker) ; // verrou 
+                                lock (_locker) ; 
                                 CryptWatch.Start();
                                 mutex.WaitOne();
                                 p.Start();

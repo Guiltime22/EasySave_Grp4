@@ -53,9 +53,9 @@ namespace EasySave_GRP4.Model
                                         CryptWatch.Stop();
                                     }
                                     TimeSpan cts = CryptWatch.Elapsed;
-                                    mutex.WaitOne();//pour éviter les conflits 
+                                    mutex.WaitOne(); 
                                     sourceFiles[source].CopyTo(Path.Combine(destinationDir.FullName, sourceFiles[source].Name), true); //Execute the copy
-                                    mutex.ReleaseMutex(); //release the mutex my son
+                                    mutex.ReleaseMutex(); //release the mutex 
                                     Butter.ST.Creer_Fichier_Etat(name, sourcePath, destinationPath, etat);
 
                                     Butter.ST.Creer_Fichier_Etatx(name, sourcePath, destinationPath, etat);
