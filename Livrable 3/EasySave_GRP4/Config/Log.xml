@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-16"?>
+<LogFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LogFile>
+    <Cryptime>00:00:00</Cryptime>
+    <Name>alors1</Name>
+    <SourceFilePath>C:\Users\mesbah\Desktop\Test1\A3_FISE_Info_2021_ Rattrapage Stratégie des gestions du SI.html</SourceFilePath>
+    <TargetFilePath>C:\Users\mesbah\Desktop\destination\A3_FISE_Info_2021_ Rattrapage Stratégie des gestions du SI.html</TargetFilePath>
+    <Size>455703</Size>
+    <Time>(Timestamp, 12/19/2021 03:20:46)</Time>
+    <TransitionTime>00:00:00.0351967</TransitionTime>
+  </LogFile>
+  <LogFile>
+    <Cryptime>00:00:00</Cryptime>
+    <Name>alors1</Name>
+    <SourceFilePath>C:\Users\mesbah\Desktop\Test1\Architecture du SI _ relecture de tentative.html</SourceFilePath>
+    <TargetFilePath>C:\Users\mesbah\Desktop\destination\Architecture du SI _ relecture de tentative.html</TargetFilePath>
+    <Size>129122</Size>
+    <Time>(Timestamp, 12/19/2021 03:20:46)</Time>
+    <TransitionTime>00:00:00.0364444</TransitionTime>
+  </LogFile>
+  <LogFile>
+    <Cryptime>00:00:00</Cryptime>
+    <Name>alors1</Name>
+    <SourceFilePath>C:\Users\mesbah\Desktop\Test1\Cryptographie _ relecture de tentative.html</SourceFilePath>
+    <TargetFilePath>C:\Users\mesbah\Desktop\destination\Cryptographie _ relecture de tentative.html</TargetFilePath>
+    <Size>84797</Size>
+    <Time>(Timestamp, 12/19/2021 03:20:46)</Time>
+    <TransitionTime>00:00:00.0277101</TransitionTime>
+  </LogFile>
+  <LogFile>
+    <Cryptime>00:00:00</Cryptime>
+    <Name>alors1</Name>
+    <SourceFilePath>C:\Users\mesbah\Desktop\Test1\Marche.docx</SourceFilePath>
+    <TargetFilePath>C:\Users\mesbah\Desktop\destination\Marche.docx</TargetFilePath>
+    <Size>35</Size>
+    <Time>(Timestamp, 12/19/2021 03:20:46)</Time>
+    <TransitionTime>00:00:00.0048599</TransitionTime>
+  </LogFile>
+  <LogFile>
+    <Cryptime>00:00:00</Cryptime>
+    <Name>alors1</Name>
+    <SourceFilePath>C:\Users\mesbah\Desktop\Test1\Marche.txt</SourceFilePath>
+    <TargetFilePath>C:\Users\mesbah\Desktop\destination\Marche.txt</TargetFilePath>
+    <Size>35</Size>
+    <Time>(Timestamp, 12/19/2021 03:20:46)</Time>
+    <TransitionTime>00:00:00.0008866</TransitionTime>
+  </LogFile>
+  <LogFile>
+    <Cryptime>00:00:00</Cryptime>
+    <Name>alors1</Name>
+    <SourceFilePath>C:\Users\mesbah\Desktop\Test1\Marche.word</SourceFilePath>
+    <TargetFilePath>C:\Users\mesbah\Desktop\destination\Marche.word</TargetFilePath>
+    <Size>35</Size>
+    <Time>(Timestamp, 12/19/2021 03:20:46)</Time>
+    <TransitionTime>00:00:00.0011672</TransitionTime>
+  </LogFile>
+  <LogFile>
+    <Cryptime>00:00:00</Cryptime>
+    <Name>alors1</Name>
+    <SourceFilePath>C:\Users\mesbah\Desktop\Test1\Rattrapage Architecture du SI _ relecture de tentative.html</SourceFilePath>
+    <TargetFilePath>C:\Users\mesbah\Desktop\destination\Rattrapage Architecture du SI _ relecture de tentative.html</TargetFilePath>
+    <Size>194085</Size>
+    <Time>(Timestamp, 12/19/2021 03:20:47)</Time>
+    <TransitionTime>00:00:00.1471078</TransitionTime>
+  </LogFile>
+  <LogFile>
+    <Cryptime>00:00:00</Cryptime>
+    <Name>alors1</Name>
+    <SourceFilePath>C:\Users\mesbah\Desktop\Test1\Rattrapage Cryptographie _ relecture de tentative.html</SourceFilePath>
+    <TargetFilePath>C:\Users\mesbah\Desktop\destination\Rattrapage Cryptographie _ relecture de tentative.html</TargetFilePath>
+    <Size>72861</Size>
+    <Time>(Timestamp, 12/19/2021 03:20:47)</Time>
+    <TransitionTime>00:00:00.0845800</TransitionTime>
+  </LogFile>
+  <LogFile>
+    <Cryptime>00:00:00</Cryptime>
+    <Name>alors1</Name>
+    <SourceFilePath>C:\Users\mesbah\Desktop\Test1\Rattrapage Sécurité et gestion du SI _ relecture de tentative.html</SourceFilePath>
+    <TargetFilePath>C:\Users\mesbah\Desktop\destination\Rattrapage Sécurité et gestion du SI _ relecture de tentative.html</TargetFilePath>
+    <Size>112683</Size>
+    <Time>(Timestamp, 12/19/2021 03:20:47)</Time>
+    <TransitionTime>00:00:00.0418817</TransitionTime>
+  </LogFile>
+  <LogFile>
+    <Cryptime>00:00:00</Cryptime>
+    <Name>alors1</Name>
+    <SourceFilePath>C:\Users\mesbah\Desktop\Test1\Sécurité _ Filtrage _ relecture de tentative.html</SourceFilePath>
+    <TargetFilePath>C:\Users\mesbah\Desktop\destination\Sécurité _ Filtrage _ relecture de tentative.html</TargetFilePath>
+    <Size>100908</Size>
+    <Time>(Timestamp, 12/19/2021 03:20:47)</Time>
+    <TransitionTime>00:00:00.1011308</TransitionTime>
+  </LogFile>
+  <LogFile>
+    <Cryptime>00:00:00</Cryptime>
+    <Name>alors1</Name>
+    <SourceFilePath>C:\Users\mesbah\Desktop\Test1\Test.pdf</SourceFilePath>
+    <TargetFilePath>C:\Users\mesbah\Desktop\destination\Test.pdf</TargetFilePath>
+    <Size>35</Size>
+    <Time>(Timestamp, 12/19/2021 03:20:47)</Time>
+    <TransitionTime>00:00:00.0620439</TransitionTime>
+  </LogFile>
+  <LogFile>
+    <Cryptime>00:00:00</Cryptime>
+    <Name>alors1</Name>
+    <SourceFilePath>C:\Users\mesbah\Desktop\Test1\Test.txt</SourceFilePath>
+    <TargetFilePath>C:\Users\mesbah\Desktop\destination\Test.txt</TargetFilePath>
+    <Size>35</Size>
+    <Time>(Timestamp, 12/19/2021 03:20:48)</Time>
+    <TransitionTime>00:00:00.0009249</TransitionTime>
+  </LogFile>
+  <LogFile>
+    <Cryptime>00:00:00</Cryptime>
+    <Name>alors1</Name>
+    <SourceFilePath>C:\Users\mesbah\Desktop\Test1\yf.docx</SourceFilePath>
+    <TargetFilePath>C:\Users\mesbah\Desktop\destination\yf.docx</TargetFilePath>
+    <Size>1305200</Size>
+    <Time>(Timestamp, 12/19/2021 03:20:48)</Time>
+    <TransitionTime>00:00:00.2748385</TransitionTime>
+  </LogFile>
+</LogFile>

@@ -57,6 +57,8 @@ namespace EasySave_GRP4.Model
                                     sourceFiles[source].CopyTo(Path.Combine(destinationDir.FullName, sourceFiles[source].Name), true); //Execute the copy
                                     mutex.ReleaseMutex(); //release the mutex my son
                                     Butter.ST.Creer_Fichier_Etat(name, sourcePath, destinationPath, etat);
+
+                                    Butter.ST.Creer_Fichier_Etatx(name, sourcePath, destinationPath, etat);
                                     Stopwatch stopWatch = new Stopwatch(); //Instance the Timer
                                     Stopwatch.StartNew(); //Reset the Timer
                                     stopWatch.Start(); //Begin the Timer
@@ -65,6 +67,7 @@ namespace EasySave_GRP4.Model
                                     stopWatch.Stop(); //Stop the Timer
                                     TimeSpan ts = stopWatch.Elapsed;
                                     Butter.LG.Create_Log(sourceFiles[source], name, sourcePath, destinationPath, ts, cts, Taille); //Function to create a log in log file
+                                    Butter.LG.Create_Logxml(sourceFiles[source], name, sourcePath, destinationPath, ts, cts, Taille); //Function to create a log in log file
 
                                 }
                             }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-16"?>
+<State_File xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <State_File>
+    <Name>Alors</Name>
+    <SourceFilePath>C:\Users\mesbah\Desktop\Test1</SourceFilePath>
+    <TargetFilePath>C:\Users\mesbah\Desktop\lol</TargetFilePath>
+    <State>Inactif</State>
+    <TotalFilesToCopy>13</TotalFilesToCopy>
+    <TotalFilesSize>2455534</TotalFilesSize>
+    <NbFilesLeftToDo>-1</NbFilesLeftToDo>
+    <Progression>100%</Progression>
+    <Time>(Timestamp, 12/19/2021 03:18:30)</Time>
+  </State_File>
+  <State_File>
+    <Name>alors1</Name>
+    <SourceFilePath>C:\Users\mesbah\Desktop\Test1</SourceFilePath>
+    <TargetFilePath>C:\Users\mesbah\Desktop\destination</TargetFilePath>
+    <State>Inactif</State>
+    <TotalFilesToCopy>13</TotalFilesToCopy>
+    <TotalFilesSize>2455534</TotalFilesSize>
+    <NbFilesLeftToDo>12</NbFilesLeftToDo>
+    <Progression>0%</Progression>
+    <Time>(Timestamp, 12/19/2021 03:20:34)</Time>
+  </State_File>
+</State_File>

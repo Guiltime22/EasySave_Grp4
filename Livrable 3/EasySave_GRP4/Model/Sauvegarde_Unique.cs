@@ -107,7 +107,8 @@ namespace EasySave_GRP4.Model
 
                         TimeSpan ts = stopWatch.Elapsed;
                         Butter.LG.Create_Log(file, name, src, dest, ts, cts, Taille); //Function to create a log in log file
-                    }
+                        Butter.LG.Create_Logxml(file, name, src, dest, ts, cts, Taille); //Function to create a log in log file
+                }
                     else
                     {
                         while (Process.GetProcessesByName(JP.Metier).Length != 0)
@@ -158,6 +159,7 @@ namespace EasySave_GRP4.Model
 
             **/
             // Butter.ST.Creer_Fichier_Etat(name, src, dest, etat); //Function to create a state into the state file for the work
+            // Butter.ST.Creer_Fichier_Etatx(name, src, dest, etat); //Function to create a state into the state file for the work
 
 
         }

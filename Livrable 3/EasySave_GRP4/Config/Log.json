@@ -1,74 +1,191 @@
 [
   {
+    "CryptTime": "00:00:00",
     "Name": "azert",
     "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A2 PFI S04 - KADOUCHE Lydia.docx",
     "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2\\A2 PFI S04 - KADOUCHE Lydia.docx",
     "Size": "397186",
     "Time": "\"Timestamp\": \"12/19/2021 02:43:18\"",
-    "TransitionTime": "00:00:00.0000438",
-    "CryptTime": "00:00:00"
+    "TransitionTime": "00:00:00.0000438"
   },
   {
+    "CryptTime": "00:00:00",
     "Name": "azert",
     "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_ArchitectureSIEtAnnuaires.xlsx",
     "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2\\A3_ArchitectureSIEtAnnuaires.xlsx",
     "Size": "9517",
     "Time": "\"Timestamp\": \"12/19/2021 02:43:19\"",
-    "TransitionTime": "00:00:00.0000082",
-    "CryptTime": "00:00:00"
+    "TransitionTime": "00:00:00.0000082"
   },
   {
+    "CryptTime": "00:00:00",
     "Name": "azert",
     "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_Cryptographie.xlsx",
     "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2\\A3_Cryptographie.xlsx",
     "Size": "9354",
     "Time": "\"Timestamp\": \"12/19/2021 02:43:19\"",
-    "TransitionTime": "00:00:00.0000021",
-    "CryptTime": "00:00:00"
+    "TransitionTime": "00:00:00.0000021"
   },
   {
+    "CryptTime": "00:00:00",
     "Name": "azert",
     "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_InteractionsSystemes.xlsx",
     "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2\\A3_InteractionsSystemes.xlsx",
     "Size": "9371",
     "Time": "\"Timestamp\": \"12/19/2021 02:43:20\"",
-    "TransitionTime": "00:00:00.0000064",
-    "CryptTime": "00:00:00"
+    "TransitionTime": "00:00:00.0000064"
   },
   {
+    "CryptTime": "00:00:00",
     "Name": "azert",
     "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\A3_SecuriteEtFiltrage.xlsx",
     "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2\\A3_SecuriteEtFiltrage.xlsx",
     "Size": "9312",
     "Time": "\"Timestamp\": \"12/19/2021 02:43:21\"",
-    "TransitionTime": "00:00:00.0000061",
-    "CryptTime": "00:00:00"
+    "TransitionTime": "00:00:00.0000061"
   },
   {
+    "CryptTime": "00:00:00",
     "Name": "azert",
     "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\KADOUCHE Lydia_PFI.docx",
     "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2\\KADOUCHE Lydia_PFI.docx",
     "Size": "397503",
     "Time": "\"Timestamp\": \"12/19/2021 02:43:23\"",
-    "TransitionTime": "00:00:00.0000055",
-    "CryptTime": "00:00:00"
+    "TransitionTime": "00:00:00.0000055"
   },
   {
+    "CryptTime": "00:00:00",
     "Name": "azert",
     "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\Kadouche Lydia_Rapport de stage.docx",
     "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2\\Kadouche Lydia_Rapport de stage.docx",
     "Size": "9725656",
     "Time": "\"Timestamp\": \"12/19/2021 02:43:23\"",
-    "TransitionTime": "00:00:00.0000055",
-    "CryptTime": "00:00:00"
+    "TransitionTime": "00:00:00.0000055"
   },
   {
+    "CryptTime": "00:00:00",
     "Name": "azert",
     "SourceFilePath": "C:\\Users\\DELL\\Desktop\\Source\\Lydia.txt",
     "TargetFilePath": "C:\\Users\\DELL\\Desktop\\Destination2\\Lydia.txt",
     "Size": "26",
     "Time": "\"Timestamp\": \"12/19/2021 02:43:25\"",
-    "TransitionTime": "00:00:00.0000040",
-    "CryptTime": "00:00:00"
+    "TransitionTime": "00:00:00.0000040"
+  },
+  {
+    "CryptTime": "00:00:00",
+    "Name": "alors1",
+    "SourceFilePath": "C:\\Users\\mesbah\\Desktop\\Test1\\A3_FISE_Info_2021_ Rattrapage Stratégie des gestions du SI.html",
+    "TargetFilePath": "C:\\Users\\mesbah\\Desktop\\destination\\A3_FISE_Info_2021_ Rattrapage Stratégie des gestions du SI.html",
+    "Size": "455703",
+    "Time": "\"Timestamp\": \"12/19/2021 03:20:46\"",
+    "TransitionTime": "00:00:00.0351967"
+  },
+  {
+    "CryptTime": "00:00:00",
+    "Name": "alors1",
+    "SourceFilePath": "C:\\Users\\mesbah\\Desktop\\Test1\\Architecture du SI _ relecture de tentative.html",
+    "TargetFilePath": "C:\\Users\\mesbah\\Desktop\\destination\\Architecture du SI _ relecture de tentative.html",
+    "Size": "129122",
+    "Time": "\"Timestamp\": \"12/19/2021 03:20:46\"",
+    "TransitionTime": "00:00:00.0364444"
+  },
+  {
+    "CryptTime": "00:00:00",
+    "Name": "alors1",
+    "SourceFilePath": "C:\\Users\\mesbah\\Desktop\\Test1\\Cryptographie _ relecture de tentative.html",
+    "TargetFilePath": "C:\\Users\\mesbah\\Desktop\\destination\\Cryptographie _ relecture de tentative.html",
+    "Size": "84797",
+    "Time": "\"Timestamp\": \"12/19/2021 03:20:46\"",
+    "TransitionTime": "00:00:00.0277101"
+  },
+  {
+    "CryptTime": "00:00:00",
+    "Name": "alors1",
+    "SourceFilePath": "C:\\Users\\mesbah\\Desktop\\Test1\\Marche.docx",
+    "TargetFilePath": "C:\\Users\\mesbah\\Desktop\\destination\\Marche.docx",
+    "Size": "35",
+    "Time": "\"Timestamp\": \"12/19/2021 03:20:46\"",
+    "TransitionTime": "00:00:00.0048599"
+  },
+  {
+    "CryptTime": "00:00:00",
+    "Name": "alors1",
+    "SourceFilePath": "C:\\Users\\mesbah\\Desktop\\Test1\\Marche.txt",
+    "TargetFilePath": "C:\\Users\\mesbah\\Desktop\\destination\\Marche.txt",
+    "Size": "35",
+    "Time": "\"Timestamp\": \"12/19/2021 03:20:46\"",
+    "TransitionTime": "00:00:00.0008866"
+  },
+  {
+    "CryptTime": "00:00:00",
+    "Name": "alors1",
+    "SourceFilePath": "C:\\Users\\mesbah\\Desktop\\Test1\\Marche.word",
+    "TargetFilePath": "C:\\Users\\mesbah\\Desktop\\destination\\Marche.word",
+    "Size": "35",
+    "Time": "\"Timestamp\": \"12/19/2021 03:20:46\"",
+    "TransitionTime": "00:00:00.0011672"
+  },
+  {
+    "CryptTime": "00:00:00",
+    "Name": "alors1",
+    "SourceFilePath": "C:\\Users\\mesbah\\Desktop\\Test1\\Rattrapage Architecture du SI _ relecture de tentative.html",
+    "TargetFilePath": "C:\\Users\\mesbah\\Desktop\\destination\\Rattrapage Architecture du SI _ relecture de tentative.html",
+    "Size": "194085",
+    "Time": "\"Timestamp\": \"12/19/2021 03:20:47\"",
+    "TransitionTime": "00:00:00.1471078"
+  },
+  {
+    "CryptTime": "00:00:00",
+    "Name": "alors1",
+    "SourceFilePath": "C:\\Users\\mesbah\\Desktop\\Test1\\Rattrapage Cryptographie _ relecture de tentative.html",
+    "TargetFilePath": "C:\\Users\\mesbah\\Desktop\\destination\\Rattrapage Cryptographie _ relecture de tentative.html",
+    "Size": "72861",
+    "Time": "\"Timestamp\": \"12/19/2021 03:20:47\"",
+    "TransitionTime": "00:00:00.0845800"
+  },
+  {
+    "CryptTime": "00:00:00",
+    "Name": "alors1",
+    "SourceFilePath": "C:\\Users\\mesbah\\Desktop\\Test1\\Rattrapage Sécurité et gestion du SI _ relecture de tentative.html",
+    "TargetFilePath": "C:\\Users\\mesbah\\Desktop\\destination\\Rattrapage Sécurité et gestion du SI _ relecture de tentative.html",
+    "Size": "112683",
+    "Time": "\"Timestamp\": \"12/19/2021 03:20:47\"",
+    "TransitionTime": "00:00:00.0418817"
+  },
+  {
+    "CryptTime": "00:00:00",
+    "Name": "alors1",
+    "SourceFilePath": "C:\\Users\\mesbah\\Desktop\\Test1\\Sécurité _ Filtrage _ relecture de tentative.html",
+    "TargetFilePath": "C:\\Users\\mesbah\\Desktop\\destination\\Sécurité _ Filtrage _ relecture de tentative.html",
+    "Size": "100908",
+    "Time": "\"Timestamp\": \"12/19/2021 03:20:47\"",
+    "TransitionTime": "00:00:00.1011308"
+  },
+  {
+    "CryptTime": "00:00:00",
+    "Name": "alors1",
+    "SourceFilePath": "C:\\Users\\mesbah\\Desktop\\Test1\\Test.pdf",
+    "TargetFilePath": "C:\\Users\\mesbah\\Desktop\\destination\\Test.pdf",
+    "Size": "35",
+    "Time": "\"Timestamp\": \"12/19/2021 03:20:47\"",
+    "TransitionTime": "00:00:00.0620439"
+  },
+  {
+    "CryptTime": "00:00:00",
+    "Name": "alors1",
+    "SourceFilePath": "C:\\Users\\mesbah\\Desktop\\Test1\\Test.txt",
+    "TargetFilePath": "C:\\Users\\mesbah\\Desktop\\destination\\Test.txt",
+    "Size": "35",
+    "Time": "\"Timestamp\": \"12/19/2021 03:20:48\"",
+    "TransitionTime": "00:00:00.0009249"
+  },
+  {
+    "CryptTime": "00:00:00",
+    "Name": "alors1",
+    "SourceFilePath": "C:\\Users\\mesbah\\Desktop\\Test1\\yf.docx",
+    "TargetFilePath": "C:\\Users\\mesbah\\Desktop\\destination\\yf.docx",
+    "Size": "1305200",
+    "Time": "\"Timestamp\": \"12/19/2021 03:20:48\"",
+    "TransitionTime": "00:00:00.2748385"
   }
 ]

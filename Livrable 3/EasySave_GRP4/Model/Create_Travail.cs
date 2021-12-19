@@ -40,7 +40,9 @@ namespace EasySave_GRP4.Model
                     ETAT = "Inactif";
                     File.WriteAllText(fileName, jsonString); // Create the work with the informations
                     Butter.ST.Creer_Fichier_Etat(name, source_name, dest_name, ETAT); //Function to create a state into the state file for the work
-                    MessageBox.Show("Creation de Travail réussie");
+                    Butter.ST.Creer_Fichier_Etatx(name, source_name, dest_name, ETAT); //Function to create a state into the state file for the work
+            
+            MessageBox.Show("Creation de Travail réussie");
         }
 
 

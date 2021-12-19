@@ -5,12 +5,16 @@ using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Threading;
+using System.Xml;
+using System.Xml.Linq;
+using System.Xml.Serialization;
 
 namespace EasySave_GRP4.Model
 {
     public class State_File
     {
         public static string fileName = @"..\..\..\Config\Etats.json";
+        public static string fileNamex = @"..\..\..\Config\Etats.xml";
         public string Name { get; set; }
         public string SourceFilePath { get; set; }
         public string TargetFilePath { get; set; }
@@ -24,6 +28,62 @@ namespace EasySave_GRP4.Model
     class States
     {
         private static Mutex mutex = new Mutex();
+
+        public void Creer_Fichier_Etatx(string nom_fichier, string source, string destination, string ETAT) //Function to create a state into the state file for the work
+        {
+            int Taille = 0;
+            int TotalFichiersACopier = Directory.GetFiles(source, "*.*", SearchOption.TopDirectoryOnly).Length;
+            int TotalFichiersDestination = Directory.GetFiles(destination, "*.*", SearchOption.TopDirectoryOnly).Length;
+            int TotalFichiersRestants = TotalFichiersACopier - TotalFichiersDestination; //To calculate the remaining files
+
+            DirectoryInfo dir = new DirectoryInfo(source);
+            DirectoryInfo[] dirs = dir.GetDirectories();
+            FileInfo[] files = dir.GetFiles();
+            foreach (FileInfo file in files)
+            {
+                int tf = Convert.ToInt32(file.Length);
+                Taille = Taille + tf; //The size of the file
+            }
+            float Progress = (TotalFichiersDestination / TotalFichiersACopier) * 100; //To calculate the progress of the copy
+            var Temps = ("Timestamp", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss")); //To set the time of the copy
+
+
+            string xml = File.ReadAllText(State_File.fileNamex);
+            XmlRootAttribute xRoot = new XmlRootAttribute();
+            xRoot.ElementName = "State_File";
+            xRoot.IsNullable = true;
+
+            XmlSerializer serializer = new XmlSerializer(typeof(List<State_File>), xRoot);
+
+            TextReader textReader = new StringReader(xml);
+
+            List<State_File> worklist = (List<State_File>)serializer.Deserialize(textReader);
+
+
+
+            worklist.Add(new State_File()
+            {
+                Name = nom_fichier,
+                SourceFilePath = source,
+                TargetFilePath = destination,
+                State = ETAT,
+                TotalFilesToCopy = Convert.ToString(TotalFichiersACopier),
+                TotalFilesSize = Convert.ToString(Taille),
+                NbFilesLeftToDo = Convert.ToString(TotalFichiersRestants),
+                Progression = Convert.ToString(Progress) + "%",
+                Time = Convert.ToString(Temps)
+            });
+
+
+            var writer1 = new StringWriter();
+            serializer.Serialize(writer1, worklist);
+            var xml1 = writer1.ToString();
+            mutex.WaitOne();
+            File.WriteAllText(State_File.fileNamex, xml1);
+            mutex.ReleaseMutex();
+
+
+        }
         public void Creer_Fichier_Etat(string nom_fichier, string source, string destination, string ETAT) //Function to create a state into the state file for the work
         {
             long Taille = 0;
@@ -59,7 +119,7 @@ namespace EasySave_GRP4.Model
                 Time = Convert.ToString(Temps)
             });
             
-            string jsonString = JsonConvert.SerializeObject(workList, Formatting.Indented);
+            string jsonString = JsonConvert.SerializeObject(workList, Newtonsoft.Json.Formatting.Indented);
             mutex.WaitOne();
             File.WriteAllText(State_File.fileName, jsonString);
             mutex.ReleaseMutex();
@@ -68,7 +128,7 @@ namespace EasySave_GRP4.Model
         }
         public void writeOnlyState(List<State_File> stateList) { 
             mutex.WaitOne(); 
-            string strResultJsonState = JsonConvert.SerializeObject(stateList, Formatting.Indented);
+            string strResultJsonState = JsonConvert.SerializeObject(stateList, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(State_File.fileName, strResultJsonState);
             mutex.ReleaseMutex();
         }

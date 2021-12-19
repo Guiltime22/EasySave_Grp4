@@ -5,23 +5,92 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading;
+using System.Xml;
+using System.Xml.Linq;
+using System.Xml.Serialization;
 
 namespace EasySave_GRP4.Model
 {
     public class LogFile
+        
     {
         public static string filepath = @"..\..\..\Config\Log.json";
-        public string Name { get; set; }
-        public string SourceFilePath { get; set; }
-        public string TargetFilePath { get; set; }
-        public string Size { get; set; }
-        public string Time { get; set; }
-        public string TransitionTime { get; set; }
+         public static string filepathx = @"..\..\..\Config\Log.xml";
+
+        [XmlElement(ElementName = "Cryptime")]
         public string CryptTime { get; set; }
+
+        [XmlElement(ElementName = "Name")]
+        public string Name { get; set; }
+        [XmlElement(ElementName = "SourceFilePath")]
+        public string SourceFilePath { get; set; }
+        [XmlElement(ElementName = "TargetFilePath")]
+        public string TargetFilePath { get; set; }
+        [XmlElement(ElementName = "Size")]
+        public string Size { get; set; }
+        [XmlElement(ElementName = "Time")]
+        public string Time { get; set; }
+        [XmlElement(ElementName = "TransitionTime")]
+        public string TransitionTime { get; set; }
 
     }
     class Log
     {
+
+        public void Create_Logxml(FileInfo name, string nom_fichier, string src, string dest, TimeSpan ts, TimeSpan cts, long Taille) //Function to create a log into the log file for the work
+        {
+            while (true)
+            {
+                try
+                {
+                    var Temps = ("Timestamp", DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
+
+
+            string xml = File.ReadAllText(LogFile.filepathx);
+            XmlRootAttribute xRoot = new XmlRootAttribute();
+            xRoot.ElementName = "LogFile";
+            xRoot.IsNullable = true;
+
+            // List<LogFile> worklist =  new List<LogFile>();
+            XmlSerializer serializer = new XmlSerializer(typeof(List<LogFile>), xRoot);
+
+            TextReader textReader = new StringReader(xml);
+
+            List<LogFile> worklist = (List<LogFile>)serializer.Deserialize(textReader);
+
+
+
+            worklist.Add(new LogFile()
+            {
+                Name = nom_fichier,
+                SourceFilePath = src + "\\" + name.Name,
+                TargetFilePath = dest + "\\" + name.Name,
+                TransitionTime = Convert.ToString(ts),
+                Size = Convert.ToString(Taille),
+                Time = Convert.ToString(Temps),
+                 CryptTime = Convert.ToString(cts)
+            });
+
+
+
+
+            var writer1 = new StringWriter();
+            serializer.Serialize(writer1, worklist);
+            var xml1 = writer1.ToString();
+            File.WriteAllText(LogFile.filepathx, xml1);
+                    break;
+                }
+                catch (Exception e)
+                {
+
+                }
+                Thread.Sleep(100);
+            }
+
+
+
+        }
+
         public void Create_Log(FileInfo name, string nom_fichier, string src, string dest, TimeSpan ts, TimeSpan cts, long Taille) //Function to create a log into the log file for the work
         {
             while (true)
@@ -51,7 +120,7 @@ namespace EasySave_GRP4.Model
                         Time = Convert.ToString(Temps),
                         CryptTime = Convert.ToString(cts)
                     });
-                    string jsonString = JsonConvert.SerializeObject(workList, Formatting.Indented);
+                    string jsonString = JsonConvert.SerializeObject(workList, Newtonsoft.Json.Formatting.Indented);
                     File.WriteAllText(LogFile.filepath, jsonString);
                     break;
                 }

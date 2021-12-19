@@ -97,5 +97,27 @@
     "NbFilesLeftToDo": "0",
     "Progression": "100%",
     "Time": "\"Timestamp\": \"12/19/2021 02:43:25\""
+  },
+  {
+    "Name": "Alors",
+    "SourceFilePath": "C:\\Users\\mesbah\\Desktop\\Test1",
+    "TargetFilePath": "C:\\Users\\mesbah\\Desktop\\lol",
+    "State": "Inactif",
+    "TotalFilesToCopy": "13",
+    "TotalFilesSize": "2455534",
+    "NbFilesLeftToDo": "-1",
+    "Progression": "100%",
+    "Time": "\"Timestamp\": \"12/19/2021 03:18:29\""
+  },
+  {
+    "Name": "alors1",
+    "SourceFilePath": "C:\\Users\\mesbah\\Desktop\\Test1",
+    "TargetFilePath": "C:\\Users\\mesbah\\Desktop\\destination",
+    "State": "END",
+    "TotalFilesToCopy": "13",
+    "TotalFilesSize": "2455534",
+    "NbFilesLeftToDo": "0",
+    "Progression": "100%",
+    "Time": "19/12/2021 03:20:48"
   }
 ]
