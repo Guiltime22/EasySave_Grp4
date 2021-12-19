@@ -18,7 +18,7 @@ namespace EasySave_GRP4.Model
     {
         private static Object _locker = new Object();
         private static Mutex mutex = new Mutex();
-
+        States CES = new States();
         //private static EventWaitHandle waitHandle = new ManualResetEvent(initialState: true);
 
         public void CopyRepertoire(string name, string src, string dest, string etat) //Function to copy the files completly
@@ -47,7 +47,8 @@ namespace EasySave_GRP4.Model
                 // Get the files in the directory and copy them to the new location.
                 FileInfo[] files = dir.GetFiles();
                 files = OrderFiles(files.ToList()).ToArray();
-                foreach (FileInfo file in files)
+            var i = 0;
+            foreach (FileInfo file in files)
                 {
                     if (Process.GetProcessesByName(JP.Metier).Length == 0)
                     {
@@ -114,7 +115,19 @@ namespace EasySave_GRP4.Model
                             MessageBox.Show("Votre logiciel métier est en cours d'éxecution, veuillez le fermer !");
                         }
                     }
-                }
+                     i++;
+                    int nbfichiers = Directory.GetFiles(src, "*", SearchOption.TopDirectoryOnly).Length;
+                     int filesLeftToDo =  nbfichiers - i;
+                     string progress = Convert.ToString((100 - (filesLeftToDo * 100) / nbfichiers)) + "%";
+
+                     List<State_File> stateList = CES.readOnlyState();
+
+                     stateList[getStateIndex].NbFilesLeftToDo = filesLeftToDo.ToString();
+                     stateList[getStateIndex].Progression = progress;
+
+
+                     state.writeOnlyState(stateList);
+            }
 
                 /**
                 DirectoryInfo diSource = new DirectoryInfo(src);
@@ -138,7 +151,7 @@ namespace EasySave_GRP4.Model
                 }
 
                 **/
-                Butter.ST.Executer_Fichier_Etat(name, src, dest, etat); //Function to create a state into the state file for the work
+               // Butter.ST.Creer_Fichier_Etat(name, src, dest, etat); //Function to create a state into the state file for the work
 
             
         }
