@@ -18,7 +18,9 @@ As any software of the ProSoft Suite, the software will be integrated into the p
 Built with:
 
 •	Visual Studio 2019 (enterprise version)
+
 •	Visual Pardigm (for diagram)
+
 •	Azure Repos
 
 
