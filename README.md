@@ -23,6 +23,7 @@ Built with:
 
 •	Azure Repos
 
+
 Version 1.0:
 
 The specifications of the first version of the software are as follows : 
@@ -90,6 +91,7 @@ The software must write in real time in a daily log file the history of the acti
     o	The locations of the two files described above (daily log and status) will have to be studied to work on the clients' servers. As a result, "c:\temp" type locations are to be avoided.
 
     o	The files (daily log and status) and any configuration files will be in XML or JSON format. In order to allow fast reading via Notepad, it is necessary to put line feeds between the XML (or JSON) elements. A pagination would be a plus.
+    
 
 Version 2.0:
 
@@ -112,7 +114,7 @@ Version 2.0:
       o	Only the files with extensions defined by the user in the general settings should be encrypted.
 
 
-Evolution of the Daily Log file
+Evolution of the Daily Log file:
 
 The daily log file must contain additional information: Time needed to encrypt the file  
 
@@ -121,6 +123,7 @@ Business software
 If the presence of business software is detected, the software must prohibit the launch of a backup job. In the case of sequential jobs, the software must complete the current job and stop before launching the next job. The user will be able to define the business software in the general settings of the software. (Note: the calculator application can substitute the business software during demonstrations). #Getting Started To get a local copy up and running follow these simple example steps. But before anything else you should be sure to have Visual Studio 2019 in order to run the program.
 
 Once you will have set up your computer You will have to clone this project.
+
 
 Version 3.0:
 
@@ -147,6 +150,7 @@ Version 2.0 : [User Documentation 2.0.docx](https://github.com/Guiltime22/EasySa
 
 Version 3.0 : [User Documentation 3.0.docx](https://github.com/Guiltime22/EasySave_Grp4/files/7740308/User.Documentation.3.0.docx)
 
+
 The versions of EasySave
 
 Version	Available
@@ -159,10 +163,12 @@ Version	Available
 
 3.0	✅
 
+
 GitHub
 
 To clone this repository use the following command:
 $ git clone https://github.com/Guiltime22/EasySave_Grp4 
+
 
 Authors:
 
