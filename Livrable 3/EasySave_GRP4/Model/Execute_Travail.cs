@@ -22,7 +22,6 @@ namespace EasySave_GRP4.Model
         {
             try
             {
-
                 string fileName = @"..\..\..\Config\Travaux_Sauvegarde\" + nom_fichier + ".json";
                 string jsonString = File.ReadAllText(fileName); //Open the file to read the work
                 JFile jFile = System.Text.Json.JsonSerializer.Deserialize<JFile>(jsonString); //Convert the content of the file into Objects
