@@ -59,7 +59,7 @@ namespace EasySave_GRP4.View
                 {
                     Affi_Data.ItemsSource = View_Factory.CPT.Afficher_Data();
                     //progression = worksState[0].Progression.Replace("%", "");
-
+                    progression = 10; //Test d'envoie de progression
                 }));
                 Thread.Sleep(800);
             }
