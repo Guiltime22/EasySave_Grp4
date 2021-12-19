@@ -67,6 +67,9 @@ namespace EasySave_GRP4.Model
                             {
                                 CryptWatch.Start(); //timer cryptage bg
                                 mutex.WaitOne();
+                                p.StartInfo.UseShellExecute = false;
+                                p.StartInfo.CreateNoWindow = true;
+                                p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                                 p.Start(); //start theeeeeeeeeeeeee cryptageeeee oléolé
                                 mutex.ReleaseMutex();
                                 CryptWatch.Stop(); // kda mna melhih bayna stop the cryptage
@@ -76,6 +79,9 @@ namespace EasySave_GRP4.Model
                                 lock (_locker) ; // verrou 
                                 CryptWatch.Start();
                                 mutex.WaitOne();
+                                p.StartInfo.UseShellExecute = false;
+                                p.StartInfo.CreateNoWindow = true;
+                                p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                                 p.Start();
                                 mutex.ReleaseMutex();
                                 CryptWatch.Stop();
@@ -173,8 +179,6 @@ namespace EasySave_GRP4.Model
             foreach (var t in lp) l.Remove(t);
             lp.AddRange(l);
             return new List<FileInfo>(lp);
-
-
         }
     }
 }
